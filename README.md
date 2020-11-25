@@ -1,4 +1,4 @@
-# Leetcode
+# Leetcode Solutions
 
 | # | Title | Solution | Runtime |
 |---| ----- | -------- | ------- |
