@@ -2,6 +2,7 @@
 
 | # | Title | Solution | Runtime |
 |---| ----- | -------- | ------- |
+|1|[ Two Sum](https://leetcode.com/problems/two-sum/)|[Java](./solutions/1.%20Two%20Sum.java)|1 ms|
 |2|[ Add Two Numbers](https://leetcode.com/problems/add-two-numbers/)|[C++](./solutions/2.%20Add%20Two%20Numbers.cpp)|36 ms|
 |13|[ Roman to Integer](https://leetcode.com/problems/roman-to-integer/)|[C++](./solutions/13.%20Roman%20to%20Integer.cpp)|4 ms|
 |21|[ Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/)|[C++](./solutions/21.%20Merge%20Two%20Sorted%20Lists.cpp)|8 ms|
