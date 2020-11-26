@@ -29,6 +29,7 @@
 |160|[ Intersection of Two Linked Lists](https://leetcode.com/problems/intersection-of-two-linked-lists/)|[C++](./solutions/160.%20Intersection%20of%20Two%20Linked%20Lists.cpp)|28 ms|
 |169|[ Majority Element](https://leetcode.com/problems/majority-element/)|[C++](./solutions/169.%20Majority%20Element.cpp)|56 ms|
 |171|[ Excel Sheet Column Number](https://leetcode.com/problems/excel-sheet-column-number/)|[C++](./solutions/171.%20Excel%20Sheet%20Column%20Number.cpp)|4 ms|
+|172|[ Factorial Trailing Zeroes](https://leetcode.com/problems/factorial-trailing-zeroes/)|[Python3](./solutions/172.%20Factorial%20Trailing%20Zeroes.py)|32 ms|
 |179|[ Largest Number](https://leetcode.com/problems/largest-number/)|[C++](./solutions/179.%20Largest%20Number.cpp)|44 ms|
 |190|[ Reverse Bits](https://leetcode.com/problems/reverse-bits/)|[C++](./solutions/190.%20Reverse%20Bits.cpp)|0 ms|
 |191|[ Number of 1 Bits](https://leetcode.com/problems/number-of-1-bits/)|[C++](./solutions/191.%20Number%20of%201%20Bits.cpp)|4 ms|
