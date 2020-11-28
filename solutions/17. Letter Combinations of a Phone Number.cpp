@@ -11,18 +11,18 @@ public:
             "pqrs",
             "tuv",
             "wxyz"
-        };
+        };
     
     vector<string> letterCombinations(string digits) {
         vector<string> answers;
         if(digits.length() == 0 || digits.empty()) {
             return answers;
         }
-        f(answers, digits, "", 0);
+        dfs(answers, digits, "", 0);
         return answers;
     }
     
-    void f(vector<string>& answers, string digits, string curr, int index) {
+    void dfs(vector<string>& answers, string digits, string curr, int index) {
         if(digits.length() == index) {
             answers.push_back(curr);
             return ;
