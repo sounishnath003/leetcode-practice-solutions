@@ -35,6 +35,10 @@ func processFileInfo(index int, f os.FileInfo) {
 	defer mu.Unlock()
 	defer wg.Done()
 
+	go func (index int)  {
+		fmt.Println("started parseing data to json encode : ", index)
+	}(index)
+
 	fmt.Println(f.Name())
 	content, err := ioutil.ReadFile("./solutions/" + f.Name())
 	warn(err)
