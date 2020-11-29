@@ -8,6 +8,7 @@ import (
 	"sync"
 )
 
+// applying concurrency to 100 different go routines
 var mu sync.RWMutex
 var wg sync.WaitGroup
 
@@ -20,12 +21,14 @@ func ExtractDirectoryContent() {
 
 	files, err := ioutil.ReadDir("./solutions")
 	warn(err)
+
 	for index, f := range files {
 		wg.Add(1)
 		mu.Lock()
 		go processFileInfo(index, f)
 	}
 	wg.Wait()
+
 }
 
 func processFileInfo(index int, f os.FileInfo) {
