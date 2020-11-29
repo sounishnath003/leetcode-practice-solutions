@@ -1,0 +1,294 @@
+[
+  {
+    "ID": 1,
+    "Content": "class Solution {\r\n    public int[] twoSum(int[] nums, int target) {\r\n    Map\u003cInteger, Integer\u003e map = new HashMap\u003c\u003e();\r\n    for (int i = 0; i \u003c nums.length; i++) {\r\n        int complement = target - nums[i];\r\n        if (map.containsKey(complement)) {\r\n            return new int[] { map.get(complement), i };\r\n        }\r\n        map.put(nums[i], i);\r\n    }\r\n    throw new IllegalArgumentException(\"No two sum solution\");\r\n}\r\n}\r\n"
+  },
+  {
+    "ID": 2,
+    "Content": "/**\r\n * Definition for a binary tree node.\r\n * struct TreeNode {\r\n *     int val;\r\n *     TreeNode *left;\r\n *     TreeNode *right;\r\n *     TreeNode() : val(0), left(nullptr), right(nullptr) {}\r\n *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}\r\n *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}\r\n * };\r\n */\r\nclass Solution {\r\npublic:\r\n    bool isSymmetric(TreeNode* root) {\r\n        if(root == NULL){\r\n            return true;\r\n        }\r\n        return f(root-\u003eleft, root-\u003eright);\r\n    }\r\n    bool f(TreeNode* left, TreeNode* right){\r\n        if(left == NULL or right == NULL){\r\n            return left == right;\r\n        }\r\n        if(left-\u003eval != right-\u003eval){\r\n            return false;\r\n        }\r\n        return f(left-\u003eleft, right-\u003eright) \u0026\u0026 f(left-\u003eright, right-\u003eleft);\r\n    }\r\n};\r\n"
+  },
+  {
+    "ID": 3,
+    "Content": "class Solution {\r\npublic:\r\n    int smallestRepunitDivByK(int k) {\r\n         if(k%2 == 0 || k%5 == 0)\r\n        {\r\n            return -1;\r\n        }\r\n​\r\n        int prevRem = 0;\r\n        for(int i = 1; i \u003c=k; i++)\r\n        {\r\n            prevRem = (prevRem*10+1)%k;\r\n            if(prevRem==0)\r\n            {\r\n                return i;\r\n            }\r\n        }\r\n        return -1; \r\n    }\r\n};\r\n"
+  },
+  {
+    "ID": 4,
+    "Content": "/**\r\n * Definition for a binary tree node.\r\n * struct TreeNode {\r\n *     int val;\r\n *     TreeNode *left;\r\n *     TreeNode *right;\r\n *     TreeNode() : val(0), left(nullptr), right(nullptr) {}\r\n *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}\r\n *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}\r\n * };\r\n */\r\nclass Solution {\r\npublic:\r\n    int maxDepth(TreeNode* root) {\r\n        if(root == NULL)   {\r\n            return 0;\r\n        }\r\n        return max( maxDepth(root-\u003eleft), maxDepth(root-\u003eright)) + 1 ;\r\n    }\r\n};\r\n"
+  },
+  {
+    "ID": 5,
+    "Content": "/**\r\n * Definition for a binary tree node.\r\n * struct TreeNode {\r\n *     int val;\r\n *     TreeNode *left;\r\n *     TreeNode *right;\r\n *     TreeNode() : val(0), left(nullptr), right(nullptr) {}\r\n *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}\r\n *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}\r\n * };\r\n */\r\nclass Solution {\r\npublic:\r\n    \r\n    TreeNode* f(vector\u003cint\u003e \u0026nums, int lo, int hi){\r\n        if(lo \u003e hi){\r\n            return nullptr;\r\n        }\r\n        int mid = (lo + hi) \u003e\u003e 1;\r\n        TreeNode* root = new TreeNode(nums[mid]);\r\n        root-\u003eleft = f(nums, lo, mid-1);\r\n        root-\u003eright = f(nums, mid + 1, hi);\r\n        return root;\r\n    }\r\n    \r\n    TreeNode* sortedArrayToBST(vector\u003cint\u003e\u0026 nums) {\r\n       if(nums.empty()){\r\n           return nullptr;\r\n       }\r\n        return f(nums, 0, nums.size() - 1);\r\n    }\r\n};\r\n"
+  },
+  {
+    "ID": 6,
+    "Content": "class Solution {\r\npublic:\r\n    #define fo(i, k, n) for(int i = k; i \u003c n; i++)\r\n    const int inf = 0x3f3f3f3f;\r\n    \r\n    int maxArea(vector\u003cint\u003e\u0026 nums) {\r\n        \r\n        /*\r\n            O(N*N)solutions:\r\n            \r\n            for(i,0,n){\r\n                for(j,i+1,n){\r\n                    minn = min(height[i], height[j]);\r\n                    maxv = max(maxv, minn*(j-i));\r\n                }\r\n            }\r\n            return maxv;\r\n        */\r\n        \r\n        int n = nums.size();\r\n        int maxv = -1 * inf;\r\n        int i = 0, j = n-1;\r\n        while(i \u003c j) {\r\n            int minn = min(nums[i], nums[j]);\r\n            maxv = max(maxv, minn*(j-i));\r\n            if(nums[i]\u003cnums[j]) {\r\n                i++;\r\n            } else {\r\n                j--;\r\n            }\r\n       }\r\n       return maxv;\r\n    }\r\n};\r\n"
+  },
+  {
+    "ID": 7,
+    "Content": "class Solution {\r\npublic:\r\n    vector\u003cvector\u003cint\u003e\u003e generate(int numRows) {\r\n        vector\u003cvector\u003cint\u003e\u003e ans;\r\n        \r\n        for(int row = 0 ; row \u003c numRows; row++) \r\n        { \r\n            vector\u003cint\u003e t;\r\n            for(int space = 0; space \u003c (numRows - row); space++)\r\n            { \r\n                // cout \u003c\u003c \" \" ; \r\n            \r\n            } \r\n            int n = 1 ; \r\n            for(int col = 0; col \u003c= row; col++)\r\n            { \r\n                t.push_back(n); \r\n                n = n * (row - col) / (col + 1) ;\r\n            } \r\n            ans.push_back(t);\r\n        }\r\n        return ans;\r\n    }\r\n};\r\n"
+  },
+  {
+    "ID": 8,
+    "Content": "class Solution {\r\npublic:\r\n    int maxProfit(vector\u003cint\u003e\u0026 prices) {\r\n        int ans = 0, minimal = 2e9+81;\r\n        for(auto \u0026\u0026 x : prices){\r\n            minimal = min(x, minimal);\r\n            ans = max(ans, x - minimal);\r\n        }\r\n        return ans;\r\n    }\r\n};\r\n"
+  },
+  {
+    "ID": 9,
+    "Content": "class Solution {\r\npublic:\r\n    int maxProfit(vector\u003cint\u003e\u0026 prices) {\r\n        if (prices.size() == 0)\r\n            return 0;\r\n​\r\n        int sum = 0, prev = 0;\r\n        for (int i = 0; i \u003c prices.size(); i++)\r\n        {\r\n            if (i == prices.size() - 1)\r\n            {\r\n                sum += prices[i] - prices[prev];\r\n            }\r\n​\r\n            else if (prices[i] \u003e prices[i + 1])\r\n            {\r\n                sum += prices[i] - prices[prev];\r\n                prev = i + 1;\r\n            }\r\n        }\r\n​\r\n        return sum;\r\n    }\r\n};\r\n"
+  },
+  {
+    "ID": 10,
+    "Content": "class Solution:\r\n    def isPalindrome(self, s: str) -\u003e bool:\r\n        punc = '''!()-[]{};`:'\"\\, \u003c\u003e./?@#$%^\u0026*_~'''\r\n        s = s.lower()\r\n        s.replace(\" \", '')\r\n        for x in s:\r\n            if x in punc:\r\n                s = s.replace(x, \"\")\r\n        return s[::-1] == s\r\n"
+  },
+  {
+    "ID": 11,
+    "Content": "class Solution {\r\npublic:\r\n    int value(char r)\r\n{\r\n    if (r == 'I')\r\n        return 1;\r\n    if (r == 'V')\r\n        return 5;\r\n    if (r == 'X')\r\n        return 10;\r\n    if (r == 'L')\r\n        return 50;\r\n    if (r == 'C')\r\n        return 100;\r\n    if (r == 'D')\r\n        return 500;\r\n    if (r == 'M')\r\n        return 1000;\r\n \r\n    return -1;\r\n}\r\n    int romanToInt(string str) {\r\n        // Initialize result\r\n    int res = 0;\r\n \r\n    // Traverse given input\r\n    for (int i = 0; i \u003c str.length(); i++) \r\n    {\r\n        // Getting value of symbol s[i]\r\n        int s1 = value(str[i]);\r\n \r\n        if (i + 1 \u003c str.length()) \r\n        {\r\n            // Getting value of symbol s[i+1]\r\n            int s2 = value(str[i + 1]);\r\n \r\n            // Comparing both values\r\n            if (s1 \u003e= s2) \r\n            {\r\n                // Value of current symbol\r\n                // is greater or equal to\r\n                // the next symbol\r\n                res = res + s1;\r\n            }\r\n            else\r\n            {\r\n                // Value of current symbol is\r\n                // less than the next symbol\r\n                res = res + s2 - s1;\r\n                i++;\r\n            }\r\n        }\r\n        else {\r\n            res = res + s1;\r\n        }\r\n    }\r\n    return res;\r\n    }\r\n};\r\n"
+  },
+  {
+    "ID": 12,
+    "Content": "class Solution {\r\npublic:\r\n    int singleNumber(vector\u003cint\u003e\u0026 nums) {\r\n        int xr = 0;\r\n        for(auto \u0026\u0026 x : nums ){\r\n            xr = xr ^ x;\r\n        }\r\n        return xr;\r\n    }\r\n};\r\n"
+  },
+  {
+    "ID": 13,
+    "Content": "class Solution {\r\npublic:\r\n    int singleNumber(vector\u003cint\u003e\u0026 nums) {\r\n        // map\u003cint, int\u003e cache;\r\n        // for(auto \u0026\u0026x : nums){cache[x]++ ;}\r\n        // for(auto \u0026\u0026p : cache) {\r\n        //     if(p.second == 1){\r\n        //         return p.first;\r\n        //     }\r\n        // }\r\n        // return -1;\r\n        \r\n        int seen1 = 0,seen2 = 0;\r\n        for(auto \u0026\u0026x : nums) {\r\n            seen1 = ~seen2 \u0026 (seen1 ^ x);\r\n            seen2 = ~seen1 \u0026 (seen2 ^ x);\r\n        }\r\n        return seen1;\r\n    }\r\n};\r\n"
+  },
+  {
+    "ID": 14,
+    "Content": "/*\r\n// Definition for a Node.\r\nclass Node {\r\npublic:\r\n    int val;\r\n    Node* next;\r\n    Node* random;\r\n    \r\n    Node(int _val) {\r\n        val = _val;\r\n        next = NULL;\r\n        random = NULL;\r\n    }\r\n};\r\n*/\r\n​\r\nclass Solution {\r\npublic:\r\n   Node* copyRandomList(Node* head) {\r\n   unordered_map\u003cNode*, Node*\u003e cache;\r\n    Node* r = head;\r\n    while(r) {\r\n        cache[r] = new Node(r-\u003eval);\r\n        r = r-\u003enext ;\r\n    }\r\n    r = head;\r\n    while(r){\r\n        cache[r]-\u003enext = cache[r-\u003enext];\r\n        cache[r]-\u003erandom = cache[r-\u003erandom];\r\n        r = r -\u003e next;\r\n    }\r\n    return cache[head];\r\n    }\r\n};\r\n"
+  },
+  {
+    "ID": 15,
+    "Content": "class Solution {\r\npublic:\r\n    string longestCommonPrefix(vector\u003cstring\u003e\u0026 strs) {\r\n        if(strs.size() == 0)   {\r\n            return \"\";\r\n        }\r\n        string prefix = strs[0];\r\n        for(int i = 1; i \u003c (int) strs.size(); i++){\r\n            while(strs[i].find_first_of(prefix) == string::npos){\r\n                prefix = string(prefix.substr(0, prefix.length() - 1));\r\n            }\r\n        }\r\n        return prefix;\r\n    }\r\n};\r\n"
+  },
+  {
+    "ID": 16,
+    "Content": "/**\r\n * Definition for singly-linked list.\r\n * struct ListNode {\r\n *     int val;\r\n *     ListNode *next;\r\n *     ListNode(int x) : val(x), next(NULL) {}\r\n * };\r\n */\r\nclass Solution {\r\npublic:\r\n    bool hasCycle(ListNode *head) {\r\n        set\u003cListNode*\u003e cache ;\r\n        while(head){\r\n            if(cache.count(head)){\r\n                return true;\r\n            }\r\n            cache.insert(head);\r\n            head = head-\u003e next;\r\n        }\r\n        return false;\r\n    }\r\n};\r\n"
+  },
+  {
+    "ID": 17,
+    "Content": "class Solution {\r\n    public int evalRPN(String[] tokens) {\r\n        \r\n        int returnValue = 0;\r\n \r\n        String operators = \"+-*/\";\r\n \r\n        Stack\u003cString\u003e stack = new Stack\u003cString\u003e();\r\n \r\n        for(String t : tokens){\r\n            if(!operators.contains(t)){\r\n                stack.push(t);\r\n            }else{\r\n                int a = Integer.valueOf(stack.pop());\r\n                int b = Integer.valueOf(stack.pop());\r\n                int index = operators.indexOf(t);\r\n                switch(index){\r\n                    case 0:\r\n                        stack.push(String.valueOf(a+b));\r\n                        break;\r\n                    case 1:\r\n                        stack.push(String.valueOf(b-a));\r\n                        break;\r\n                    case 2:\r\n                        stack.push(String.valueOf(a*b));\r\n                        break;\r\n                    case 3:\r\n                        stack.push(String.valueOf(b/a));\r\n                        break;\r\n                }\r\n            }\r\n        }\r\n \r\n        returnValue = Integer.valueOf(stack.pop());\r\n \r\n        return returnValue;\r\n"
+  },
+  {
+    "ID": 18,
+    "Content": "#define fo(i, k, n) for(int i = k; i \u003c n; i++)\r\nclass Solution {\r\npublic:\r\n    int maxProduct(vector\u003cint\u003e\u0026 nums) {\r\n        int n = nums.size();\r\n        int ans = nums[0], rmx = nums[0], rmn = nums[0];\r\n        fo(i, 1, n){\r\n            int cmax = rmx;\r\n            rmx = max({rmx*nums[i], nums[i], rmn*nums[i]});\r\n            rmn = min({cmax*nums[i], rmn*nums[i], nums[i]});\r\n            ans = max(rmx,ans);\r\n        }\r\n        return ans ;\r\n    }\r\n};\r\n"
+  },
+  {
+    "ID": 19,
+    "Content": "struct Element\r\n{\r\n    int val;\r\n    int min;\r\n};\r\n​\r\nclass MinStack\r\n{\r\n    stack\u003cElement\u003e m_data;\r\n    int curr_min;\r\npublic:\r\n    /** initialize your data structure here. */\r\n    MinStack()\r\n​\r\n    void push(int x)\r\n    {\r\n        Element e;\r\n        e.val = x;\r\n        if( m_data.empty()){\r\n            curr_min = INT32_MAX;\r\n        }\r\n        if( curr_min \u003e x){\r\n            curr_min = x;\r\n        }\r\n        e.min = curr_min;\r\n        m_data.push(e);\r\n    }\r\n​\r\n    void pop()\r\n    {\r\n        m_data.pop();\r\n        if(!m_data.empty())\r\n            curr_min = m_data.top().min;\r\n    }\r\n​\r\n    int top()\r\n"
+  },
+  {
+    "ID": 20,
+    "Content": "/**\r\n * Definition for singly-linked list.\r\n * struct ListNode {\r\n *     int val;\r\n *     ListNode *next;\r\n *     ListNode(int x) : val(x), next(NULL) {}\r\n * };\r\n */\r\nclass Solution {\r\npublic:\r\n    ListNode *getIntersectionNode(ListNode *headA, ListNode *headB) {\r\n        // set\u003cListNode*\u003e  cache;\r\n        // if(headA == NULL or headB == NULL){\r\n        //     return NULL;\r\n        // }\r\n        // while(headA != NULL){\r\n        //     cache.insert(headA);\r\n        //     headA = headA-\u003enext;\r\n        // }\r\n        // while(headB){\r\n        //     if(cache.count(headB)){\r\n        //         return headB;\r\n        //     }\r\n        //     headB = headB-\u003enext;\r\n        // }\r\n        // return NULL ;\r\n        \r\n          ListNode* pa = headA, *pb = headB;\r\n        while (pa != pb) {\r\n            if(pa!=NULL)\r\n                pa = pa-\u003enext;\r\n            else\r\n                pa = headB;\r\n            if(pb!=NULL)\r\n                pb = pb-\u003enext;\r\n            else\r\n                pb = headA;\r\n        }\r\n        return pa;\r\n    }\r\n};\r\n"
+  },
+  {
+    "ID": 21,
+    "Content": "class Solution {\r\npublic:\r\n    int findPeakElement(vector\u003cint\u003e\u0026 nums) {\r\n        // int n = nums.size();\r\n        // int lo = 0, hi = n-1;   \r\n        // while(lo \u003c hi) {\r\n        //     int mid = lo+(hi-lo)/2;\r\n        //     if(nums[mid] \u003c nums[mid+1]){\r\n        //         lo = mid + 1;\r\n        //     }\r\n        //     else {\r\n        //         hi = mid;\r\n        //     }\r\n        // }\r\n        // return lo;\r\n        \r\n        int maxelem = *max_element(nums.begin(), nums.end());\r\n        return find(nums.begin(), nums.end(), maxelem) - nums.begin();\r\n    }\r\n};\r\n"
+  },
+  {
+    "ID": 22,
+    "Content": "class Solution {\r\npublic:\r\n    int majorityElement(vector\u003cint\u003e\u0026 nums) {\r\n        int n = nums.size();\r\n        unordered_map\u003cint, int\u003e cache ;\r\n        for(auto \u0026\u0026x : nums ){\r\n            cache[x]++;\r\n        }\r\n        int ans= 0;\r\n        for(int x : nums){\r\n            if(ans \u003c= cache[x] \u0026\u0026 (n / 2) \u003c cache[x] ){\r\n                ans = x;\r\n            }\r\n        }\r\n        return ans;\r\n    }\r\n};\r\n"
+  },
+  {
+    "ID": 23,
+    "Content": "class Solution {\r\npublic:\r\n    vector\u003cstring\u003e mapps = {\r\n            \"0\",\r\n            \"1\",\r\n            \"abc\",\r\n            \"def\",\r\n            \"ghi\",\r\n            \"jkl\",\r\n            \"mno\",\r\n            \"pqrs\",\r\n            \"tuv\",\r\n            \"wxyz\"\r\n        };\r\n    \r\n    vector\u003cstring\u003e letterCombinations(string digits) {\r\n        vector\u003cstring\u003e answers;\r\n        if(digits.length() == 0 || digits.empty()) {\r\n            return answers;\r\n        }\r\n        dfs(answers, digits, \"\", 0);\r\n        return answers;\r\n    }\r\n    \r\n    void dfs(vector\u003cstring\u003e\u0026 answers, string digits, string curr, int index) {\r\n        if(digits.length() == index) {\r\n            answers.push_back(curr);\r\n            return ;\r\n        }\r\n        string letters = mapps[digits[index] - '0'];\r\n        for(auto letter : letters) {\r\n            f(answers, digits, curr+letter, index+1);\r\n        }\r\n    }\r\n};\r\n"
+  },
+  {
+    "ID": 24,
+    "Content": "class Solution {\r\npublic:\r\n    int titleToNumber(string s) {\r\n        long long int n=0;\r\n        for(auto c: s){\r\n            n = (n * 26) + (int)(c - 'A' + 1);\r\n        }\r\n        return n;\r\n    }\r\n};\r\n"
+  },
+  {
+    "ID": 25,
+    "Content": "import math\r\n​\r\nclass Solution:\r\n    def trailingZeroes(self, n: int) -\u003e int:\r\n        if n \u003c 5:\r\n            return 0\r\n        ans = 0\r\n        while n \u003e 4:\r\n            ans+=int(n/5)\r\n            n = n / 5\r\n            \r\n        return ans\r\n"
+  },
+  {
+    "ID": 26,
+    "Content": "class Solution {\r\npublic:\r\n    string largestNumber(vector\u003cint\u003e\u0026 nums) {\r\n        sort(nums.begin(), nums.end(), [\u0026](const int a, const int b) {\r\n        string x = to_string(a) + to_string(b) ;\r\n        string y = to_string(b) + to_string(a);\r\n        return (x \u003e y) ? 1 : 0 ;\r\n    });\r\n        if(nums[0] == 0){ return \"0\" ; }\r\n        string s = \"\";\r\n        for(auto \u0026\u0026x : nums) { s += to_string(x) ; }\r\n        return s ;\r\n    }\r\n};\r\n"
+  },
+  {
+    "ID": 27,
+    "Content": "class Solution {\r\npublic:\r\n    void rotate(vector\u003cint\u003e\u0026 nums, int k) { \r\n       if(k == 0 or nums.size() == 0)\r\n           return;\r\n        \r\n         if(k\u003enums.size())\r\n            k=k%nums.size();\r\n        \r\n        reverse(nums.begin(), nums.end());\r\n        reverse(nums.begin(), nums.begin()+k);\r\n        reverse(nums.begin()+k, nums.end());\r\n        return;\r\n    }\r\n};\r\n"
+  },
+  {
+    "ID": 28,
+    "Content": "/**\r\n * Definition for singly-linked list.\r\n * struct ListNode {\r\n *     int val;\r\n *     ListNode *next;\r\n *     ListNode() : val(0), next(nullptr) {}\r\n *     ListNode(int x) : val(x), next(nullptr) {}\r\n *     ListNode(int x, ListNode *next) : val(x), next(next) {}\r\n * };\r\n */\r\nclass Solution {\r\npublic:\r\n    ListNode* removeNthFromEnd(ListNode* head, int k) {\r\n        ListNode* root = new ListNode() ;\r\n        root-\u003enext = head;\r\n        ListNode* f = root, *s = root;\r\n        for(int i = 1; i \u003c= k+1; i++)\r\n            f = f -\u003e next;\r\n        \r\n        while(f){\r\n            f = f -\u003e next;\r\n            s = s -\u003e next;\r\n        }\r\n        ListNode* d = s-\u003enext;\r\n        s-\u003enext = s-\u003enext-\u003enext;\r\n        delete d;\r\n        return root-\u003enext;\r\n    }\r\n};\r\n"
+  },
+  {
+    "ID": 29,
+    "Content": "class Solution {\r\npublic:\r\n    uint32_t reverseBits(uint32_t n) {\r\n          // you need treat n as an unsigned value\r\n   int res = 0;\r\n        int x = 31;\r\n        while(x \u003e= 0){\r\n            res = res ^ ((n \u0026 0x1) \u003c\u003c (x--));\r\n            n \u003e\u003e= 0x1;\r\n        }\r\n​\r\n        return res;\r\n    }\r\n};\r\n"
+  },
+  {
+    "ID": 30,
+    "Content": "class Solution {\r\npublic:\r\n    int hammingWeight(uint32_t n) {\r\n       int ans = 0 ;\r\n        while(n){\r\n           ans += (n \u0026 1);\r\n            n = n \u003e\u003e 1;\r\n        }\r\n        return ans;\r\n    }\r\n};\r\n"
+  },
+  {
+    "ID": 31,
+    "Content": "class Solution {\r\npublic:\r\n    int rob(vector\u003cint\u003e\u0026 nums) {\r\n        if(nums.empty() or nums.size() == 0){\r\n            return 0;\r\n        }\r\n        if(nums.size() == 1){\r\n            return nums[0];\r\n        }\r\n        if(nums.size() == 0){\r\n            return max(nums[0], nums[1]);\r\n        }\r\n        int n = nums.size();\r\n        vector\u003cint\u003e dp(n);\r\n        dp[0] = nums[0];\r\n        dp[1] = max(nums[0], nums[1]);\r\n        for(int i = 2; i \u003c n; i++){\r\n            dp[i] = max(nums[i] + dp[i-2], dp[i-1]);\r\n        }\r\n        return dp[n-1];\r\n    }\r\n};\r\n"
+  },
+  {
+    "ID": 32,
+    "Content": "/**\r\n * Definition for singly-linked list.\r\n * struct ListNode {\r\n *     int val;\r\n *     ListNode *next;\r\n *     ListNode() : val(0), next(nullptr) {}\r\n *     ListNode(int x) : val(x), next(nullptr) {}\r\n *     ListNode(int x, ListNode *next) : val(x), next(next) {}\r\n * };\r\n */\r\nclass Solution {\r\npublic:\r\n    ListNode* addTwoNumbers(ListNode* root1, ListNode* root2) {\r\n        if(!root1) {\r\n            return root2;\r\n        }\r\n        if(!root2) {\r\n            return root1 ;\r\n        }\r\n        ListNode *answer = NULL, *t, *prev(NULL) ;\r\n        int cursum = 0, carry = 0 ;\r\n        while(root1 or root2) {\r\n            cursum = carry + ( root1 ? root1-\u003eval : 0 ) + ( root2 ? root2-\u003eval : 0 ) ;\r\n            carry = (cursum \u003e 9) ? 1 : 0 ;\r\n            cursum %= 10 ;\r\n            t = new ListNode(cursum) ;\r\n            if(!answer) { answer = t ; }\r\n            else {\r\n                prev-\u003enext = t ;\r\n            }\r\n            prev = t ;\r\n            if(root1) { root1 = root1-\u003enext ; }\r\n            if(root2) { root2 = root2-\u003enext ; }\r\n        }\r\n        if(carry \u003e 0) {\r\n"
+  },
+  {
+    "ID": 33,
+    "Content": "class Solution {\r\npublic:\r\n   bool isValid(string s) {\r\n        \r\n        map\u003cchar,char\u003e closing; // the set of closing parenthesis\r\n        closing[')'] = '('; // the opening parenthesis of the closing parenthesis\r\n        closing[']'] = '[';\r\n        closing['}'] = '{';\r\n        \r\n        stack\u003cchar\u003e stack;\r\n        map\u003cchar,char\u003e::iterator it;\r\n        for (int i = 0; i \u003c s.size(); i++)  {\r\n            it = closing.find(s[i]);\r\n            if (it != closing.end())     // if s[i] is found in closing\r\n                if (!stack.empty() \u0026\u0026 it-\u003esecond == stack.top())    // if stack is not empty and its top element is the opening parenthesis of the closing parenthesis s[i]\r\n                    stack.pop();\r\n                else\r\n                    return false;\r\n            else\r\n                stack.push(s[i]);   // add the opening s[i] to stack\r\n        }\r\n                \r\n        if (stack.empty())\r\n            return true;\r\n        else\r\n            return false;\r\n    }\r\n};\r\n"
+  },
+  {
+    "ID": 34,
+    "Content": "class Solution {\r\npublic:\r\n    int numIslands(vector\u003cvector\u003cchar\u003e\u003e\u0026 grid) {\r\n        \r\n        if(grid.empty()) {\r\n            return 0;\r\n        }\r\n        \r\n        int H = grid.size(),\r\n            W = grid[0].size();\r\n        \r\n        int ans = 0;\r\n        for(int row = 0; row \u003c H; row++) {\r\n            for(int col = 0; col \u003c W; col++) {\r\n                if(grid[row][col] == '1') {\r\n                    ans += dfs(grid, row, col, H, W);\r\n                }\r\n            }\r\n        }\r\n        return ans;\r\n    }\r\n    \r\n    int dfs(vector\u003cvector\u003cchar\u003e\u003e\u0026 grid, int row, int col, int H, int W) {\r\n        \r\n        if(row \u003c 0 or row \u003e= H || col \u003c 0 or col \u003e= W || grid[row][col] != '1' ) {\r\n            return 0;\r\n        }\r\n        \r\n        grid[row][col] = '0';\r\n        \r\n        dfs(grid, row+1, col, H, W);\r\n        dfs(grid, row-1, col, H, W);\r\n        dfs(grid, row, col+1, H, W);\r\n        dfs(grid, row, col-1, H, W);\r\n        \r\n        return 1;\r\n    }\r\n};\r\n"
+  },
+  {
+    "ID": 35,
+    "Content": "class Solution {\r\npublic:\r\n    bool isHappy(int n) {\r\n        set\u003cint\u003e cache;\r\n        while(!cache.count(n)){\r\n            cache.insert(n);\r\n            n = f(n);\r\n            if(n == 1){\r\n                return true;\r\n            }\r\n        }\r\n        return false;\r\n    }\r\n    int f(int n) {\r\n        int sum = 0;\r\n        while(n \u003e 0){\r\n            sum += (n % 10) * (n % 10);\r\n            n = n / 10;\r\n        }\r\n        return sum;\r\n    }\r\n};\r\n"
+  },
+  {
+    "ID": 36,
+    "Content": "class Solution {\r\npublic:\r\n    int countPrimes(int n) {\r\n        if(n \u003c 2){\r\n            return 0;\r\n        }\r\n        \r\n        vector\u003cbool\u003e primee(n + 1) ;\r\n        for(long long int i = 2; i \u003c n + 1; i++){\r\n            if(!primee[i]){\r\n                for(long long int j = i * i; j \u003c n + 1; j += i){\r\n                    primee[j] = true;\r\n                }\r\n            }\r\n        }\r\n        \r\n        int ans = 0;\r\n        for(int i = 2; i \u003c n ; i++){\r\n            if(primee[i] == false){\r\n                ans++;\r\n            }\r\n        }\r\n        \r\n        return ans;\r\n    }\r\n};\r\n"
+  },
+  {
+    "ID": 37,
+    "Content": "/**\r\n * Definition for singly-linked list.\r\n * struct ListNode {\r\n *     int val;\r\n *     ListNode *next;\r\n *     ListNode() : val(0), next(nullptr) {}\r\n *     ListNode(int x) : val(x), next(nullptr) {}\r\n *     ListNode(int x, ListNode *next) : val(x), next(next) {}\r\n * };\r\n */\r\n​\r\nusing Node = ListNode;\r\n​\r\nclass Solution {\r\npublic:\r\n    ListNode* reverseList(ListNode* root) {\r\n        if(root == NULL or root-\u003enext == NULL){\r\n            return root;\r\n        }\r\n        Node* nroot = reverseList(root-\u003enext);\r\n        root-\u003enext-\u003enext = root;\r\n        root-\u003enext = NULL;\r\n        return nroot;\r\n    }\r\n};\r\n"
+  },
+  {
+    "ID": 38,
+    "Content": "/**\r\n * Definition for singly-linked list.\r\n * struct ListNode {\r\n *     int val;\r\n *     ListNode *next;\r\n *     ListNode() : val(0), next(nullptr) {}\r\n *     ListNode(int x) : val(x), next(nullptr) {}\r\n *     ListNode(int x, ListNode *next) : val(x), next(next) {}\r\n * };\r\n */\r\nclass Solution {\r\npublic:\r\n    ListNode* mergeTwoLists(ListNode* l1, ListNode* l2) {\r\n        ListNode fake(-1);\r\n        ListNode* last = \u0026fake;\r\n        \r\n        while(l1 != NULL \u0026\u0026 l2 != NULL){\r\n            if(l1-\u003eval \u003c l2-\u003eval){\r\n                last-\u003enext = l1;\r\n                last = l1;\r\n                l1 = l1-\u003enext;\r\n            }else{\r\n                last-\u003enext = l2;\r\n                last = l2;\r\n                l2 = l2-\u003enext;\r\n            }\r\n        }\r\n        \r\n        if(l1 != NULL){\r\n            last-\u003enext = l1;\r\n        }\r\n        if(l2 != NULL){\r\n            last-\u003enext = l2;\r\n        }\r\n        return fake.next;\r\n    }\r\n};\r\n"
+  },
+  {
+    "ID": 39,
+    "Content": "class Solution {\r\npublic:\r\n    bool containsDuplicate(vector\u003cint\u003e\u0026 nums) {\r\n        set\u003cint\u003e cache ;\r\n        for(auto \u0026\u0026 x : nums ){\r\n            if(cache.count(x)){\r\n                return true;\r\n            }\r\n                cache.insert(x);\r\n        }\r\n        return false;\r\n    }\r\n};\r\n"
+  },
+  {
+    "ID": 40,
+    "Content": "            }\r\n             \r\n            values.push(val);\r\n             \r\n            // right now the i points to \r\n            // the character next to the digit,\r\n            // since the for loop also increases \r\n            // the i, we would skip one \r\n            //  token position; we need to \r\n            // decrease the value of i by 1 to\r\n            // correct the offset.\r\n              i--;\r\n        }\r\n         \r\n        // Closing brace encountered, solve \r\n        // entire brace.\r\n        else if(tokens[i] == ')')\r\n        {\r\n            while(!ops.empty() \u0026\u0026 ops.top() != '(')\r\n            {\r\n                int val2 = values.top();\r\n                values.pop();\r\n                 \r\n                int val1 = values.top();\r\n                values.pop();\r\n                 \r\n                char op = ops.top();\r\n                ops.pop();\r\n                 \r\n                values.push(applyOp(val1, val2, op));\r\n            }\r\n             \r\n            // pop opening brace.\r\n            if(!ops.empty())\r\n               ops.pop();\r\n        }\r\n         \r\n        // Current token is an operator.\r\n        else\r\n        {\r\n            // While top of 'ops' has same or greater \r\n            // precedence to current token, which\r\n            // is an operator. Apply operator on top \r\n            // of 'ops' to top two elements in values stack.\r\n            while(!ops.empty() \u0026\u0026 precedence(ops.top())\r\n                                \u003e= precedence(tokens[i])){\r\n"
+  },
+  {
+    "ID": 41,
+    "Content": "/**\r\n * Definition for singly-linked list.\r\n * struct ListNode {\r\n *     int val;\r\n *     ListNode *next;\r\n *     ListNode() : val(0), next(nullptr) {}\r\n *     ListNode(int x) : val(x), next(nullptr) {}\r\n *     ListNode(int x, ListNode *next) : val(x), next(next) {}\r\n * };\r\n */\r\nclass Solution {\r\npublic:\r\n    ListNode* r = NULL;\r\n    bool ans = true;\r\n    \r\n    void solve(ListNode* rt){\r\n        if(rt == NULL){\r\n            return ;\r\n        }\r\n        solve(rt-\u003enext);\r\n        \r\n        if(rt-\u003eval != r-\u003eval){\r\n            ans = false;\r\n            return;\r\n        }\r\n        r = r-\u003enext;\r\n    }\r\n    \r\n    bool isPalindrome(ListNode* head) {\r\n        // stack\u003cint\u003e cache;\r\n        // ListNode* r = head;\r\n        // while(r){\r\n        //     cache.push(r-\u003eval);\r\n        //     r = r-\u003enext;\r\n        // }\r\n        // r = head;\r\n        // while(r){\r\n        //     if(cache.top() != r-\u003eval){\r\n        //         return false;\r\n        //     }\r\n        //     r = r-\u003enext;\r\n        //     cache.pop();\r\n        // }\r\n        // return true;\r\n        \r\n        r = head;\r\n        solve(head);\r\n        return ans;\r\n    }\r\n};\r\n"
+  },
+  {
+    "ID": 42,
+    "Content": "# Definition for singly-linked list.\r\n# class ListNode:\r\n#     def __init__(self, val=0, next=None):\r\n#         self.val = val\r\n#         self.next = next\r\nclass Solution:\r\n    def isPalindrome(self, head: ListNode) -\u003e bool:\r\n        \r\n"
+  },
+  {
+    "ID": 43,
+    "Content": "/**\r\n * Definition for singly-linked list.\r\n * struct ListNode {\r\n *     int val;\r\n *     ListNode *next;\r\n *     ListNode(int x) : val(x), next(NULL) {}\r\n * };\r\n */\r\nclass Solution {\r\npublic:\r\n    void deleteNode(ListNode* node) {\r\n        node-\u003eval = node-\u003enext-\u003eval;\r\n        node-\u003enext = node-\u003enext-\u003enext;\r\n    }\r\n};\r\n"
+  },
+  {
+    "ID": 44,
+    "Content": "class Solution {\r\npublic:\r\n    bool isAnagram(string s, string t) {\r\n        sort(s.begin(), s.end());\r\n        sort(t.begin(), t.end());\r\n        return s == t;\r\n    }\r\n};\r\n"
+  },
+  {
+    "ID": 45,
+    "Content": "class Solution {\r\npublic:\r\n    int removeDuplicates(vector\u003cint\u003e\u0026 nums) {\r\n        // auto itr = unique(nums.begin(), nums.end());\r\n        // nums.resize(distance(nums.begin(), itr));\r\n        // return nums.size();\r\n        \r\n        int n = nums.size();\r\n        if (n \u003c 2) return n;\r\n        \r\n        int tmp = nums[0];\r\n        int ret = 1;\r\n        for (int i = 1; i \u003c n; i++) {\r\n            if (tmp != nums[i]) {\r\n                nums[ret] = nums[i];\r\n                ret++;\r\n                \r\n                tmp = nums[i];\r\n            }\r\n        }\r\n        \r\n        return ret;\r\n    }\r\n};\r\n"
+  },
+  {
+    "ID": 46,
+    "Content": "class Solution {\r\npublic:\r\n    int missingNumber(vector\u003cint\u003e\u0026 nums) {\r\n        int n=nums.size();\r\n       int x1 =0; \r\n        int x2=0;\r\n        for(int i=0;i\u003cn;i++){\r\n            x1^=nums[i];\r\n            x2^=i+1;\r\n        }\r\n        return x1^x2;\r\n    }\r\n};\r\n"
+  },
+  {
+    "ID": 47,
+    "Content": "/* COPIED SOLUTION - DON'T UNDERSTAND THE HOW TO IMPLEMENT */\r\n​\r\nclass Solution {\r\n   public int strStr(String haystack, String needle) {\r\n    if(haystack==null || needle==null)    \r\n        return 0;\r\n \r\n    if(needle.length() == 0)\r\n        return 0;\r\n \r\n    for(int i=0; i\u003chaystack.length(); i++){\r\n        if(i + needle.length() \u003e haystack.length())\r\n            return -1;\r\n \r\n        int m = i;\r\n        for(int j=0; j\u003cneedle.length(); j++){\r\n            if(needle.charAt(j)==haystack.charAt(m)){\r\n                if(j==needle.length()-1)\r\n                    return i;\r\n                m++;\r\n            }else{\r\n                break;\r\n            }\r\n \r\n        }    \r\n    }   \r\n \r\n    return -1;\r\n}\r\n}\r\n"
+  },
+  {
+    "ID": 48,
+    "Content": "class Solution {\r\npublic:\r\n    void moveZeroes(vector\u003cint\u003e\u0026 nums) {\r\n        int x = 0;\r\n        for(int i = 0; i \u003c nums.size(); i++){\r\n            if(nums[i] != 0){\r\n                nums[x++] = nums[i];\r\n            }\r\n        }\r\n        for(int i = x; i \u003c (int) nums.size(); i++){\r\n            nums[i] = 0;\r\n        }\r\n    }\r\n};\r\n"
+  },
+  {
+    "ID": 49,
+    "Content": "class Solution {\r\n    public int coinChange(int[] coins, int amount) {\r\n           int n = coins.length;\r\n    \r\n    int dp[] = new int[amount + 1];    \r\n     dp[0] = 0;        //  amount = 0 can be made by excuding every coin\r\n    if(amount \u003e 0 \u0026\u0026 coins == null) return 0;\r\n     for(int i = 1; i \u003c= amount; i++) {\r\n        dp[i] = 100000;       // if no coin is available we return a large number or infinity\r\n    }\r\n    \r\n    for(int i = 1; i \u003c= n; i++) {\r\n        for(int j = coins[i-1]; j \u003c= amount; j++) {\r\n            if(j \u003e= coins[i-1]) {\r\n                dp[j] =  Math.min(1 + dp[j-coins[i-1]], dp[j]);  // minimum of (Include , Exclude)\r\n            } else { \r\n                dp[j] = dp[j];  // else exlude the current coin \r\n            }\r\n        }\r\n    }\r\n    return dp[amount] \u003e amount ? -1 : dp[amount];\r\n    }\r\n}\r\n"
+  },
+  {
+    "ID": 50,
+    "Content": "class Solution {\r\npublic:\r\n    bool isPowerOfThree(int n) {\r\n       return (n \u003e 0) \u0026\u0026 pow(3,19) % n == 0;\r\n    }\r\n};\r\n"
+  },
+  {
+    "ID": 51,
+    "Content": "class Solution {\r\npublic:\r\n    int search(vector\u003cint\u003e\u0026 nums, int target) {\r\n    int n = nums.size();\r\n    if(n == 0){\r\n        return -1;\r\n    }\r\n    int low = 0, high = n-1;\r\n    int firstel = nums[0];\r\n    while(low \u003c= high)\r\n    {\r\n        int mid = low + (high-low)/2;\r\n        int value = nums[mid];\r\n        if(target == value){\r\n            return mid;\r\n        }\r\n        int am_big = value \u003e= firstel;\r\n        int target_bg = target \u003e= firstel;\r\n        if(am_big == target_bg) {\r\n            if(value \u003c target) {\r\n                low = mid + 1;\r\n            }else {\r\n                high = mid - 1;\r\n            }\r\n        }else {\r\n            if(am_big) {\r\n                low = mid + 1;\r\n            }else {\r\n                high = mid - 1;\r\n            }\r\n        }\r\n    }\r\n        return -1;\r\n    }\r\n};\r\n"
+  },
+  {
+    "ID": 52,
+    "Content": "class Solution {\r\npublic:\r\n    vector\u003cint\u003e searchRange(vector\u003cint\u003e\u0026 nums, int target) {\r\n        if(nums.empty()){\r\n            return {-1,-1} ;\r\n        }\r\n        if(binary_search(nums.begin(), nums.end(), target) == false){\r\n            return {-1,-1} ;\r\n        }\r\n        int lo = lower_bound(nums.begin(), nums.end(), target) - nums.begin();\r\n        int hi = upper_bound(nums.begin(), nums.end(), target) - nums.begin();\r\n        return {lo, hi-1} ;   \r\n    }\r\n};\r\n"
+  },
+  {
+    "ID": 53,
+    "Content": "class Solution {\r\npublic:\r\n    void reverseString(vector\u003cchar\u003e\u0026 s) {\r\n       reverse(s.begin(), s.end());\r\n    }\r\n};\r\n"
+  },
+  {
+    "ID": 54,
+    "Content": "class Solution {\r\npublic:\r\n    vector\u003cint\u003e intersect(vector\u003cint\u003e\u0026 nums1, vector\u003cint\u003e\u0026 nums2) {\r\n       vector\u003cint\u003e ans;\r\n        map\u003cint, int\u003e cache;\r\n        for(auto \u0026\u0026 x : nums1){cache[x]++ ;}\r\n        for(auto \u0026\u0026x  : nums2){\r\n            if(cache.find(x) != cache.end()){\r\n                if(cache[x] == 0){continue;}\r\n                else {ans.push_back(x);}\r\n                cache[x]--;\r\n            }\r\n        }\r\n        return ans;\r\n    }\r\n};\r\n"
+  },
+  {
+    "ID": 55,
+    "Content": "public class Solution \r\n{\r\n  public string CountAndSay(int n) \r\n  {\r\n    var result = \"1\";\r\n    \r\n    if (n == 1) return result;\r\n    \r\n    var i = 1;\r\n    var countSay = 1;\r\n    while (i \u003c n)\r\n    {\r\n      var temp = result;\r\n      result = string.Empty;\r\n      for (var j = 0; j \u003c temp.Length - 1; j++)\r\n      {\r\n        if (temp[j] == temp[j + 1])\r\n        {\r\n          countSay++;\r\n        }\r\n        else\r\n        {\r\n          result += countSay;\r\n          result += temp[j];\r\n          countSay = 1;\r\n        }\r\n      }\r\n      result += countSay;\r\n      result += temp[temp.Length - 1];\r\n      countSay = 1;\r\n      i++;\r\n    }\r\n    return result;\r\n  }\r\n}\r\n"
+  },
+  {
+    "ID": 56,
+    "Content": "class Solution {\r\npublic:\r\n    int firstUniqChar(string s) {\r\n//         map\u003cchar, int\u003e cache;\r\n        \r\n//         for(auto \u0026\u0026 x : s){\r\n//             cache[x]++;\r\n//         }\r\n        \r\n//         for(auto \u0026\u0026 x : s){\r\n//             if(cache[x] == 1){\r\n//                 return distance(s.begin(), find(s.begin(), s.end(), x));\r\n//             }\r\n//         }\r\n//         return -1;\r\n        \r\n        // -1 indicates that there are no occurences of char.\r\n        int count_chars[26] = {[0 ... 25] = -1};\r\n        for (int i=0; i\u003cs.size(); i++) {\r\n            char c = s[i];\r\n            int val = count_chars[s[i] - 'a'];\r\n            if (val == -1) count_chars[c - 'a'] = i;\r\n            // -2 indicates that there are more than one occurence of char.\r\n            else if (val != -2) count_chars[c - 'a'] = -2;\r\n        }\r\n        int return_index = INT_MAX;\r\n        for (int i=0; i\u003c26; i++) {\r\n            if (count_chars[i] \u003e= 0) {\r\n                // Get the lowest index for a char that occurs only once.\r\n                return_index = min(return_index, count_chars[i]);\r\n            }\r\n        }\r\n        if (return_index != INT_MAX) return return_index;\r\n        return -1;\r\n    }\r\n        \r\n    }\r\n};\r\n"
+  },
+  {
+    "ID": 57,
+    "Content": "class Solution {\r\npublic:\r\nint f(string \u0026s, int lo, int hi, int k){\r\n        if(hi-lo \u003c k){\r\n            return 0;\r\n        }\r\n        vector\u003cint\u003e count(26);\r\n        for(int i = lo; i\u003c hi; i++){\r\n            count[s[i]-'a']++;\r\n        }\r\n        for(int i = lo; i \u003c hi; i++){\r\n            if(count[s[i]-'a'] \u003c k ){\r\n                int j = i+1;\r\n​\r\n                while(j\u003chi \u0026\u0026 count[s[j] -'a'] \u003c k){\r\n                    j++;\r\n                }\r\n                return max( f(s, lo, i, k), f(s, j, hi, k) );\r\n            }\r\n        }\r\n        return hi-lo;\r\n}\r\n    \r\n    int longestSubstring(string s, int k) {\r\n        \r\n        return f(s, 0, s.length(), k);\r\n    }\r\n};\r\n"
+  },
+  {
+    "ID": 58,
+    "Content": "class Solution {\r\npublic:\r\n    vector\u003cstring\u003e fizzBuzz(int n) {\r\n        vector\u003cstring\u003e ans ;\r\n        \r\n        for(int i = 1; i \u003c n + 1; i++){\r\n            if(i % 3 == 0 \u0026\u0026 (i % 5 != 0) ){\r\n                ans.push_back(\"Fizz\");\r\n            }else if(i % 5 == 0 \u0026\u0026 (i % 3 != 0)){\r\n                ans.push_back(\"Buzz\");\r\n            }else if (i % 15 == 0) {\r\n                ans.push_back(\"FizzBuzz\");\r\n            }else{\r\n                ans.push_back(to_string(i));\r\n            }\r\n        }\r\n        return ans;\r\n    }\r\n};\r\n"
+  },
+  {
+    "ID": 59,
+    "Content": "class Solution {\r\npublic:\r\n    bool canPartition(vector\u003cint\u003e\u0026 nums) {\r\n         int sum = (int) accumulate(nums.begin(), nums.end(),0);\r\n        if(sum\u00261){\r\n            return false;\r\n        }else {\r\n            sum = (int) sum/2;\r\n            vector\u003cbool\u003e dp(sum+1);\r\n            dp[0] = true;\r\n            for(auto \u0026\u0026x : nums) {\r\n                // if sumX is present that means sumX-(something) also present\r\n                for(int i = sum; i \u003e= x; i--){\r\n                    dp[i] = dp[i] || dp[i-x] ;\r\n                }\r\n            }\r\n            // debug() \u003c\u003c imie(dp);\r\n            return dp.back();\r\n        }   \r\n    }\r\n};\r\n"
+  },
+  {
+    "ID": 60,
+    "Content": "class Solution:\r\n    def permute(self, nums: List[int]) -\u003e List[List[int]]:\r\n        from itertools import permutations\r\n        return list(permutations(nums))\r\n"
+  },
+  {
+    "ID": 61,
+    "Content": "class Solution {\r\npublic:\r\n    double myPow(double x, int n) {\r\n        return pow(x, n)   ;\r\n    }\r\n};\r\n"
+  },
+  {
+    "ID": 62,
+    "Content": "using arr = vector\u003cint\u003e;\r\nconst int inf = 2e9+18;\r\nint maxx = -1 * inf;\r\nclass Solution {\r\npublic:\r\n    int maxSubArray(vector\u003cint\u003e\u0026 nums) {\r\n        int n = nums.size() ;\r\n        arr dp(n);\r\n        dp[0] = nums[0];\r\n        maxx = dp[0];\r\n        for(int i = 1; i \u003c n; i++){\r\n            if(dp[i-1] + nums[i] \u003e nums[i]){\r\n                dp[i] = dp[i-1] + nums[i];\r\n            }else{\r\n                dp[i] = nums[i];\r\n            }\r\n            maxx = max(dp[i],maxx);\r\n        }\r\n        return maxx;\r\n    }\r\n};\r\n"
+  },
+  {
+    "ID": 63,
+    "Content": "class Solution {\r\npublic:\r\n    bool canJump(vector\u003cint\u003e\u0026 nums) {\r\n        int len = nums.size();\r\n        int maxjp = 0;\r\n        for(int i = 0; i \u003c= maxjp; i++){\r\n            maxjp = max(maxjp, i+nums[i]);\r\n            if(maxjp \u003e= len-1){\r\n                return true;\r\n            }\r\n        }\r\n        return false;\r\n    }\r\n};\r\n"
+  },
+  {
+    "ID": 64,
+    "Content": "const int inf = 0x3f3f3f3f;\r\nclass Solution {\r\npublic:\r\n    int minPathSum(vector\u003cvector\u003cint\u003e\u003e\u0026 grid) {\r\n        int H = grid.size(),\r\n            W = grid[0].size();\r\n        \r\n        vector\u003cvector\u003cint\u003e\u003e dp(H, vector\u003cint\u003e(W, inf));\r\n        for(int row = 0; row \u003c H; row++){\r\n            for(int col = 0; col \u003c W; col++) {\r\n                if(row == 0 \u0026\u0026 col == 0) {\r\n                    dp[row][col] = grid[row][col];\r\n                }else {\r\n                    dp[row][col] = grid[row][col] + min(( (row == 0) ? inf : dp[row-1][col]), ((col == 0) ? inf : dp[row][col-1]));   \r\n                }\r\n            }\r\n        }\r\n        \r\n        return dp[H-1][W-1];\r\n    }\r\n};\r\n"
+  },
+  {
+    "ID": 65,
+    "Content": "class Solution {\r\npublic:\r\n    vector\u003cint\u003e plusOne(vector\u003cint\u003e\u0026 digits) {\r\n       int n = digits.size();\r\n        for(int i = n - 1; i \u003e= 0; i--) {\r\n            if(digits[i] \u003c 9){\r\n                digits[i]++;\r\n                return digits;\r\n            }\r\n            \r\n            digits[i] = 0;\r\n        }\r\n        vector\u003cint\u003e nn(n + 1);\r\n        nn[0] = 1;\r\n        return nn;\r\n    }\r\n};\r\n​\r\n//1 2 3 9 9 9\r\n \r\n"
+  },
+  {
+    "ID": 66,
+    "Content": "class Solution:\r\n    def mySqrt(self, x: int) -\u003e int:\r\n        \r\n        left, right = 0,  x\r\n        while left \u003c= right:\r\n            mid = left + (right - left) // 2\r\n​\r\n            if mid * mid \u003e x:\r\n                right = mid - 1\r\n            elif mid * mid \u003c x:\r\n                left = mid + 1\r\n            else:\r\n                return mid\r\n​\r\n        # left \u003e right\r\n        return right\r\n"
+  },
+  {
+    "ID": 67,
+    "Content": "class Solution {\r\npublic:\r\n    int reverse(int x) {\r\n        int ret = 0;\r\n        int last_digit = 0;\r\n        while(true) {\r\n            last_digit = x % 10;\r\n            ret = ret + last_digit;\r\n            x = x/10;\r\n            if (x == 0) break;\r\n            else {\r\n                if (ret \u003e INT_MAX/10 || ret \u003c INT_MIN/10) return 0;\r\n                ret = ret * 10;\r\n            }\r\n        }\r\n        return ret;   \r\n    }\r\n};\r\n"
+  },
+  {
+    "ID": 68,
+    "Content": "class Solution {\r\n    private:\r\n    int memo[46] = {-1};\r\npublic:\r\n    Solution() { memo[0] = memo[1] = 1 ; }\r\n    int climbStairs(int n) {\r\n        if(n \u003c= 1){\r\n            return 1;\r\n        }\r\n        if(memo[n]){ return memo[n] ; }\r\n        return memo[n] = climbStairs(n - 1) + climbStairs(n - 2);\r\n    }\r\n};\r\n"
+  },
+  {
+    "ID": 69,
+    "Content": "class Solution {\r\npublic:\r\n    void dfs( vector\u003cvector\u003cint\u003e\u003e\u0026 subsets,\r\n    int index, int n, int k, vector\u003cint\u003e currrent) {\r\n        if((int) currrent.size() == k) {\r\n            subsets.push_back(currrent);\r\n            return;\r\n        }\r\n        for(int i = index; i \u003c n+1; i++) {\r\n            currrent.push_back(i);\r\n            dfs(subsets, i+1, n, k, currrent);\r\n            currrent.pop_back();\r\n        }\r\n    }\r\n    \r\n    vector\u003cvector\u003cint\u003e\u003e combine(int n, int k) {\r\n      vector\u003cvector\u003cint\u003e\u003e subsets;\r\n      dfs(subsets, 1, n, k, vector\u003cint\u003e());\r\n      return subsets;\r\n    }\r\n};\r\n"
+  },
+  {
+    "ID": 70,
+    "Content": "class Solution {\r\npublic:\r\n    \r\n    void dfs(vector\u003cvector\u003cint\u003e\u003e \u0026subsets, vector\u003cint\u003e \u0026nums, int index, vector\u003cint\u003e current){\r\n​\r\n        subsets.push_back(current);\r\n        for(int i = index; i \u003c nums.size(); i++){\r\n            current.push_back(nums[i]);\r\n            dfs(subsets, nums, i+1, current);\r\n            current.pop_back();\r\n        }\r\n    }\r\n    \r\n    vector\u003cvector\u003cint\u003e\u003e subsets(vector\u003cint\u003e\u0026 nums) {\r\n        vector\u003cvector\u003cint\u003e\u003e subsets;\r\n        dfs(subsets, nums, 0, vector\u003cint\u003e());\r\n        return subsets;\r\n    }\r\n};\r\n"
+  },
+  {
+    "ID": 71,
+    "Content": "class Solution {\r\npublic:\r\n    \r\nbool dfs(vector\u003cvector\u003cchar\u003e\u003e \u0026board, int row, int col, string \u0026word, int wc)\r\n{\r\n    if(wc == (int) word.length()){\r\n        return true;\r\n    }\r\n    if(row \u003c 0 or row \u003e= board.size() or col \u003c 0 or col \u003e= board[row].size() or board[row][col] != word[wc])\r\n    {\r\n        return false;\r\n    }\r\n    {\r\n        char temp = board[row][col];\r\n        board[row][col] = ' ';\r\n        bool found = (dfs(board, row+1, col, word, wc+1) || dfs(board, row-1, col, word, wc+1)\r\n                      || dfs(board, row, col+1, word, wc+1) || dfs(board, row, col-1, word, wc+1));\r\n        board[row][col] = temp;\r\n        return found;\r\n    }\r\n}\r\n​\r\n    \r\n    bool exist(vector\u003cvector\u003cchar\u003e\u003e\u0026 board, string word) {\r\n        \r\n        int M = board.size(), N = board[0].size();\r\n        if(board.empty()){\r\n            return false;\r\n        }\r\n        for(int row = 0; row \u003c M; row++){\r\n            for(int col = 0; col \u003c N; col++){\r\n                if(board[row][col] == word[0] \u0026\u0026 dfs(board, row, col, word, 0)){\r\n                    return true;\r\n"
+  },
+  {
+    "ID": 72,
+    "Content": "class Solution {\r\npublic:\r\nvoid merge(vector\u003cint\u003e\u0026 nums1, int m, vector\u003cint\u003e\u0026 nums2, int n) {\r\n    int i=0,j=0,k=0;\r\n    while (j\u003cn \u0026\u0026 i\u003c=(m+n) ){\r\n        if(i\u003e=(m+j)){ \r\n            nums1[i]=nums2[j];\r\n            j++;\r\n        } \r\n        else if(nums1[i]\u003e=nums2[j]) {\r\n            nums1.erase(nums1.begin()+m+k);\r\n            nums1.insert(nums1.begin()+i,nums2[j]);\r\n            j++;\r\n            k++;\r\n        }\r\n        i++;\r\n        }\r\n    }\r\n};\r\n"
+  },
+  {
+    "ID": 73,
+    "Content": "class Solution {\r\npublic:\r\n    vector\u003cvector\u003cint\u003e\u003e subsetsWithDup(vector\u003cint\u003e\u0026 nums) {\r\n        /*\r\n            * iterative approch exists, but need O(N) extra space\r\n            * n = size of vector\u003cint\u003enums.\r\n        */\r\n        sort(nums.begin(), nums.end());\r\n        vector\u003cvector\u003cint\u003e\u003e subsets;\r\n        dfs(nums, subsets, 0, vector\u003cint\u003e());\r\n        return subsets;\r\n    }\r\n    \r\n    void dfs(vector\u003cint\u003e \u0026nums, vector\u003cvector\u003cint\u003e\u003e \u0026subsets, int index, vector\u003cint\u003e current){\r\n        subsets.push_back(current);\r\n        for(int i = index; i \u003c (int) nums.size(); i++){\r\n            if(index \u003c i \u0026\u0026 nums[i-1] == nums[i]){\r\n                continue;\r\n            }\r\n            current.push_back(nums[i]);\r\n            dfs(nums, subsets, i+1, current);\r\n            current.pop_back();\r\n        }\r\n    }\r\n};\r\n"
+  }
+]
