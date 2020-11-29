@@ -13,7 +13,7 @@ class Solution {
             q.pop();
             
             // go start - nums[start]
-            {if(start - nums[start] >= 0 && !visited[start]) {
+            {if(start - nums[start] >= 0 && !visited[start]) {
                 if(start - nums[start] == 0 || nums[start] == 0) {
                     return true;
                 }else if(start - nums[start] > 0) {
