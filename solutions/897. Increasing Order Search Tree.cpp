@@ -20,11 +20,11 @@ public:
         inorder(root);
         
         for(int i = 0; i < (int) nodes.size()-1; i++ ) {
-            nodes[i]->right = nodes[i+1];
             nodes[i]->left = nullptr;
+            nodes[i]->right = nodes[i+1];
         }
-        nodes.back()->right = nullptr;
         nodes.back()->left = nullptr;
+        nodes.back()->right = nullptr;
         
         return nodes[0];
     }
