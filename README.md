@@ -77,6 +77,7 @@
 |412|[ Fizz Buzz](https://leetcode.com/problems/fizz-buzz/)|[C++](./solutions/412.%20Fizz%20Buzz.cpp)|4 ms|
 |416|[ Partition Equal Subset Sum](https://leetcode.com/problems/partition-equal-subset-sum/)|[C++](./solutions/416.%20Partition%20Equal%20Subset%20Sum.cpp)|780 ms|
 |419|[ Battleships in a Board](https://leetcode.com/problems/battleships-in-a-board/)|[C++](./solutions/419.%20Battleships%20in%20a%20Board.cpp)|12 ms|
+|605|[ Can Place Flowers](https://leetcode.com/problems/can-place-flowers/)|[C++](./solutions/605.%20Can%20Place%20Flowers.cpp)|48 ms|
 |897|[ Increasing Order Search Tree](https://leetcode.com/problems/increasing-order-search-tree/)|[C++](./solutions/897.%20Increasing%20Order%20Search%20Tree.cpp)|4 ms|
 |904|[ Fruit Into Baskets](https://leetcode.com/problems/fruit-into-baskets/)|[C++](./solutions/904.%20Fruit%20Into%20Baskets.cpp)|256 ms|
 |1015|[ Smallest Integer Divisible by K](https://leetcode.com/problems/smallest-integer-divisible-by-k/)|[C++](./solutions/1015.%20Smallest%20Integer%20Divisible%20by%20K.cpp)|0 ms|
