@@ -83,4 +83,5 @@
 |897|[ Increasing Order Search Tree](https://leetcode.com/problems/increasing-order-search-tree/)|[C++](./solutions/897.%20Increasing%20Order%20Search%20Tree.cpp)|4 ms|
 |904|[ Fruit Into Baskets](https://leetcode.com/problems/fruit-into-baskets/)|[C++](./solutions/904.%20Fruit%20Into%20Baskets.cpp)|256 ms|
 |1015|[ Smallest Integer Divisible by K](https://leetcode.com/problems/smallest-integer-divisible-by-k/)|[C++](./solutions/1015.%20Smallest%20Integer%20Divisible%20by%20K.cpp)|0 ms|
+|1123|[ Lowest Common Ancestor of Deepest Leaves](https://leetcode.com/problems/lowest-common-ancestor-of-deepest-leaves/)|[C++](./solutions/1123.%20Lowest%20Common%20Ancestor%20of%20Deepest%20Leaves.cpp)|24 ms|
 |1306|[ Jump Game III](https://leetcode.com/problems/jump-game-iii/)|[C++](./solutions/1306.%20Jump%20Game%20III.cpp)|76 ms|
