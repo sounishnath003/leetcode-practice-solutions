@@ -17,7 +17,7 @@ public:
         TreeNode *tmp = root ;
         dfs(tmp,0);
         return answer ;
-    }
+    }
     
     int dfs(TreeNode* root, int curDepth) {
         if(!root) {
