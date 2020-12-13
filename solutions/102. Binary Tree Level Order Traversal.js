@@ -13,21 +13,20 @@
 var levelOrder = function (root) {
   let result = [];
 ​
-  const dfs = (root, level) => {
-    if (!root) return;
+   function dfs (root, level) {
+        if (!root) return;
 ​
-    dfs(root.left, level + 1);
+        dfs(root.left, level + 1);
 ​
-    if (result[level]) {
-      result[level].push(root.val);
-    } else {
-      result[level] = [root.val];
-    }
+        if (result[level]) {
+          result[level].push(root.val);
+        } else {
+          result[level] = [root.val];
+        }
 ​
-    dfs(root.right, level + 1);
-  };
-​
-  dfs(root, 0);
-  return result;
+        dfs(root.right, level + 1);
+    };
+      dfs(root, 0);
+      return result;
 };
 ​
