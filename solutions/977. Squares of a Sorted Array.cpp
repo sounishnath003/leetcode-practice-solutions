@@ -8,7 +8,7 @@ public:
         return nums ;
         */
         
-        // MOst efficient - O(N) solution
+        // Quite efficient - O(N) solution
         int n = nums.size() ;
         vector<int> answer(n) ;
         for (int i = 0, j = n-1, k = j; i <= j; k-- ) {
