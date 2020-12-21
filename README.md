@@ -88,6 +88,7 @@
 |637|[ Average of Levels in Binary Tree](https://leetcode.com/problems/average-of-levels-in-binary-tree/)|[JavaScript](./solutions/637.%20Average%20of%20Levels%20in%20Binary%20Tree.js)|92 ms|
 |700|[ Search in a Binary Search Tree](https://leetcode.com/problems/search-in-a-binary-search-tree/)|[JavaScript](./solutions/700.%20Search%20in%20a%20Binary%20Search%20Tree.js)|100 ms|
 |865|[ Smallest Subtree with all the Deepest Nodes](https://leetcode.com/problems/smallest-subtree-with-all-the-deepest-nodes/)|[C++](./solutions/865.%20Smallest%20Subtree%20with%20all%20the%20Deepest%20Nodes.cpp)|8 ms|
+|880|[ Decoded String at Index](https://leetcode.com/problems/decoded-string-at-index/)|[Java](./solutions/880.%20Decoded%20String%20at%20Index.java)|7 ms|
 |897|[ Increasing Order Search Tree](https://leetcode.com/problems/increasing-order-search-tree/)|[C++](./solutions/897.%20Increasing%20Order%20Search%20Tree.cpp)|4 ms|
 |904|[ Fruit Into Baskets](https://leetcode.com/problems/fruit-into-baskets/)|[C++](./solutions/904.%20Fruit%20Into%20Baskets.cpp)|256 ms|
 |941|[ Valid Mountain Array](https://leetcode.com/problems/valid-mountain-array/)|[C++](./solutions/941.%20Valid%20Mountain%20Array.cpp)|104 ms|
