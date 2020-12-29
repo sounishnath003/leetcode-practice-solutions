@@ -39,3 +39,8 @@ public:
                 maxlen = len;
                 start = l+1;
             }
+        }
+​
+        return s.substr(start, maxlen);
+    }
+};
