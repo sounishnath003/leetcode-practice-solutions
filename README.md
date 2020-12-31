@@ -91,6 +91,7 @@
 |605|[ Can Place Flowers](https://leetcode.com/problems/can-place-flowers/)|[C++](./solutions/605.%20Can%20Place%20Flowers.cpp)|48 ms|
 |621|[ Task Scheduler](https://leetcode.com/problems/task-scheduler/)|[C++](./solutions/621.%20Task%20Scheduler.cpp)|344 ms|
 |637|[ Average of Levels in Binary Tree](https://leetcode.com/problems/average-of-levels-in-binary-tree/)|[JavaScript](./solutions/637.%20Average%20of%20Levels%20in%20Binary%20Tree.js)|92 ms|
+|695|[ Max Area of Island](https://leetcode.com/problems/max-area-of-island/)|[C++](./solutions/695.%20Max%20Area%20of%20Island.cpp)|28 ms|
 |700|[ Search in a Binary Search Tree](https://leetcode.com/problems/search-in-a-binary-search-tree/)|[JavaScript](./solutions/700.%20Search%20in%20a%20Binary%20Search%20Tree.js)|100 ms|
 |754|[ Reach a Number](https://leetcode.com/problems/reach-a-number/)|[C++](./solutions/754.%20Reach%20a%20Number.cpp)|0 ms|
 |841|[ Keys and Rooms](https://leetcode.com/problems/keys-and-rooms/)|[C++](./solutions/841.%20Keys%20and%20Rooms.cpp)|20 ms|
