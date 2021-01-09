@@ -7,6 +7,7 @@ import (
 // QuestionModel json file structer
 type QuestionModel struct {
 	ID      int
+	Name    string
 	Content string
 }
 

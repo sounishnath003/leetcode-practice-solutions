@@ -35,7 +35,7 @@ func processFileInfo(index int, f os.FileInfo) {
 	defer mu.Unlock()
 	defer wg.Done()
 
-	go func (index int)  {
+	go func(index int) {
 		fmt.Println("started parseing data to json encode : ", index)
 	}(index)
 
@@ -46,7 +46,7 @@ func processFileInfo(index int, f os.FileInfo) {
 	defer jsonFile.Close()
 	warn(err)
 
-	rawData := QuestionModel{ID: index + 1, Content: string(content)}
+	rawData := QuestionModel{ID: index + 1, Name: f.Name(), Content: string(content)}
 	jsonData, err := RecieveByteConvertJSON(rawData)
 	warn(err)
 	jsonFile.Write(jsonData)
