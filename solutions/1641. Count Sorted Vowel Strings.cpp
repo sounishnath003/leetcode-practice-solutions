@@ -18,5 +18,5 @@ public:
                 ans+=dfs(vowel, n-1);
         }
         return ans;
-    }
+    }
 };
