@@ -107,6 +107,7 @@
 |1123|[ Lowest Common Ancestor of Deepest Leaves](https://leetcode.com/problems/lowest-common-ancestor-of-deepest-leaves/)|[C++](./solutions/1123.%20Lowest%20Common%20Ancestor%20of%20Deepest%20Leaves.cpp)|24 ms|
 |1306|[ Jump Game III](https://leetcode.com/problems/jump-game-iii/)|[C++](./solutions/1306.%20Jump%20Game%20III.cpp)|76 ms|
 |1457|[ Pseudo-Palindromic Paths in a Binary Tree](https://leetcode.com/problems/pseudo-palindromic-paths-in-a-binary-tree/)|[C++](./solutions/1457.%20Pseudo-Palindromic%20Paths%20in%20a%20Binary%20Tree.cpp)|204 ms|
+|1641|[ Count Sorted Vowel Strings](https://leetcode.com/problems/count-sorted-vowel-strings/)|[C++](./solutions/1641.%20Count%20Sorted%20Vowel%20Strings.cpp)|720 ms|
 |1646|[ Get Maximum in Generated Array](https://leetcode.com/problems/get-maximum-in-generated-array/)|[C++](./solutions/1646.%20Get%20Maximum%20in%20Generated%20Array.cpp)|0 ms|
 |1658|[ Minimum Operations to Reduce X to Zero](https://leetcode.com/problems/minimum-operations-to-reduce-x-to-zero/)|[C++](./solutions/1658.%20Minimum%20Operations%20to%20Reduce%20X%20to%20Zero.cpp)|148 ms|
 |1662|[ Check If Two String Arrays are Equivalent](https://leetcode.com/problems/check-if-two-string-arrays-are-equivalent/)|[C++](./solutions/1662.%20Check%20If%20Two%20String%20Arrays%20are%20Equivalent.cpp)|4 ms|
