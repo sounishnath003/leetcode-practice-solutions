@@ -17,7 +17,7 @@ public:
                     ans += floor(cache[key]/2);
                     cache[key]=0;
                 }
-            }
+            }
         }   
         return ans;
     }
