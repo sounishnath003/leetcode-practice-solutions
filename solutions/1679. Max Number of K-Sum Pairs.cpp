@@ -4,6 +4,7 @@ public:
         unordered_map<int, int> cache;
         for (int x : nums)
            cache[x]++;
+        
         int ans=0;
         for(pair<int, int> const &pp : cache) {
             int key = pp.first;
@@ -18,7 +19,7 @@ public:
                     cache[key]=0;
                 }
             }
-        }   
+        }
         return ans;
     }
 };
