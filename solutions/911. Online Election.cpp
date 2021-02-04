@@ -1,33 +1,25 @@
 class TopVotedCandidate {
-    map<int, int> voteCount, winnerCount;
+    map<int, int> vote_count, most_prefered_by_time;
 public:
     TopVotedCandidate(vector<int>& persons, vector<int>& times) {
-        int mv=-1,lc=-1;
-        for(int i = 0; i < persons.size(); i++) {
+        int max_voted_person = -1;
+        for (int i = 0; i < persons.size(); i++) {
             int person = persons[i];
-            voteCount[person]++;
-            if(mv <= voteCount[person]) { mv = voteCount[person]; lc=person; }
-            winnerCount[times[i]] = lc;
-        }
-     
-     /*
-      // if we dont want hashmap - we can simple binarySearch over it!!
-      int mostvotedPerson=-1;
-       vector<int> voteCount((int) persons.size(), -1);
-       for(int i = 0; i < (int) persons.size(); i++) {
-           int person = persons[i];
-           voteCount[person]++;
-           mostvotedPerson = max(mostvotedPerson, voteCount[person]);
-           leaderBoard.push_back(mostvotedPerson);
-           timeTable.push_back(times[i]);
-       }
-     */
+            vote_count[person]++; 
+            if(max_voted_person <= vote_count[person]) {
+                max_voted_person = vote_count[person];
+                most_prefered_by_time[times[i]] = person;    
+            }
+            
+        }
     }
     
     int q(int t) {
-        auto itr = winnerCount.lower_bound(t);
-        if(itr->first != t) {itr-- ;}
-        return itr->second;
+     auto itr = most_prefered_by_time.lower_bound(t);
+       if(itr->first != t) {
+           itr--;
+       }
+       return itr->second;
     }
 };
 ​
