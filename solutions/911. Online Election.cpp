@@ -9,7 +9,19 @@ public:
             if(mv <= voteCount[person]) { mv = voteCount[person]; lc=person; }
             winnerCount[times[i]] = lc;
         }
-​
+     
+     /*
+      // if we dont want hashmap - we can simple binarySearch over it!!
+      int mostvotedPerson=-1;
+       vector<int> voteCount((int) persons.size(), -1);
+       for(int i = 0; i < (int) persons.size(); i++) {
+           int person = persons[i];
+           voteCount[person]++;
+           mostvotedPerson = max(mostvotedPerson, voteCount[person]);
+           leaderBoard.push_back(mostvotedPerson);
+           timeTable.push_back(times[i]);
+       }
+     */
     }
     
     int q(int t) {
