@@ -43,3 +43,9 @@ class Solution {
             i=0;
         }
         int mx = -1;
+        for (int a : lis)
+            mx = Math.max(mx, a);
+        
+        return mx;
+    }
+}
