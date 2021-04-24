@@ -85,6 +85,7 @@
 |328|[ Odd Even Linked List](https://leetcode.com/problems/odd-even-linked-list/)|[C++](./solutions/328.%20Odd%20Even%20Linked%20List.cpp)|12 ms|
 |344|[ Reverse String](https://leetcode.com/problems/reverse-string/)|[C++](./solutions/344.%20Reverse%20String.cpp)|32 ms|
 |350|[ Intersection of Two Arrays II](https://leetcode.com/problems/intersection-of-two-arrays-ii/)|[C++](./solutions/350.%20Intersection%20of%20Two%20Arrays%20II.cpp)|8 ms|
+|354|[ Russian Doll Envelopes](https://leetcode.com/problems/russian-doll-envelopes/)|[Java](./solutions/354.%20Russian%20Doll%20Envelopes.java)|203 ms|
 |382|[ Linked List Random Node](https://leetcode.com/problems/linked-list-random-node/)|[Java](./solutions/382.%20Linked%20List%20Random%20Node.java)|18 ms|
 |384|[ Shuffle an Array](https://leetcode.com/problems/shuffle-an-array/)|[C++](./solutions/384.%20Shuffle%20an%20Array.cpp)|320 ms|
 |387|[ First Unique Character in a String](https://leetcode.com/problems/first-unique-character-in-a-string/)|[C++](./solutions/387.%20First%20Unique%20Character%20in%20a%20String.cpp)|148 ms|
