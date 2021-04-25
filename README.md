@@ -56,7 +56,7 @@
 |138|[ Copy List with Random Pointer](https://leetcode.com/problems/copy-list-with-random-pointer/)|[C++](./solutions/138.%20Copy%20List%20with%20Random%20Pointer.cpp)|8 ms|
 |141|[ Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/)|[C++](./solutions/141.%20Linked%20List%20Cycle.cpp)|32 ms|
 |150|[ Evaluate Reverse Polish Notation](https://leetcode.com/problems/evaluate-reverse-polish-notation/)|[Java](./solutions/150.%20Evaluate%20Reverse%20Polish%20Notation.java)|4 ms|
-|152|[ Maximum Product Subarray](https://leetcode.com/problems/maximum-product-subarray/)|[C++](./solutions/152.%20Maximum%20Product%20Subarray.cpp)|8 ms|
+|152|[ Maximum Product Subarray](https://leetcode.com/problems/maximum-product-subarray/)|[Java](./solutions/152.%20Maximum%20Product%20Subarray.java)|1 ms|
 |155|[ Min Stack](https://leetcode.com/problems/min-stack/)|[C++](./solutions/155.%20Min%20Stack.cpp)|36 ms|
 |160|[ Intersection of Two Linked Lists](https://leetcode.com/problems/intersection-of-two-linked-lists/)|[C++](./solutions/160.%20Intersection%20of%20Two%20Linked%20Lists.cpp)|28 ms|
 |162|[ Find Peak Element](https://leetcode.com/problems/find-peak-element/)|[C++](./solutions/162.%20Find%20Peak%20Element.cpp)|8 ms|
