@@ -16,4 +16,5 @@ class Solution:
             rows[i] = ''.join(rows[i])
             
         return ''.join(rows)
+    
         
