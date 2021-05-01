@@ -105,6 +105,7 @@
 |669|[ Trim a Binary Search Tree](https://leetcode.com/problems/trim-a-binary-search-tree/)|[C++](./solutions/669.%20Trim%20a%20Binary%20Search%20Tree.cpp)|12 ms|
 |695|[ Max Area of Island](https://leetcode.com/problems/max-area-of-island/)|[C++](./solutions/695.%20Max%20Area%20of%20Island.cpp)|28 ms|
 |700|[ Search in a Binary Search Tree](https://leetcode.com/problems/search-in-a-binary-search-tree/)|[JavaScript](./solutions/700.%20Search%20in%20a%20Binary%20Search%20Tree.js)|100 ms|
+|745|[ Prefix and Suffix Search](https://leetcode.com/problems/prefix-and-suffix-search/)|[Java](./solutions/745.%20Prefix%20and%20Suffix%20Search.java)|188 ms|
 |754|[ Reach a Number](https://leetcode.com/problems/reach-a-number/)|[C++](./solutions/754.%20Reach%20a%20Number.cpp)|0 ms|
 |841|[ Keys and Rooms](https://leetcode.com/problems/keys-and-rooms/)|[C++](./solutions/841.%20Keys%20and%20Rooms.cpp)|20 ms|
 |865|[ Smallest Subtree with all the Deepest Nodes](https://leetcode.com/problems/smallest-subtree-with-all-the-deepest-nodes/)|[C++](./solutions/865.%20Smallest%20Subtree%20with%20all%20the%20Deepest%20Nodes.cpp)|8 ms|
