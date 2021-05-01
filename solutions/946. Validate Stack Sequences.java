@@ -1,5 +1,11 @@
 class Solution {
     public boolean validateStackSequences(int[] pushed, int[] popped) {
+        /*
+        * there is no spcl. algo for that, just traverse and use 2-pointer approch
+        * and carefully remove the stack.peek() == popped[j] ? stack.pop() : break ;
+        * after pushing all elems into stack, now traverse from jth to popped.length
+        * similar check for that also!
+        */
         int n = pushed.length, j = 0;
         Stack<Integer> stack = new Stack<>();
         for (int i = 0; i < n; i++) {
