@@ -3,10 +3,16 @@ import { SolutionInterface, solutions } from "../data";
 
 interface SideNavbarProps {
   setContent: React.Dispatch<React.SetStateAction<string>>;
+  setFileName: React.Dispatch<React.SetStateAction<string>>;
 }
 
-export const SideNavbar = ({ setContent }: SideNavbarProps) => {
+export const SideNavbar = ({ setContent, setFileName }: SideNavbarProps) => {
   const [searchTxt, setSearch] = React.useState("");
+
+  function onHandleChange(solution: SolutionInterface) {
+    setContent(solution.Content);
+    setFileName(solution.Name);
+  }
   return (
     <div>
       <aside
@@ -58,9 +64,7 @@ export const SideNavbar = ({ setContent }: SideNavbarProps) => {
               .map((solution: SolutionInterface) => (
                 <div style={{ marginTop: "2px", cursor: "pointer" }}>
                   <tr
-                    onClick={() =>
-                      setContent((data: string) => (data = solution.Content))
-                    }
+                    onClick={() => onHandleChange(solution)}
                     key={solution.ID}
                   >
                     <td> {solution.Name} </td>
