@@ -35,19 +35,31 @@ export const ContentViewArea = ({
           defaultLanguage={extractExtentioFromFileName()}
           defaultValue=""
           value={content}
-          options={{ readOnly: true }}
+          options={{ readOnly: false }}
         />
       ) : (
         <div
           style={{
             display: "flex",
+            flexDirection: "column",
             alignItems: "center",
             justifyContent: "center",
             justifyItems: "center",
             marginTop: "15em",
           }}
         >
-          <div>Select any question</div>
+          <div style={{ margin: "10px" }}>Select any question</div>
+          <div style={{ justifyItems: "center", justifySelf: "center" }}>
+            <span
+              style={{ fontSize: "13px", color: "blue", fontWeight: "bolder" }}
+            >
+              Note: You can practice the question! however working code will not
+              be changed! 😎
+              <br />
+              Do not fear any way!🔥🙅‍♂️ This is a Interview Re-practice
+              savior!🐱‍🏍🙌. Anytime Anywhere.
+            </span>
+          </div>
         </div>
       )}
     </div>

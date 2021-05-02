@@ -37,7 +37,7 @@ export const SideNavbar = ({ setContent, setFileName }: SideNavbarProps) => {
               }}
             >
               <div>
-                <th style={{ paddingTop: "10px" }}>Problem Name</th>
+                <th style={{ paddingTop: "10px" }}>Leetcode Practice Solutions | sounishnath003</th>
               </div>
               <div style={{ width: "70%" }}>
                 {" "}
@@ -49,7 +49,7 @@ export const SideNavbar = ({ setContent, setFileName }: SideNavbarProps) => {
                     padding: "6px",
                     outline: "none",
                   }}
-                  placeholder="search question..."
+                  placeholder="Search for questions..."
                   type="text"
                   value={searchTxt}
                   onChange={(e) => setSearch(e.target.value.toLowerCase())}
