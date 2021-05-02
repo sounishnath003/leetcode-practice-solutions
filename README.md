@@ -104,7 +104,7 @@
 |518|[ Coin Change 2](https://leetcode.com/problems/coin-change-2/)|[Java](./solutions/518.%20Coin%20Change%202.java)|3 ms|
 |605|[ Can Place Flowers](https://leetcode.com/problems/can-place-flowers/)|[C++](./solutions/605.%20Can%20Place%20Flowers.cpp)|48 ms|
 |621|[ Task Scheduler](https://leetcode.com/problems/task-scheduler/)|[C++](./solutions/621.%20Task%20Scheduler.cpp)|344 ms|
-|630|[ Course Schedule III](https://leetcode.com/problems/course-schedule-iii/)|[Java](./solutions/630.%20Course%20Schedule%20III.java)|28 ms|
+|630|[ Course Schedule III](https://leetcode.com/problems/course-schedule-iii/)|[Java](./solutions/630.%20Course%20Schedule%20III.java)|N/A|
 |637|[ Average of Levels in Binary Tree](https://leetcode.com/problems/average-of-levels-in-binary-tree/)|[JavaScript](./solutions/637.%20Average%20of%20Levels%20in%20Binary%20Tree.js)|92 ms|
 |669|[ Trim a Binary Search Tree](https://leetcode.com/problems/trim-a-binary-search-tree/)|[C++](./solutions/669.%20Trim%20a%20Binary%20Search%20Tree.cpp)|12 ms|
 |695|[ Max Area of Island](https://leetcode.com/problems/max-area-of-island/)|[C++](./solutions/695.%20Max%20Area%20of%20Island.cpp)|28 ms|
