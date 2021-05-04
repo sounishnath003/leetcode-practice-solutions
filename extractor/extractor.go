@@ -2,6 +2,7 @@ package extractor
 
 import (
 	"fmt"
+	"io/fs"
 	"io/ioutil"
 	"log"
 	"os"
@@ -22,16 +23,32 @@ func ExtractDirectoryContent() {
 	files, err := ioutil.ReadDir("./solutions")
 	warn(err)
 
+	// delete previous database contents
+	// wg.Add(1)
+	// go func() {
+	// 	defer wg.Done()
+	// 	err = os.Remove("data.json")
+	// 	warn(err)
+	// 	fmt.Println("### Old Data.json file has been formated")
+	// }()
+
+	// start writing in new file
+	jsonFile, err := os.OpenFile("data.json", os.O_APPEND|os.O_WRONLY, 0644)
+	warn(err)
+	defer jsonFile.Close()
+	jsonFile.Write([]byte{'['})
+
 	for index, f := range files {
 		wg.Add(1)
 		mu.Lock()
-		go processFileInfo(index, f)
+		go processFileInfo(index, f, files)
 	}
 	wg.Wait()
 
+	jsonFile.Write([]byte{']'})
 }
 
-func processFileInfo(index int, f os.FileInfo) {
+func processFileInfo(index int, f os.FileInfo, files []fs.FileInfo) {
 	defer mu.Unlock()
 	defer wg.Done()
 
@@ -50,7 +67,9 @@ func processFileInfo(index int, f os.FileInfo) {
 	jsonData, err := RecieveByteConvertJSON(rawData)
 	warn(err)
 	jsonFile.Write(jsonData)
-	jsonFile.Write([]byte(","))
+	if index <= len(files)-2 {
+		jsonFile.Write([]byte(","))
+	}
 }
 
 func warn(err error) {
