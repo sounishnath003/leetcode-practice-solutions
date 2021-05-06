@@ -31,11 +31,11 @@ class Solution {
     }
 ​
     private TreeNode _sortedListToBST(ListNode head, ListNode tailNode) {
+        if (head == tailNode) return null;
         // find middle of the linekdList
         // 2 pointer approch
         ListNode fast = head;
-        ListNode slow = head;
-        if (fast == slow) return null;
+        ListNode slow = head;        
         while (fast != tailNode && fast.next != tailNode){
             fast = fast.next.next;
             slow = slow.next;
