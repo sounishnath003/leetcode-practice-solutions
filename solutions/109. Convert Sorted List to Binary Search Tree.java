@@ -25,32 +25,24 @@
  */
 class Solution {
     
-    public TreeNode sortedListToBST(ListNode head) {
-    if(head==null) return null;
-    return toBST(head,null);
-}
-public TreeNode toBST(ListNode head, ListNode tail){
-    ListNode slow = head;
-    ListNode fast = head;
-    if(head==tail) return null;
-    
-    while(fast!=tail&&fast.next!=tail){
-        fast = fast.next.next;
-        slow = slow.next;
+     public TreeNode sortedListToBST(ListNode head) {
+         if(head == null) return null;
+         return _sortedListToBST(head, null);
     }
-    TreeNode thead = new TreeNode(slow.val);
-    thead.left = toBST(head,slow);
-    thead.right = toBST(slow.next,tail);
-    return thead;
-}
 ​
-    private int countTotalNodesPresent(ListNode head) {
-        ListNode temp = head;
-        int nodes = 0;
-        while(temp != null) {
-            nodes++;
-            temp = temp.next;
+    private TreeNode _sortedListToBST(ListNode head, ListNode tailNode) {
+        // find middle of the linekdList
+        // 2 pointer approch
+        ListNode fast = head;
+        ListNode slow = head;
+        if (fast == slow) return null;
+        while (fast != tailNode && fast.next != tailNode){
+            fast = fast.next.next;
+            slow = slow.next;
         }
-        return nodes;
+        TreeNode root = new TreeNode(slow.val);
+        root.left = _sortedListToBST(head, slow);
+        root.right = _sortedListToBST(slow.next, tailNode);
+        return root;
     }
 }
