@@ -125,6 +125,7 @@
 |880|[ Decoded String at Index](https://leetcode.com/problems/decoded-string-at-index/)|[Java](./solutions/880.%20Decoded%20String%20at%20Index.java)|7 ms|
 |897|[ Increasing Order Search Tree](https://leetcode.com/problems/increasing-order-search-tree/)|[C++](./solutions/897.%20Increasing%20Order%20Search%20Tree.cpp)|4 ms|
 |904|[ Fruit Into Baskets](https://leetcode.com/problems/fruit-into-baskets/)|[C++](./solutions/904.%20Fruit%20Into%20Baskets.cpp)|256 ms|
+|906|[ Super Palindromes](https://leetcode.com/problems/super-palindromes/)|[Java](./solutions/906.%20Super%20Palindromes.java)|809 ms|
 |911|[ Online Election](https://leetcode.com/problems/online-election/)|[C++](./solutions/911.%20Online%20Election.cpp)|344 ms|
 |941|[ Valid Mountain Array](https://leetcode.com/problems/valid-mountain-array/)|[C++](./solutions/941.%20Valid%20Mountain%20Array.cpp)|104 ms|
 |946|[ Validate Stack Sequences](https://leetcode.com/problems/validate-stack-sequences/)|[Java](./solutions/946.%20Validate%20Stack%20Sequences.java)|1 ms|
