@@ -1,43 +1,45 @@
 class Solution {
-    public int superpalindromesInRange(String l, String r) {
-        int superPalindrome = 0;
-        Long left = (long) Math.sqrt(Long.parseLong(l));
-        Long right = (Long.parseLong(r) / 2) * 1L;
-        HashMap<Long, Boolean> cache = new HashMap<>();
-        for (Long i = (long) 1; i < 10; i++) {
-            if (i == 1 || i == 2 || i == 3) {
-                cache.put(i * i, true);
-            }
-            cache.put(i, true);
-        }
-        for (Long i = left; i < right + 1; i++) { // 4 - 1000
-            if (i < 10 && cache.containsKey(i*i) == true)
-                superPalindrome++;
-            else {
-                if (cache.containsKey(i) == false) {
-                    Long palindromeSquare = (long) Math.pow(i, 2); // 11 - 121
-                    if (palindromeSquare <= right) {
-                        if (isPalindromeSlow(i) && isPalindromeSlow(palindromeSquare)) {
-                            superPalindrome++;
-                            cache.put(i, true);
-                            cache.put(palindromeSquare, true);
-                        }
-                    } else
-                        break;
-                }
-            }
-        }
+    // Hopefully Working!! Phewwwww!
+    public int superpalindromesInRange(String left, String right) {
+        List<Long> palindromicNo = new ArrayList<>();
+        Long leftNo = Long.parseLong(left);
+        Long rightNo = Long.parseLong(right);
+        int count = 0;
+        for(long i= 1;i<10;i++){
+            palindromicNo.add(i);
+        }
+        for(long i=1;i<10000;i++){
+            String leftPart = Long.toString(i);
+            String rightPart = new StringBuilder(leftPart).reverse().toString();
 ​
-        return superPalindrome;
+            palindromicNo.add(Long.parseLong(leftPart+rightPart));
+​
+            for(int digit=0;digit<10;digit++){
+                palindromicNo.add(Long.parseLong(leftPart + digit + rightPart));
+            }
+        }
+        for(long no : palindromicNo){
+            long squareNo = no * no; // 10^18
+            if(leftNo <= squareNo && rightNo >=squareNo &&  isPalindromic(Long.toString(squareNo))){
+​
+                count++;
+            }
+        }
+        return count;
     }
-    private boolean isPalindromeSlow(Long num) {
-        // TODO Auto-generated method stub
-        String s = "" + num;
-        StringBuilder sb = new StringBuilder();
-        for (int i = s.length() - 1; i >= 0; i--) {
-            sb.append(s.charAt(i));
-        }
-        String t = sb.toString();
-        return s.equals(t);
-    }
+​
+     private boolean isPalindromic(String str){
+        int start = 0;
+        int end = str.length()-1;
+        while(start< end){
+            if(str.charAt(start)!= str.charAt(end)){
+                return false;
+            } else{
+                start++;
+                end--;
+            }
+        }
+​
+        return true;
+    }
 }
