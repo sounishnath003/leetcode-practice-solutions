@@ -57,6 +57,7 @@
 |121|[ Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)|[C++](./solutions/121.%20Best%20Time%20to%20Buy%20and%20Sell%20Stock.cpp)|12 ms|
 |122|[ Best Time to Buy and Sell Stock II](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/)|[C++](./solutions/122.%20Best%20Time%20to%20Buy%20and%20Sell%20Stock%20II.cpp)|12 ms|
 |125|[ Valid Palindrome](https://leetcode.com/problems/valid-palindrome/)|[Python3](./solutions/125.%20Valid%20Palindrome.py)|1228 ms|
+|131|[ Palindrome Partitioning](https://leetcode.com/problems/palindrome-partitioning/)|[Java](./solutions/131.%20Palindrome%20Partitioning.java)|16 ms|
 |136|[ Single Number](https://leetcode.com/problems/single-number/)|[C++](./solutions/136.%20Single%20Number.cpp)|32 ms|
 |137|[ Single Number II](https://leetcode.com/problems/single-number-ii/)|[C++](./solutions/137.%20Single%20Number%20II.cpp)|16 ms|
 |138|[ Copy List with Random Pointer](https://leetcode.com/problems/copy-list-with-random-pointer/)|[C++](./solutions/138.%20Copy%20List%20with%20Random%20Pointer.cpp)|8 ms|
