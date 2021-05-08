@@ -1,5 +1,4 @@
 class Solution {
-    
     public int superpalindromesInRange(String l, String r) {
         int superPalindrome = 0;
         Long left = (long) Math.sqrt(Long.parseLong(l));
