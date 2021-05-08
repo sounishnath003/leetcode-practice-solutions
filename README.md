@@ -34,6 +34,7 @@
 |66|[ Plus One](https://leetcode.com/problems/plus-one/)|[C++](./solutions/66.%20Plus%20One.cpp)|0 ms|
 |69|[ Sqrt(x)](https://leetcode.com/problems/sqrtx/)|[Python3](./solutions/69.%20Sqrt(x).py)|48 ms|
 |70|[ Climbing Stairs](https://leetcode.com/problems/climbing-stairs/)|[C++](./solutions/70.%20Climbing%20Stairs.cpp)|0 ms|
+|72|[ Edit Distance](https://leetcode.com/problems/edit-distance/)|[Java](./solutions/72.%20Edit%20Distance.java)|5 ms|
 |74|[ Search a 2D Matrix](https://leetcode.com/problems/search-a-2d-matrix/)|[Java](./solutions/74.%20Search%20a%202D%20Matrix.java)|0 ms|
 |75|[ Sort Colors](https://leetcode.com/problems/sort-colors/)|[Java](./solutions/75.%20Sort%20Colors.java)|0 ms|
 |77|[ Combinations](https://leetcode.com/problems/combinations/)|[C++](./solutions/77.%20Combinations.cpp)|1376 ms|
