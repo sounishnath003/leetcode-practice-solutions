@@ -136,6 +136,7 @@
 |1123|[ Lowest Common Ancestor of Deepest Leaves](https://leetcode.com/problems/lowest-common-ancestor-of-deepest-leaves/)|[C++](./solutions/1123.%20Lowest%20Common%20Ancestor%20of%20Deepest%20Leaves.cpp)|24 ms|
 |1306|[ Jump Game III](https://leetcode.com/problems/jump-game-iii/)|[C++](./solutions/1306.%20Jump%20Game%20III.cpp)|76 ms|
 |1329|[ Sort the Matrix Diagonally](https://leetcode.com/problems/sort-the-matrix-diagonally/)|[C++](./solutions/1329.%20Sort%20the%20Matrix%20Diagonally.cpp)|8 ms|
+|1354|[ Construct Target Array With Multiple Sums](https://leetcode.com/problems/construct-target-array-with-multiple-sums/)|[Java](./solutions/1354.%20Construct%20Target%20Array%20With%20Multiple%20Sums.java)|N/A|
 |1457|[ Pseudo-Palindromic Paths in a Binary Tree](https://leetcode.com/problems/pseudo-palindromic-paths-in-a-binary-tree/)|[C++](./solutions/1457.%20Pseudo-Palindromic%20Paths%20in%20a%20Binary%20Tree.cpp)|204 ms|
 |1480|[ Running Sum of 1d Array](https://leetcode.com/problems/running-sum-of-1d-array/)|[Java](./solutions/1480.%20Running%20Sum%20of%201d%20Array.java)|0 ms|
 |1641|[ Count Sorted Vowel Strings](https://leetcode.com/problems/count-sorted-vowel-strings/)|[C++](./solutions/1641.%20Count%20Sorted%20Vowel%20Strings.cpp)|720 ms|
