@@ -124,6 +124,7 @@
 |724|[ Find Pivot Index](https://leetcode.com/problems/find-pivot-index/)|[Java](./solutions/724.%20Find%20Pivot%20Index.java)|1 ms|
 |745|[ Prefix and Suffix Search](https://leetcode.com/problems/prefix-and-suffix-search/)|[Java](./solutions/745.%20Prefix%20and%20Suffix%20Search.java)|188 ms|
 |754|[ Reach a Number](https://leetcode.com/problems/reach-a-number/)|[C++](./solutions/754.%20Reach%20a%20Number.cpp)|0 ms|
+|816|[ Ambiguous Coordinates](https://leetcode.com/problems/ambiguous-coordinates/)|[Java](./solutions/816.%20Ambiguous%20Coordinates.java)|11 ms|
 |841|[ Keys and Rooms](https://leetcode.com/problems/keys-and-rooms/)|[C++](./solutions/841.%20Keys%20and%20Rooms.cpp)|20 ms|
 |865|[ Smallest Subtree with all the Deepest Nodes](https://leetcode.com/problems/smallest-subtree-with-all-the-deepest-nodes/)|[C++](./solutions/865.%20Smallest%20Subtree%20with%20all%20the%20Deepest%20Nodes.cpp)|8 ms|
 |880|[ Decoded String at Index](https://leetcode.com/problems/decoded-string-at-index/)|[Java](./solutions/880.%20Decoded%20String%20at%20Index.java)|7 ms|
