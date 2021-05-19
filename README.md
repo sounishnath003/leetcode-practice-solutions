@@ -42,6 +42,7 @@
 |78|[ Subsets](https://leetcode.com/problems/subsets/)|[C++](./solutions/78.%20Subsets.cpp)|4 ms|
 |79|[ Word Search](https://leetcode.com/problems/word-search/)|[C++](./solutions/79.%20Word%20Search.cpp)|40 ms|
 |80|[ Remove Duplicates from Sorted Array II](https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/)|[C++](./solutions/80.%20Remove%20Duplicates%20from%20Sorted%20Array%20II.cpp)|8 ms|
+|82|[ Remove Duplicates from Sorted List II](https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii/)|[Java](./solutions/82.%20Remove%20Duplicates%20from%20Sorted%20List%20II.java)|0 ms|
 |83|[ Remove Duplicates from Sorted List](https://leetcode.com/problems/remove-duplicates-from-sorted-list/)|[Java](./solutions/83.%20Remove%20Duplicates%20from%20Sorted%20List.java)|0 ms|
 |88|[ Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/)|[C++](./solutions/88.%20Merge%20Sorted%20Array.cpp)|4 ms|
 |90|[ Subsets II](https://leetcode.com/problems/subsets-ii/)|[C++](./solutions/90.%20Subsets%20II.cpp)|8 ms|
