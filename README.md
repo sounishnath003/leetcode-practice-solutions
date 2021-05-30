@@ -117,6 +117,7 @@
 |451|[ Sort Characters By Frequency](https://leetcode.com/problems/sort-characters-by-frequency/)|[Java](./solutions/451.%20Sort%20Characters%20By%20Frequency.java)|10 ms|
 |496|[ Next Greater Element I](https://leetcode.com/problems/next-greater-element-i/)|[Java](./solutions/496.%20Next%20Greater%20Element%20I.java)|3 ms|
 |518|[ Coin Change 2](https://leetcode.com/problems/coin-change-2/)|[Java](./solutions/518.%20Coin%20Change%202.java)|3 ms|
+|542|[ 01 Matrix](https://leetcode.com/problems/01-matrix/)|[Java](./solutions/542.%2001%20Matrix.java)|13 ms|
 |583|[ Delete Operation for Two Strings](https://leetcode.com/problems/delete-operation-for-two-strings/)|[Java](./solutions/583.%20Delete%20Operation%20for%20Two%20Strings.java)|320 ms|
 |605|[ Can Place Flowers](https://leetcode.com/problems/can-place-flowers/)|[C++](./solutions/605.%20Can%20Place%20Flowers.cpp)|48 ms|
 |609|[ Find Duplicate File in System](https://leetcode.com/problems/find-duplicate-file-in-system/)|[Java](./solutions/609.%20Find%20Duplicate%20File%20in%20System.java)|13 ms|
