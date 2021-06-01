@@ -127,7 +127,7 @@
 |637|[ Average of Levels in Binary Tree](https://leetcode.com/problems/average-of-levels-in-binary-tree/)|[JavaScript](./solutions/637.%20Average%20of%20Levels%20in%20Binary%20Tree.js)|92 ms|
 |665|[ Non-decreasing Array](https://leetcode.com/problems/non-decreasing-array/)|[Java](./solutions/665.%20Non-decreasing%20Array.java)|0 ms|
 |669|[ Trim a Binary Search Tree](https://leetcode.com/problems/trim-a-binary-search-tree/)|[C++](./solutions/669.%20Trim%20a%20Binary%20Search%20Tree.cpp)|12 ms|
-|695|[ Max Area of Island](https://leetcode.com/problems/max-area-of-island/)|[C++](./solutions/695.%20Max%20Area%20of%20Island.cpp)|28 ms|
+|695|[ Max Area of Island](https://leetcode.com/problems/max-area-of-island/)|[Java](./solutions/695.%20Max%20Area%20of%20Island.java)|10 ms|
 |700|[ Search in a Binary Search Tree](https://leetcode.com/problems/search-in-a-binary-search-tree/)|[JavaScript](./solutions/700.%20Search%20in%20a%20Binary%20Search%20Tree.js)|100 ms|
 |709|[ To Lower Case](https://leetcode.com/problems/to-lower-case/)|[Java](./solutions/709.%20To%20Lower%20Case.java)|0 ms|
 |724|[ Find Pivot Index](https://leetcode.com/problems/find-pivot-index/)|[Java](./solutions/724.%20Find%20Pivot%20Index.java)|1 ms|
