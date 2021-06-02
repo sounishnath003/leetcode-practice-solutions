@@ -1,3 +1,29 @@
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ */
+​
+class Solution {
+​
+    private List<Integer> nodesAtKDistance;
+​
+    public List<Integer> distanceK(TreeNode root, TreeNode target, int k) {
+        this.nodesAtKDistance = new ArrayList<>();
+​
+        ArrayList<TreeNode> rootpath = this.getTheNodeRootPath(root, target);
+​
+        for (int i = 0; i < rootpath.size(); i++) {
+            TreeNode node = rootpath.get(i);
+            if (i == 0) {
+                this.printNodesWhichAreKLevelsDown(node, k-i, null);
+            } else {
+                this.printNodesWhichAreKLevelsDown(node, k-i, rootpath.get(i-1));
+            }
         }
 ​
         return this.nodesAtKDistance;
@@ -36,10 +62,10 @@
         ArrayList<TreeNode> mypath = new ArrayList<>();
 ​
         if (path1.size() > 0) {
-            mypath = path1;
+            mypath = (ArrayList) path1.clone();
             mypath.add(root);
-        } else {
-            mypath = path2;
+        } else if (path2.size() > 0) {
+            mypath = (ArrayList) path2.clone();
             mypath.add(root);
         }
 ​
