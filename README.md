@@ -151,6 +151,7 @@
 |906|[ Super Palindromes](https://leetcode.com/problems/super-palindromes/)|[Java](./solutions/906.%20Super%20Palindromes.java)|809 ms|
 |911|[ Online Election](https://leetcode.com/problems/online-election/)|[C++](./solutions/911.%20Online%20Election.cpp)|344 ms|
 |929|[ Unique Email Addresses](https://leetcode.com/problems/unique-email-addresses/)|[Java](./solutions/929.%20Unique%20Email%20Addresses.java)|13 ms|
+|938|[ Range Sum of BST](https://leetcode.com/problems/range-sum-of-bst/)|[Java](./solutions/938.%20Range%20Sum%20of%20BST.java)|0 ms|
 |941|[ Valid Mountain Array](https://leetcode.com/problems/valid-mountain-array/)|[C++](./solutions/941.%20Valid%20Mountain%20Array.cpp)|104 ms|
 |943|[ Find the Shortest Superstring](https://leetcode.com/problems/find-the-shortest-superstring/)|[Java](./solutions/943.%20Find%20the%20Shortest%20Superstring.java)|26 ms|
 |946|[ Validate Stack Sequences](https://leetcode.com/problems/validate-stack-sequences/)|[Java](./solutions/946.%20Validate%20Stack%20Sequences.java)|1 ms|
