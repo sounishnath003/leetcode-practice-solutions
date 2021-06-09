@@ -175,3 +175,4 @@
 |1679|[ Max Number of K-Sum Pairs](https://leetcode.com/problems/max-number-of-k-sum-pairs/)|[C++](./solutions/1679.%20Max%20Number%20of%20K-Sum%20Pairs.cpp)|156 ms|
 |1689|[ Partitioning Into Minimum Number Of Deci-Binary Numbers](https://leetcode.com/problems/partitioning-into-minimum-number-of-deci-binary-numbers/)|[Java](./solutions/1689.%20Partitioning%20Into%20Minimum%20Number%20Of%20Deci-Binary%20Numbers.java)|5 ms|
 |1695|[ Maximum Erasure Value](https://leetcode.com/problems/maximum-erasure-value/)|[Java](./solutions/1695.%20Maximum%20Erasure%20Value.java)|53 ms|
+|1696|[ Jump Game VI](https://leetcode.com/problems/jump-game-vi/)|[Java](./solutions/1696.%20Jump%20Game%20VI.java)|85 ms|
