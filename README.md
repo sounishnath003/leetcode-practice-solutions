@@ -136,6 +136,7 @@
 |700|[ Search in a Binary Search Tree](https://leetcode.com/problems/search-in-a-binary-search-tree/)|[JavaScript](./solutions/700.%20Search%20in%20a%20Binary%20Search%20Tree.js)|100 ms|
 |709|[ To Lower Case](https://leetcode.com/problems/to-lower-case/)|[Java](./solutions/709.%20To%20Lower%20Case.java)|0 ms|
 |724|[ Find Pivot Index](https://leetcode.com/problems/find-pivot-index/)|[Java](./solutions/724.%20Find%20Pivot%20Index.java)|1 ms|
+|729|[ My Calendar I](https://leetcode.com/problems/my-calendar-i/)|[Java](./solutions/729.%20My%20Calendar%20I.java)|20 ms|
 |745|[ Prefix and Suffix Search](https://leetcode.com/problems/prefix-and-suffix-search/)|[Java](./solutions/745.%20Prefix%20and%20Suffix%20Search.java)|188 ms|
 |746|[ Min Cost Climbing Stairs](https://leetcode.com/problems/min-cost-climbing-stairs/)|[Java](./solutions/746.%20Min%20Cost%20Climbing%20Stairs.java)|3 ms|
 |752|[ Open the Lock](https://leetcode.com/problems/open-the-lock/)|[Java](./solutions/752.%20Open%20the%20Lock.java)|28 ms|
