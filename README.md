@@ -122,6 +122,7 @@
 |518|[ Coin Change 2](https://leetcode.com/problems/coin-change-2/)|[Java](./solutions/518.%20Coin%20Change%202.java)|3 ms|
 |542|[ 01 Matrix](https://leetcode.com/problems/01-matrix/)|[Java](./solutions/542.%2001%20Matrix.java)|13 ms|
 |543|[ Diameter of Binary Tree](https://leetcode.com/problems/diameter-of-binary-tree/)|[Java](./solutions/543.%20Diameter%20of%20Binary%20Tree.java)|0 ms|
+|561|[ Array Partition I](https://leetcode.com/problems/array-partition-i/)|[Java](./solutions/561.%20Array%20Partition%20I.java)|17 ms|
 |563|[ Binary Tree Tilt](https://leetcode.com/problems/binary-tree-tilt/)|[Java](./solutions/563.%20Binary%20Tree%20Tilt.java)|1 ms|
 |583|[ Delete Operation for Two Strings](https://leetcode.com/problems/delete-operation-for-two-strings/)|[Java](./solutions/583.%20Delete%20Operation%20for%20Two%20Strings.java)|320 ms|
 |605|[ Can Place Flowers](https://leetcode.com/problems/can-place-flowers/)|[C++](./solutions/605.%20Can%20Place%20Flowers.cpp)|48 ms|
