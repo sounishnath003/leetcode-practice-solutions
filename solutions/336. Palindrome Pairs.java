@@ -35,3 +35,28 @@ class Solution {
                 String left = cur.substring(0, cut);
                 String right = cur.substring(cut);
                 if (isPalindrome(left)) {
+                    String reversedRight = new StringBuilder(right).reverse().toString();
+                    if (map.containsKey(reversedRight)) {
+                        res.add(Arrays.asList(map.get(reversedRight), i));
+                    }
+                }
+                if (isPalindrome(right)) {
+                    String reversedLeft = new StringBuilder(left).reverse().toString();
+                    if (map.containsKey(reversedLeft)) {
+                        res.add(Arrays.asList(i, map.get(reversedLeft)));
+                    }
+                }
+            }
+        }
+        return res;
+    }
+​
+    private boolean isPalindrome(String word) {
+        int i = 0, j = word.length() - 1;
+        while (i < j) {
+            if (word.charAt(i++) != word.charAt(j--))
+                return false;
+        }
+        return true;
+    }
+}
