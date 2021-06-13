@@ -107,6 +107,7 @@
 |322|[ Coin Change](https://leetcode.com/problems/coin-change/)|[Java](./solutions/322.%20Coin%20Change.java)|10 ms|
 |326|[ Power of Three](https://leetcode.com/problems/power-of-three/)|[C++](./solutions/326.%20Power%20of%20Three.cpp)|92 ms|
 |328|[ Odd Even Linked List](https://leetcode.com/problems/odd-even-linked-list/)|[C++](./solutions/328.%20Odd%20Even%20Linked%20List.cpp)|12 ms|
+|336|[ Palindrome Pairs](https://leetcode.com/problems/palindrome-pairs/)|[Java](./solutions/336.%20Palindrome%20Pairs.java)|64 ms|
 |344|[ Reverse String](https://leetcode.com/problems/reverse-string/)|[C++](./solutions/344.%20Reverse%20String.cpp)|32 ms|
 |350|[ Intersection of Two Arrays II](https://leetcode.com/problems/intersection-of-two-arrays-ii/)|[C++](./solutions/350.%20Intersection%20of%20Two%20Arrays%20II.cpp)|8 ms|
 |354|[ Russian Doll Envelopes](https://leetcode.com/problems/russian-doll-envelopes/)|[Java](./solutions/354.%20Russian%20Doll%20Envelopes.java)|203 ms|
