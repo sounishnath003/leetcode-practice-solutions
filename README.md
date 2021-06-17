@@ -143,6 +143,7 @@
 |746|[ Min Cost Climbing Stairs](https://leetcode.com/problems/min-cost-climbing-stairs/)|[Java](./solutions/746.%20Min%20Cost%20Climbing%20Stairs.java)|3 ms|
 |752|[ Open the Lock](https://leetcode.com/problems/open-the-lock/)|[Java](./solutions/752.%20Open%20the%20Lock.java)|28 ms|
 |754|[ Reach a Number](https://leetcode.com/problems/reach-a-number/)|[C++](./solutions/754.%20Reach%20a%20Number.cpp)|0 ms|
+|795|[ Number of Subarrays with Bounded Maximum](https://leetcode.com/problems/number-of-subarrays-with-bounded-maximum/)|[Java](./solutions/795.%20Number%20of%20Subarrays%20with%20Bounded%20Maximum.java)|3 ms|
 |816|[ Ambiguous Coordinates](https://leetcode.com/problems/ambiguous-coordinates/)|[Java](./solutions/816.%20Ambiguous%20Coordinates.java)|11 ms|
 |841|[ Keys and Rooms](https://leetcode.com/problems/keys-and-rooms/)|[C++](./solutions/841.%20Keys%20and%20Rooms.cpp)|20 ms|
 |863|[ All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)|[Java](./solutions/863.%20All%20Nodes%20Distance%20K%20in%20Binary%20Tree.java)|17 ms|
