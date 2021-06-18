@@ -103,6 +103,7 @@
 |268|[ Missing Number](https://leetcode.com/problems/missing-number/)|[Java](./solutions/268.%20Missing%20Number.java)|0 ms|
 |283|[ Move Zeroes](https://leetcode.com/problems/move-zeroes/)|[C++](./solutions/283.%20Move%20Zeroes.cpp)|8 ms|
 |300|[ Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/)|[Java](./solutions/300.%20Longest%20Increasing%20Subsequence.java)|65 ms|
+|303|[ Range Sum Query - Immutable](https://leetcode.com/problems/range-sum-query-immutable/)|[Java](./solutions/303.%20Range%20Sum%20Query%20-%20Immutable.java)|9 ms|
 |304|[ Range Sum Query 2D - Immutable](https://leetcode.com/problems/range-sum-query-2d-immutable/)|[Java](./solutions/304.%20Range%20Sum%20Query%202D%20-%20Immutable.java)|19 ms|
 |318|[ Maximum Product of Word Lengths](https://leetcode.com/problems/maximum-product-of-word-lengths/)|[Java](./solutions/318.%20Maximum%20Product%20of%20Word%20Lengths.java)|251 ms|
 |322|[ Coin Change](https://leetcode.com/problems/coin-change/)|[Java](./solutions/322.%20Coin%20Change.java)|10 ms|
