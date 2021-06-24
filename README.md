@@ -130,6 +130,7 @@
 |543|[ Diameter of Binary Tree](https://leetcode.com/problems/diameter-of-binary-tree/)|[Java](./solutions/543.%20Diameter%20of%20Binary%20Tree.java)|0 ms|
 |561|[ Array Partition I](https://leetcode.com/problems/array-partition-i/)|[Java](./solutions/561.%20Array%20Partition%20I.java)|17 ms|
 |563|[ Binary Tree Tilt](https://leetcode.com/problems/binary-tree-tilt/)|[Java](./solutions/563.%20Binary%20Tree%20Tilt.java)|1 ms|
+|576|[ Out of Boundary Paths](https://leetcode.com/problems/out-of-boundary-paths/)|[Java](./solutions/576.%20Out%20of%20Boundary%20Paths.java)|5 ms|
 |583|[ Delete Operation for Two Strings](https://leetcode.com/problems/delete-operation-for-two-strings/)|[Java](./solutions/583.%20Delete%20Operation%20for%20Two%20Strings.java)|320 ms|
 |605|[ Can Place Flowers](https://leetcode.com/problems/can-place-flowers/)|[C++](./solutions/605.%20Can%20Place%20Flowers.cpp)|48 ms|
 |609|[ Find Duplicate File in System](https://leetcode.com/problems/find-duplicate-file-in-system/)|[Java](./solutions/609.%20Find%20Duplicate%20File%20in%20System.java)|13 ms|
