@@ -1,73 +1,54 @@
-​
-    // Optimation Using BST / MinHeap
-​
-    class Node {
-        Node left;
-        Node right;
-        int data;
-        int count;
-​
-        Node(int d, Node l, Node r) {
-            this.data = d;
-            this.left = l;
-            this.right = r;
-            this.count = 1;
+        for (int i = 0; i < n; i++) {
+            if (i == n - 1) {
+                answer.add(0);
+            } else
+                answer.add(dp[i]);
         }
+​
+        return answer;
     }
 ​
-    public List<Integer> countSmaller(int[] nums) {
-        /*
-         * Build BST and Count
-         */
+    static class FastScanner {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringTokenizer st = new StringTokenizer("");
 ​
-        final int n = nums.length;
-        List<Integer> smallers = new ArrayList<Integer>();
-        if (nums == null || nums.length == 0)
-            return smallers;
-​
-        Node root = new Node(nums[n - 1], null, null);
-        smallers.add(0);
-​
-        for (int i = n - 2; i >= 0; i--) {
-            int smallerElems = construct(root, nums[i]);
-            smallers.add(smallerElems);
-        }
-        Collections.reverse(smallers);
-        return smallers;
-    }
-​
-    private int construct(Node root, int data) {
-        // TODO Auto-generated method stub
-        int smallerNodes = 0;
-​
-        while (true) {
-            if (data <= root.data) {
-                // go left
-                root.count++;
-                if (root.left == null) {
-                    root.left = new Node(data, null, null);
-                    break;
-                } else {
-                    root = root.left;
+        public String next() {
+            while (!st.hasMoreElements())
+                try {
+                    st = new StringTokenizer(br.readLine());
+                } catch (IOException e) {
+                    e.printStackTrace();
                 }
-            } else {
-                // go right
-                smallerNodes += root.count;
-                if (root.right == null) {
-                    root.right = new Node(data, null, null);
-                    break;
-                } else {
-                    root = root.right;
-                }
-            }
+            return st.nextToken();
         }
 ​
-        return smallerNodes;
+        int nextInt() {
+            return Integer.parseInt(next());
+        }
+​
+        int[] readArray(int n) {
+            int[] a = new int[n];
+            for (int i = 0; i < n; i++)
+                a[i] = nextInt();
+            return a;
+        }
+​
+        long[] readLongArray(int n) {
+            long[] a = new long[n];
+            for (int i = 0; i < n; i++)
+                a[i] = nextLong();
+            return a;
+        }
+​
+        long nextLong() {
+            return Long.parseLong(next());
+        }
     }
 ​
-    // O(N^2) Solutions BAD
-    public List<Integer> countSmaller2(int[] nums) {
-        final int n = nums.length;
-        int[] dp = new int[n];
+}
 ​
-        dp[n - 1] = 1;
+/*
+ * TC:1 7 T P P P T T T 2
+ * 
+ * TC:2 10 P T T P P T T T T P 2
+ */
