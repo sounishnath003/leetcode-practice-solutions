@@ -59,7 +59,7 @@ class Solution {
                         while ((ii < arr2.length && jj < arr1.length) && arr2[ii] == arr1[jj]) {
                             ii++;
                             jj++;
-                        }
+                        }
                         ii--;
                         int len = Math.abs(ii - i);
                         maxLength = Math.max(len, maxLength);
