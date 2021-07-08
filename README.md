@@ -145,6 +145,7 @@
 |695|[ Max Area of Island](https://leetcode.com/problems/max-area-of-island/)|[Java](./solutions/695.%20Max%20Area%20of%20Island.java)|10 ms|
 |700|[ Search in a Binary Search Tree](https://leetcode.com/problems/search-in-a-binary-search-tree/)|[JavaScript](./solutions/700.%20Search%20in%20a%20Binary%20Search%20Tree.js)|100 ms|
 |709|[ To Lower Case](https://leetcode.com/problems/to-lower-case/)|[Java](./solutions/709.%20To%20Lower%20Case.java)|0 ms|
+|718|[ Maximum Length of Repeated Subarray](https://leetcode.com/problems/maximum-length-of-repeated-subarray/)|[Java](./solutions/718.%20Maximum%20Length%20of%20Repeated%20Subarray.java)|51 ms|
 |724|[ Find Pivot Index](https://leetcode.com/problems/find-pivot-index/)|[Java](./solutions/724.%20Find%20Pivot%20Index.java)|1 ms|
 |729|[ My Calendar I](https://leetcode.com/problems/my-calendar-i/)|[Java](./solutions/729.%20My%20Calendar%20I.java)|20 ms|
 |745|[ Prefix and Suffix Search](https://leetcode.com/problems/prefix-and-suffix-search/)|[Java](./solutions/745.%20Prefix%20and%20Suffix%20Search.java)|188 ms|
