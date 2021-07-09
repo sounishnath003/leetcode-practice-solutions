@@ -14,14 +14,12 @@
  * }
  */
 class Solution {
-    private int globalsum = 0;
     public int deepestLeavesSum(TreeNode root) {
         int height = getHeight(root); 
-        _deepestLeavesSum(root, height, 0);
-        return globalsum;
+        int a = _deepestLeavesSum(root, height, 0);
+        return a;
     }
     private int getHeight(TreeNode root) {
-        
         if (root == null) return -1;
         
         // faith
@@ -35,7 +33,6 @@ class Solution {
         if (root == null) return 0;
         
         if (curlevel == height && root.left == null && root.right == null) {
-            globalsum += root.val;
             return root.val;
         }
         
