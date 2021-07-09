@@ -132,6 +132,7 @@
 |560|[ Subarray Sum Equals K](https://leetcode.com/problems/subarray-sum-equals-k/)|[Java](./solutions/560.%20Subarray%20Sum%20Equals%20K.java)|19 ms|
 |561|[ Array Partition I](https://leetcode.com/problems/array-partition-i/)|[Java](./solutions/561.%20Array%20Partition%20I.java)|17 ms|
 |563|[ Binary Tree Tilt](https://leetcode.com/problems/binary-tree-tilt/)|[Java](./solutions/563.%20Binary%20Tree%20Tilt.java)|1 ms|
+|572|[ Subtree of Another Tree](https://leetcode.com/problems/subtree-of-another-tree/)|[Java](./solutions/572.%20Subtree%20of%20Another%20Tree.java)|3 ms|
 |576|[ Out of Boundary Paths](https://leetcode.com/problems/out-of-boundary-paths/)|[Java](./solutions/576.%20Out%20of%20Boundary%20Paths.java)|5 ms|
 |583|[ Delete Operation for Two Strings](https://leetcode.com/problems/delete-operation-for-two-strings/)|[Java](./solutions/583.%20Delete%20Operation%20for%20Two%20Strings.java)|320 ms|
 |605|[ Can Place Flowers](https://leetcode.com/problems/can-place-flowers/)|[C++](./solutions/605.%20Can%20Place%20Flowers.cpp)|48 ms|
