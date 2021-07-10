@@ -198,3 +198,4 @@
 |1695|[ Maximum Erasure Value](https://leetcode.com/problems/maximum-erasure-value/)|[Java](./solutions/1695.%20Maximum%20Erasure%20Value.java)|53 ms|
 |1696|[ Jump Game VI](https://leetcode.com/problems/jump-game-vi/)|[Java](./solutions/1696.%20Jump%20Game%20VI.java)|85 ms|
 |1710|[ Maximum Units on a Truck](https://leetcode.com/problems/maximum-units-on-a-truck/)|[Java](./solutions/1710.%20Maximum%20Units%20on%20a%20Truck.java)|122 ms|
+|1921|[ Eliminate Maximum Number of Monsters](https://leetcode.com/problems/eliminate-maximum-number-of-monsters/)|[Java](./solutions/1921.%20Eliminate%20Maximum%20Number%20of%20Monsters.java)|26 ms|
