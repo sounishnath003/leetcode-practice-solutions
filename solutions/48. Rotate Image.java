@@ -18,6 +18,6 @@ class Solution {
                 matrix[i][j] = matrix[i][C - 1 - j];
                 matrix[i][C - 1 - j] = temp;
             }
-        }
+        }
     }
 }
