@@ -9,7 +9,7 @@ class Solution {
                 int temp = matrix[i][j];
                 matrix[i][j] = matrix[j][i];
                 matrix[j][i] = temp;
-            }
+            }
         }
         // reverse each row
         for (int i = 0; i < R; i++) {
