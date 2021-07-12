@@ -93,6 +93,7 @@
 |200|[ Number of Islands](https://leetcode.com/problems/number-of-islands/)|[C++](./solutions/200.%20Number%20of%20Islands.cpp)|32 ms|
 |202|[ Happy Number](https://leetcode.com/problems/happy-number/)|[C++](./solutions/202.%20Happy%20Number.cpp)|4 ms|
 |204|[ Count Primes](https://leetcode.com/problems/count-primes/)|[Java](./solutions/204.%20Count%20Primes.java)|33 ms|
+|205|[ Isomorphic Strings](https://leetcode.com/problems/isomorphic-strings/)|[Java](./solutions/205.%20Isomorphic%20Strings.java)|6 ms|
 |206|[ Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/)|[C++](./solutions/206.%20Reverse%20Linked%20List.cpp)|8 ms|
 |210|[ Course Schedule II](https://leetcode.com/problems/course-schedule-ii/)|[Java](./solutions/210.%20Course%20Schedule%20II.java)|2 ms|
 |215|[ Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/)|[Java](./solutions/215.%20Kth%20Largest%20Element%20in%20an%20Array.java)|5 ms|
