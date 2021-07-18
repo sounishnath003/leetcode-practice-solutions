@@ -1,3 +1,12 @@
+        this.size++;
+    }
+​
+    public int removeFirst() {
+        if (this.head == null && this.size == 0) {
+            return -1;
+        } else {
+            int data = this.head.val;
+            this.head = this.head.next;
             this.size--;
             return data;
         }
