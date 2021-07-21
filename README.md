@@ -162,6 +162,7 @@
 |792|[ Number of Matching Subsequences](https://leetcode.com/problems/number-of-matching-subsequences/)|[Java](./solutions/792.%20Number%20of%20Matching%20Subsequences.java)|1867 ms|
 |795|[ Number of Subarrays with Bounded Maximum](https://leetcode.com/problems/number-of-subarrays-with-bounded-maximum/)|[Java](./solutions/795.%20Number%20of%20Subarrays%20with%20Bounded%20Maximum.java)|3 ms|
 |816|[ Ambiguous Coordinates](https://leetcode.com/problems/ambiguous-coordinates/)|[Java](./solutions/816.%20Ambiguous%20Coordinates.java)|11 ms|
+|838|[ Push Dominoes](https://leetcode.com/problems/push-dominoes/)|[Java](./solutions/838.%20Push%20Dominoes.java)|28 ms|
 |841|[ Keys and Rooms](https://leetcode.com/problems/keys-and-rooms/)|[C++](./solutions/841.%20Keys%20and%20Rooms.cpp)|20 ms|
 |863|[ All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)|[Java](./solutions/863.%20All%20Nodes%20Distance%20K%20in%20Binary%20Tree.java)|17 ms|
 |865|[ Smallest Subtree with all the Deepest Nodes](https://leetcode.com/problems/smallest-subtree-with-all-the-deepest-nodes/)|[C++](./solutions/865.%20Smallest%20Subtree%20with%20all%20the%20Deepest%20Nodes.cpp)|8 ms|
