@@ -27,7 +27,7 @@ class Solution {
         if (root == null) return null;
         this.containsOne(root);
         return root;
-    }
+    }
 ​
     private boolean containsOne(TreeNode root) {
         if (root == null) return false;
