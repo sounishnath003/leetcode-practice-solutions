@@ -12,7 +12,7 @@ class Solution {
         public Pair(String val, List<String> series) {
             this.value = val;
             this.currentSeries = new ArrayList<>(series);
-        }
+        }
     }
 ​
     // Word Ladders - II
