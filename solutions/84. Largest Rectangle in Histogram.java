@@ -1,26 +1,3 @@
-class Solution {
-    public int largestRectangleArea(int[] heights) {
-        int[] leftWalls = getLeftHeightIndcies(heights);
-        int[] rightWalls = getRightHeightIndices(heights);
-​
-        int maxarea = 0;
-​
-        for (int i = 0; i < heights.length; i++) {
-            int leftwall = leftWalls[i]; // left wall index
-            int rightWall = rightWalls[i]; // right wall index
-​
-            int width = (rightWall - leftwall - 1);
-            int height = heights[i];
-​
-            int area = width * height;
-            maxarea = Math.max(maxarea, area);
-        }
-​
-        return maxarea;
-    }
-​
-    private int[] getRightHeightIndices(int[] heights) {
-        // TODO Auto-generated method stub
         final int n = heights.length;
         int[] walls = new int[n];
 ​
