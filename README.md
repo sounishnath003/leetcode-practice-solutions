@@ -99,6 +99,7 @@
 |210|[ Course Schedule II](https://leetcode.com/problems/course-schedule-ii/)|[Java](./solutions/210.%20Course%20Schedule%20II.java)|2 ms|
 |215|[ Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/)|[Java](./solutions/215.%20Kth%20Largest%20Element%20in%20an%20Array.java)|5 ms|
 |217|[ Contains Duplicate](https://leetcode.com/problems/contains-duplicate/)|[C++](./solutions/217.%20Contains%20Duplicate.cpp)|108 ms|
+|226|[ Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree/)|[Java](./solutions/226.%20Invert%20Binary%20Tree.java)|0 ms|
 |227|[ Basic Calculator II](https://leetcode.com/problems/basic-calculator-ii/)|[C++](./solutions/227.%20Basic%20Calculator%20II.cpp)|20 ms|
 |230|[ Kth Smallest Element in a BST](https://leetcode.com/problems/kth-smallest-element-in-a-bst/)|[Java](./solutions/230.%20Kth%20Smallest%20Element%20in%20a%20BST.java)|0 ms|
 |234|[ Palindrome Linked List](https://leetcode.com/problems/palindrome-linked-list/)|[C++](./solutions/234.%20Palindrome%20Linked%20List.cpp)|20 ms|
