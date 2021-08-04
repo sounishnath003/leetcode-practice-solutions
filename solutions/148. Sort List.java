@@ -43,7 +43,7 @@ class Solution {
                 t2 = t2.next;
             }
             tmp = tmp.next;
-        }
+        }
         
         if (t1 != null) tmp.next = t1;
         if (t2 != null) tmp.next = t2;
