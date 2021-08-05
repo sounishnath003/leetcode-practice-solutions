@@ -10,36 +10,49 @@
  * }
  */
 public class Solution {
-    private int getSize(ListNode node) {
-        ListNode temp = node;
-        int count = 0;
-        while(temp != null) {count++; temp = temp.next;}
-        return count;
+    public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
+        return this.IntersectionNodeInTwoLL(headA, headB) ;
     }
-    public ListNode getIntersectionNode(ListNode one, ListNode two) {
-            int size1 = this.getSize(one);
-            int size2 = this.getSize(two);
-            
-            if (size1 > size2) {
-                ListNode head1 = this.getIntersectionPoint(one, two, size1, size2);
-                return head1;
-            } else {
-                ListNode head2 = this.getIntersectionPoint(two, one, size2, size1);
-                return head2;
-            }
-    }
     
-    private ListNode getIntersectionPoint(ListNode head1, ListNode head2, int size1, int size2) {
-            int diff = size1 - size2;
-            while(diff > 0) {
-                head1 = head1.next;
-                diff--;
-            }
-            
-            while(head1 != head2) {
-                head1 = head1.next;
-                head2 = head2.next;
-            }
-            return head1;
-        }
+    public ListNode IntersectionNodeInTwoLL(ListNode headA, ListNode headB) {
+        int n = getLength(headA);
+        int m = getLength(headB);
+​
+        int diff = Math.abs(n - m);
+        ListNode intersectionPoint = null;
+​
+        if (n > m) {
+            intersectionPoint = getIntersection(headA, headB, diff);
+        } else {
+            intersectionPoint = getIntersection(headB, headA, diff);
+        }
+​
+        return intersectionPoint;
+    }
+​
+    private ListNode getIntersection(ListNode headA, ListNode headB, int diff) {
+​
+        ListNode slow = headB;
+        ListNode fast = headA;
+​
+        for (int i = 0; i < diff; i++) fast = fast.next;
+​
+        while (fast != slow) {
+            slow = slow.next;
+            fast = fast.next;
+        }
+​
+        return slow;
+    }
+​
+    private static int getLength(ListNode node) {
+        int len = 0;
+        while (node != null) {
+            node = node.next;
+            len++;
+        }
+        return len;
+    }
+​
+    
 }
