@@ -17,7 +17,7 @@ class Solution {
 ​
             runningSum = getRunningSum(runningSum, elem);
             maxWindowLength = updateTheWindowLength(maxWindowLength, runningSum, seen, index);
-        }
+        }
 ​
         return maxWindowLength;
     }
