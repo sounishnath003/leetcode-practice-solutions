@@ -13,39 +13,35 @@
  *     }
  * }
  */
-​
-// Hopefully It Works!! [Random pickup]
-​
 class Solution {
-    HashMap<Integer, Integer> hasmap = new HashMap<Integer, Integer>();
-    int previousIndex = 0;
+    private final Map<Integer, Integer> inorderRoots = new HashMap<>();
+    public TreeNode buildTree(int[] preorder, int[] inorder) {
+        return _buildTree(preorder, inorder);
+    }
+    
+    private TreeNode _buildTree(int[] preorder, int[] inorder) {
+        processInorderNodes(inorder);
+        TreeNode root = constructFromPreoderInorder(preorder, 0, 0, inorder.length - 1);
+        return root;
+    }
 ​
-    public TreeNode buildTree(int[] preorder, int[] inorder) {
-        for (int i = 0; i < inorder.length; i++)
-            hasmap.put(inorder[i], i);
+    private  void processInorderNodes(int[] inorder) {
+        for (int index = 0; index < inorder.length; index++) inorderRoots.put(inorder[index], index);
+    }
 ​
-        return _buildTree(preorder, inorder, 0, inorder.length - 1);
-    }
+    private TreeNode constructFromPreoderInorder(int[] preorder, int currentIndex, int lo, int hi) {
+        if (lo > hi) return null;
 ​
-    private TreeNode _buildTree(int[] preorder, int[] inorder, int curIndex, int end) {
-        // TODO Auto-generated method stub
+        TreeNode root = new TreeNode(preorder[currentIndex]);
+        if (root == null || lo == hi) return root;
 ​
-        if (curIndex > end)
-            return null;
+        currentIndex++;
+        int rootIndex = inorderRoots.get(root.val);
 ​
-        // creating root
-        TreeNode root = new TreeNode(preorder[this.previousIndex]);
-        this.previousIndex++;
+        root.left = constructFromPreoderInorder(preorder, currentIndex, lo, rootIndex - 1);
+        root.right = constructFromPreoderInorder(preorder, currentIndex, rootIndex + 1, hi);
 ​
-        if (root == null || curIndex == end)
-            return root;
+        return root;
+    }
 ​
-        int idx = this.hasmap.get(root.val);
-​
-        // faith
-        root.left = _buildTree(preorder, inorder, curIndex, idx - 1);
-        root.right = _buildTree(preorder, inorder, idx + 1, end);
-​
-        return root;
-    }
 }
