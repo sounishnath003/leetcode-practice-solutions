@@ -23,7 +23,7 @@ class Solution {
       } else {
         return false;
       }
-    }
+    }
     
     while (j < typed.length()) {
         if ( isEqual(name, typed, i-1, j)) j++;
