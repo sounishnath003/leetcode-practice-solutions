@@ -27,6 +27,6 @@ class Solution {
 ​
         // right sub part
         return Math.max(zeros, dist);
-    }
+    }
 ​
 }
