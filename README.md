@@ -173,6 +173,7 @@
 |816|[ Ambiguous Coordinates](https://leetcode.com/problems/ambiguous-coordinates/)|[Java](./solutions/816.%20Ambiguous%20Coordinates.java)|11 ms|
 |838|[ Push Dominoes](https://leetcode.com/problems/push-dominoes/)|[Java](./solutions/838.%20Push%20Dominoes.java)|28 ms|
 |841|[ Keys and Rooms](https://leetcode.com/problems/keys-and-rooms/)|[C++](./solutions/841.%20Keys%20and%20Rooms.cpp)|20 ms|
+|849|[ Maximize Distance to Closest Person](https://leetcode.com/problems/maximize-distance-to-closest-person/)|[Java](./solutions/849.%20Maximize%20Distance%20to%20Closest%20Person.java)|3 ms|
 |863|[ All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)|[Java](./solutions/863.%20All%20Nodes%20Distance%20K%20in%20Binary%20Tree.java)|17 ms|
 |865|[ Smallest Subtree with all the Deepest Nodes](https://leetcode.com/problems/smallest-subtree-with-all-the-deepest-nodes/)|[C++](./solutions/865.%20Smallest%20Subtree%20with%20all%20the%20Deepest%20Nodes.cpp)|8 ms|
 |871|[ Minimum Number of Refueling Stops](https://leetcode.com/problems/minimum-number-of-refueling-stops/)|[Java](./solutions/871.%20Minimum%20Number%20of%20Refueling%20Stops.java)|N/A|
