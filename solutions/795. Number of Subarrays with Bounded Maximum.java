@@ -1,26 +1,26 @@
 class Solution {
+    // public int numSubarrayBoundedMax(int[] nums, int left, int right) {
+    
+    // leetcode 795 https://leetcode.com/problems/number-of-subarrays-with-bounded-maximum/
     public int numSubarrayBoundedMax(int[] nums, int left, int right) {
-        int start = 0;
-        int end = 0;
-        int answer = 0;
-        int wc = 0;
+        int prev_count = 0;
+        int overall_count = 0;
 ​
-        while (end < nums.length) {
-            if (nums[end] >= left && nums[end] <= right) {
-                // means in range
-                wc = end - start + 1;
-            } else if (nums[end] > right) {
-                // means right overflowed
-                wc = 0; // reset window
-                start = end + 1;
-            } else if (nums[end] < left) {
-                // means left underflowed
-            }
-            
-            answer += wc;
-            end++;
-        }
+        int i = 0;
+        int j = 0;
 ​
-        return answer;
+        while(j < nums.length) {
+            if(left <= nums[j] && nums[j] <= right) {
+                prev_count = j - i + 1;
+                overall_count += prev_count;
+            } else if(nums[j] < left) {
+                overall_count += prev_count;
+            } else {
+                prev_count = 0;
+                i = j + 1;
+            }
+            j++;
+        }
+        return overall_count;
     }
 }
