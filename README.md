@@ -172,6 +172,7 @@
 |754|[ Reach a Number](https://leetcode.com/problems/reach-a-number/)|[C++](./solutions/754.%20Reach%20a%20Number.cpp)|0 ms|
 |792|[ Number of Matching Subsequences](https://leetcode.com/problems/number-of-matching-subsequences/)|[Java](./solutions/792.%20Number%20of%20Matching%20Subsequences.java)|1867 ms|
 |795|[ Number of Subarrays with Bounded Maximum](https://leetcode.com/problems/number-of-subarrays-with-bounded-maximum/)|[Java](./solutions/795.%20Number%20of%20Subarrays%20with%20Bounded%20Maximum.java)|5 ms|
+|815|[ Bus Routes](https://leetcode.com/problems/bus-routes/)|[Java](./solutions/815.%20Bus%20Routes.java)|84 ms|
 |816|[ Ambiguous Coordinates](https://leetcode.com/problems/ambiguous-coordinates/)|[Java](./solutions/816.%20Ambiguous%20Coordinates.java)|11 ms|
 |838|[ Push Dominoes](https://leetcode.com/problems/push-dominoes/)|[Java](./solutions/838.%20Push%20Dominoes.java)|28 ms|
 |841|[ Keys and Rooms](https://leetcode.com/problems/keys-and-rooms/)|[C++](./solutions/841.%20Keys%20and%20Rooms.cpp)|20 ms|
