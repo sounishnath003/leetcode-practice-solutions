@@ -204,6 +204,7 @@
 |1051|[ Height Checker](https://leetcode.com/problems/height-checker/)|[Java](./solutions/1051.%20Height%20Checker.java)|1 ms|
 |1123|[ Lowest Common Ancestor of Deepest Leaves](https://leetcode.com/problems/lowest-common-ancestor-of-deepest-leaves/)|[C++](./solutions/1123.%20Lowest%20Common%20Ancestor%20of%20Deepest%20Leaves.cpp)|24 ms|
 |1162|[ As Far from Land as Possible](https://leetcode.com/problems/as-far-from-land-as-possible/)|[Java](./solutions/1162.%20As%20Far%20from%20Land%20as%20Possible.java)|11 ms|
+|1192|[ Critical Connections in a Network](https://leetcode.com/problems/critical-connections-in-a-network/)|[Java](./solutions/1192.%20Critical%20Connections%20in%20a%20Network.java)|134 ms|
 |1268|[ Search Suggestions System](https://leetcode.com/problems/search-suggestions-system/)|[Java](./solutions/1268.%20Search%20Suggestions%20System.java)|8 ms|
 |1302|[ Deepest Leaves Sum](https://leetcode.com/problems/deepest-leaves-sum/)|[Java](./solutions/1302.%20Deepest%20Leaves%20Sum.java)|2 ms|
 |1306|[ Jump Game III](https://leetcode.com/problems/jump-game-iii/)|[Java](./solutions/1306.%20Jump%20Game%20III.java)|8 ms|
