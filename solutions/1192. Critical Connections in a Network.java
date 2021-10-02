@@ -1,4 +1,5 @@
 class Solution {
+    // Thankfully noe works !!
     private int time = 0;
 ​
     private void dfsArticulation(ArrayList<ArrayList<Integer>> graph, 
@@ -24,7 +25,7 @@ class Solution {
                     edge.add(nbr);
                     res.add(edge);
                     arti[src] = true;
-                }
+                }
             }
         }
     }
@@ -40,26 +41,3 @@ class Solution {
         boolean[] arti = new boolean[n];
         parent[0] = -1; // parent of starting point is -1
         time = 0;
-        List<List<Integer>> res = new ArrayList<>();
-        dfsArticulation(graph,  0, vis, parent, disc, low, arti, res); 
-        return res;
-    }
-​
-    public List<List<Integer>> criticalConnections(int n, List<List<Integer>> connections) {
-        ArrayList<ArrayList<Integer>> graph = new ArrayList<>();
-        for(int i = 0; i < n; i++) {
-            graph.add(new ArrayList<>());
-        }
-​
-        for(List<Integer> edge : connections) {
-            int v1 = edge.get(0);
-            int v2 = edge.get(1);
-​
-            graph.get(v1).add(v2);
-            graph.get(v2).add(v1);
-        }
-        List<List<Integer>> res = articulationBridge(graph);
-        return res;
-    }
-​
-}
