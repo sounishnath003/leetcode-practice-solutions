@@ -161,6 +161,7 @@
 |647|[ Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/)|[Java](./solutions/647.%20Palindromic%20Substrings.java)|13 ms|
 |665|[ Non-decreasing Array](https://leetcode.com/problems/non-decreasing-array/)|[Java](./solutions/665.%20Non-decreasing%20Array.java)|0 ms|
 |669|[ Trim a Binary Search Tree](https://leetcode.com/problems/trim-a-binary-search-tree/)|[C++](./solutions/669.%20Trim%20a%20Binary%20Search%20Tree.cpp)|12 ms|
+|684|[ Redundant Connection](https://leetcode.com/problems/redundant-connection/)|[Java](./solutions/684.%20Redundant%20Connection.java)|0 ms|
 |695|[ Max Area of Island](https://leetcode.com/problems/max-area-of-island/)|[Java](./solutions/695.%20Max%20Area%20of%20Island.java)|10 ms|
 |700|[ Search in a Binary Search Tree](https://leetcode.com/problems/search-in-a-binary-search-tree/)|[JavaScript](./solutions/700.%20Search%20in%20a%20Binary%20Search%20Tree.js)|100 ms|
 |709|[ To Lower Case](https://leetcode.com/problems/to-lower-case/)|[Java](./solutions/709.%20To%20Lower%20Case.java)|0 ms|
