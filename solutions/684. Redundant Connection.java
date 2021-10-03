@@ -1,3 +1,11 @@
+/*
+    Question e find that edge for that the tree converted into graph
+    Find the last edge who cause cycle in the structure
+​
+    boils down to find the edge for whom the cycle is forming.
+    *** Cycle detection but DFS use cannot be possible ***
+​
+ */
 class Solution {
     public int[] findRedundantConnection(int[][] edges) {
         int[] parent = new int[edges.length + 1];
