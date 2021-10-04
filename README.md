@@ -144,6 +144,7 @@
 |542|[ 01 Matrix](https://leetcode.com/problems/01-matrix/)|[Java](./solutions/542.%2001%20Matrix.java)|13 ms|
 |543|[ Diameter of Binary Tree](https://leetcode.com/problems/diameter-of-binary-tree/)|[Java](./solutions/543.%20Diameter%20of%20Binary%20Tree.java)|0 ms|
 |547|[ Number of Provinces](https://leetcode.com/problems/number-of-provinces/)|[Java](./solutions/547.%20Number%20of%20Provinces.java)|3 ms|
+|556|[ Next Greater Element III](https://leetcode.com/problems/next-greater-element-iii/)|[Java](./solutions/556.%20Next%20Greater%20Element%20III.java)|9 ms|
 |560|[ Subarray Sum Equals K](https://leetcode.com/problems/subarray-sum-equals-k/)|[Java](./solutions/560.%20Subarray%20Sum%20Equals%20K.java)|19 ms|
 |561|[ Array Partition I](https://leetcode.com/problems/array-partition-i/)|[Java](./solutions/561.%20Array%20Partition%20I.java)|17 ms|
 |563|[ Binary Tree Tilt](https://leetcode.com/problems/binary-tree-tilt/)|[Java](./solutions/563.%20Binary%20Tree%20Tilt.java)|1 ms|
