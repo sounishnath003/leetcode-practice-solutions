@@ -206,6 +206,7 @@
 |977|[ Squares of a Sorted Array](https://leetcode.com/problems/squares-of-a-sorted-array/)|[C++](./solutions/977.%20Squares%20of%20a%20Sorted%20Array.cpp)|52 ms|
 |990|[ Satisfiability of Equality Equations](https://leetcode.com/problems/satisfiability-of-equality-equations/)|[Java](./solutions/990.%20Satisfiability%20of%20Equality%20Equations.java)|14 ms|
 |994|[ Rotting Oranges](https://leetcode.com/problems/rotting-oranges/)|[Java](./solutions/994.%20Rotting%20Oranges.java)|19 ms|
+|1008|[ Construct Binary Search Tree from Preorder Traversal](https://leetcode.com/problems/construct-binary-search-tree-from-preorder-traversal/)|[Java](./solutions/1008.%20Construct%20Binary%20Search%20Tree%20from%20Preorder%20Traversal.java)|0 ms|
 |1015|[ Smallest Integer Divisible by K](https://leetcode.com/problems/smallest-integer-divisible-by-k/)|[C++](./solutions/1015.%20Smallest%20Integer%20Divisible%20by%20K.cpp)|0 ms|
 |1048|[ Longest String Chain](https://leetcode.com/problems/longest-string-chain/)|[Java](./solutions/1048.%20Longest%20String%20Chain.java)|34 ms|
 |1051|[ Height Checker](https://leetcode.com/problems/height-checker/)|[Java](./solutions/1051.%20Height%20Checker.java)|1 ms|
