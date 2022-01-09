@@ -1,69 +1,51 @@
-class Solution {
-    List<Integer>[] graph;
-    boolean[] visited;
-    boolean[] explored;
-    Stack<Integer> stk;
-    public int[] findOrder(int numCourses, int[][] prerequisites) {
-        graph = new ArrayList[numCourses];
-        for(int i = 0; i < numCourses; i++){
-            graph[i] = new ArrayList<>();
-        }
-        for(int i = 0; i < prerequisites.length; i++){
-            graph[prerequisites[i][1]].add(prerequisites[i][0]);
-        }
         
-        explored = new boolean[numCourses];
-        visited = new boolean[numCourses];
-        
-        for(int i = 0; i < numCourses; i++){
-            if(!visited[i]){
-                if(isCyclic(i)){
-                    return new int[]{};
-                }
-            }
-        }
-        
-        visited = new boolean[numCourses];
-        stk = new Stack<>();
-        for(int i = 0; i < numCourses; i++){
-            if(!visited[i]){
-                topologicalSort(i);
-            }
-        }
-        
-        int[] res = new int[stk.size()];
-        for(int i = 0; i < res.length; i++){
-            res[i] = stk.pop();
-        }
-        
-        return res;
+        return answer;
     }
-    
-    boolean isCyclic(int i){
-        visited[i] = true;
-        for(Integer j : graph[i]){
-            if(!visited[j]){
-                if(isCyclic(j)){
-                    return true;
-                }
+​
+    private void findTopologicalOrder(List<Integer>[] graph, int node, boolean[] visited, Stack<Integer> topologicalOrdering) {
+        visited[node] = true;
+        for (int v : graph[node]) {
+            if (!visited[v]) {
+                findTopologicalOrder(graph, v, visited, topologicalOrdering);
             }
-            else if(!explored[j]){
-                return true;
-            }
         }
-        explored[i] = true;
+        topologicalOrdering.add(node);
+    }
+​
+    private boolean isCyclic(List<Integer>[] graph, int node, NodeStatus[] tracking) {
+        if (isCompletlyDiscovered(tracking[node], NodeStatus.COMPLETED)) return false;
+        if(isInProgress(tracking[node], NodeStatus.IN_PROGRESS)) return true;
+​
+        tracking[node] = NodeStatus.IN_PROGRESS;
+        for (int adjNode : graph[node]) {
+            boolean rres = isCyclic(graph, adjNode, tracking);
+            if (rres) return true;
+        }
+        tracking[node] = NodeStatus.COMPLETED;
         return false;
     }
-    
-    void topologicalSort(int i){
-        visited[i] = true;
-        for(Integer j : graph[i]){
-            if(!visited[j]){
-                topologicalSort(j);
-            }
-        }
-        stk.push(i);
+​
+    private boolean isInProgress(NodeStatus nodeStatus, NodeStatus inProgress) {
+        return nodeStatus == inProgress;
     }
-    
-    
+​
+    private boolean isCompletlyDiscovered(NodeStatus nodeStatus, NodeStatus completed) {
+        return nodeStatus == completed;
+    }
+​
+    private List[] getGraph(int numCourses, int[][] prerequisites) {
+        List[] graph = new List[numCourses];
+        for (int i = 0; i < graph.length; i++) {
+            graph[i] = new ArrayList<Integer>();
+        }
+​
+        for (int[] nodes : prerequisites) {
+            int firstNode = nodes[0];
+            int secondNode = nodes[1];
+​
+            // second --> first
+            graph[secondNode].add(firstNode);
+        }
+        return graph;
+    }
 }
