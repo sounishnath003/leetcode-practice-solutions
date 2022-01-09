@@ -1,53 +1,96 @@
 class Solution {
-    private enum NodeStatus { NOT_VISITED, IN_PROGRESS, VISITED };
+    private enum NodeStatus {UNTOUCHED, IN_PROGRESS, COMPLETED};
 
-    public boolean canFinish(int numCourses, int[][] prerequisites) {
+    public int[] findOrder(int numCourses, int[][] prerequisites) {
+        List[] graph = getGraph(numCourses, prerequisites);
+        // System.out.println(Arrays.toString(graph));
+
         /**
-         * concept based on DAG, if there exists a cycle answer is false
-         * else cycle does not exist answer is true
+         * if cycle in DAG return empty[],
+         * because pre-req cannot be completed
          *
-         * basically problem is to try to find a cycle
+         * it is impossible to finish all courses, return an empty array.
          */
 
-        List<Integer>[] graph = getGraph(numCourses, prerequisites);
-
-        NodeStatus[] visited = new NodeStatus[numCourses];
-        Arrays.fill(visited, NodeStatus.NOT_VISITED);
+        NodeStatus[] tracking = new NodeStatus[numCourses];
+        Arrays.fill(tracking, NodeStatus.UNTOUCHED);
 
         for (int node = 0; node < graph.length; node++) {
-            if (visited[node] == NodeStatus.NOT_VISITED) {
-                boolean result = exploreTheGraph(graph, node, visited);
-                if (!result) return false;
+            if (isCompletlyDiscovered(tracking[node], NodeStatus.UNTOUCHED)) {
+                if (isCyclic(graph, node, tracking)){
+                    return new int[]{};
+                }
             }
         }
 
-        return true;
-    }
+        /**
+         * find the dependency array
+         * by finding the topological ordering of nodes
+         */
 
-    private boolean exploreTheGraph(List<Integer>[] graph, int source, NodeStatus[] visited) {
-        if (visited[source] == NodeStatus.VISITED) return true;
-        if (visited[source] == NodeStatus.IN_PROGRESS) return false;
-        
-        visited[source] = NodeStatus.IN_PROGRESS;
-        // explore all adj nodes of the source
-        for (int v : graph[source]) {            
-            boolean rres = exploreTheGraph(graph, v, visited);
-            if (!rres) return false;
+        Stack<Integer> topologicalOrdering = new Stack<>();
+        boolean[] visited = new boolean[numCourses];
+        for (int node = 0; node < graph.length; node++) {
+            if (visited[node]==false) {
+                findTopologicalOrder(graph, node, visited, topologicalOrdering);
+            }
         }
-        visited[source] = NodeStatus.VISITED;
-        return true;
+        
+        int[] answer = new int[topologicalOrdering.size()];
+        
+        int index = 0;
+        while (topologicalOrdering.isEmpty()==false) {
+            int v = topologicalOrdering.pop();
+            answer[index] = v;
+            index++;
+        }
+        
+        return answer;
     }
 
-    private List<Integer>[] getGraph(int numCourses, int[][] prerequisites) {
-        List<Integer>[] graph = new List[numCourses];
-        for (int i = 0; i < numCourses; i++)
-            graph[i] = new ArrayList<>();
+    private void findTopologicalOrder(List<Integer>[] graph, int node, boolean[] visited, Stack<Integer> topologicalOrdering) {
+        visited[node] = true;
+        for (int v : graph[node]) {
+            if (!visited[v]) {
+                findTopologicalOrder(graph, v, visited, topologicalOrdering);
+            }
+        }
+        topologicalOrdering.add(node);
+    }
+
+    private boolean isCyclic(List<Integer>[] graph, int node, NodeStatus[] tracking) {
+        if (isCompletlyDiscovered(tracking[node], NodeStatus.COMPLETED)) return false;
+        if(isInProgress(tracking[node], NodeStatus.IN_PROGRESS)) return true;
+
+        tracking[node] = NodeStatus.IN_PROGRESS;
+        for (int adjNode : graph[node]) {
+            boolean rres = isCyclic(graph, adjNode, tracking);
+            if (rres) return true;
+        }
+        tracking[node] = NodeStatus.COMPLETED;
+        return false;
+    }
+
+    private boolean isInProgress(NodeStatus nodeStatus, NodeStatus inProgress) {
+        return nodeStatus == inProgress;
+    }
+
+    private boolean isCompletlyDiscovered(NodeStatus nodeStatus, NodeStatus completed) {
+        return nodeStatus == completed;
+    }
+
+    private List[] getGraph(int numCourses, int[][] prerequisites) {
+        List[] graph = new List[numCourses];
+        for (int i = 0; i < graph.length; i++) {
+            graph[i] = new ArrayList<Integer>();
+        }
 
         for (int[] nodes : prerequisites) {
-            int u = nodes[0];
-            int v = nodes[1];
+            int firstNode = nodes[0];
+            int secondNode = nodes[1];
 
-            graph[u].add(v);
+            // second --> first
+            graph[secondNode].add(firstNode);
         }
         return graph;
     }
