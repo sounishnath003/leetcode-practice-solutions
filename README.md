@@ -104,7 +104,7 @@
 |206|[ Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/)|[Java](./solutions/206.%20Reverse%20Linked%20List.java)|0 ms|
 |207|[ Course Schedule](https://leetcode.com/problems/course-schedule/)|[Java](./solutions/207.%20Course%20Schedule.java)|6 ms|
 |209|[ Minimum Size Subarray Sum](https://leetcode.com/problems/minimum-size-subarray-sum/)|[Java](./solutions/209.%20Minimum%20Size%20Subarray%20Sum.java)|1 ms|
-|210|[ Course Schedule II](https://leetcode.com/problems/course-schedule-ii/)|[Java](./solutions/210.%20Course%20Schedule%20II.java)|2 ms|
+|210|[ Course Schedule II](https://leetcode.com/problems/course-schedule-ii/)|[Java](./solutions/210.%20Course%20Schedule%20II.java)|8 ms|
 |215|[ Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/)|[Java](./solutions/215.%20Kth%20Largest%20Element%20in%20an%20Array.java)|5 ms|
 |217|[ Contains Duplicate](https://leetcode.com/problems/contains-duplicate/)|[C++](./solutions/217.%20Contains%20Duplicate.cpp)|108 ms|
 |226|[ Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree/)|[Java](./solutions/226.%20Invert%20Binary%20Tree.java)|0 ms|
