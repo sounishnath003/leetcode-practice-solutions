@@ -181,6 +181,7 @@
 |752|[ Open the Lock](https://leetcode.com/problems/open-the-lock/)|[Java](./solutions/752.%20Open%20the%20Lock.java)|28 ms|
 |754|[ Reach a Number](https://leetcode.com/problems/reach-a-number/)|[C++](./solutions/754.%20Reach%20a%20Number.cpp)|0 ms|
 |783|[ Minimum Distance Between BST Nodes](https://leetcode.com/problems/minimum-distance-between-bst-nodes/)|[Java](./solutions/783.%20Minimum%20Distance%20Between%20BST%20Nodes.java)|0 ms|
+|787|[ Cheapest Flights Within K Stops](https://leetcode.com/problems/cheapest-flights-within-k-stops/)|[Java](./solutions/787.%20Cheapest%20Flights%20Within%20K%20Stops.java)|N/A|
 |792|[ Number of Matching Subsequences](https://leetcode.com/problems/number-of-matching-subsequences/)|[Java](./solutions/792.%20Number%20of%20Matching%20Subsequences.java)|1867 ms|
 |795|[ Number of Subarrays with Bounded Maximum](https://leetcode.com/problems/number-of-subarrays-with-bounded-maximum/)|[Java](./solutions/795.%20Number%20of%20Subarrays%20with%20Bounded%20Maximum.java)|5 ms|
 |815|[ Bus Routes](https://leetcode.com/problems/bus-routes/)|[Java](./solutions/815.%20Bus%20Routes.java)|84 ms|
