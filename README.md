@@ -145,6 +145,7 @@
 |412|[ Fizz Buzz](https://leetcode.com/problems/fizz-buzz/)|[C++](./solutions/412.%20Fizz%20Buzz.cpp)|4 ms|
 |416|[ Partition Equal Subset Sum](https://leetcode.com/problems/partition-equal-subset-sum/)|[C++](./solutions/416.%20Partition%20Equal%20Subset%20Sum.cpp)|780 ms|
 |419|[ Battleships in a Board](https://leetcode.com/problems/battleships-in-a-board/)|[C++](./solutions/419.%20Battleships%20in%20a%20Board.cpp)|12 ms|
+|438|[ Find All Anagrams in a String](https://leetcode.com/problems/find-all-anagrams-in-a-string/)|[Java](./solutions/438.%20Find%20All%20Anagrams%20in%20a%20String.java)|60 ms|
 |451|[ Sort Characters By Frequency](https://leetcode.com/problems/sort-characters-by-frequency/)|[Java](./solutions/451.%20Sort%20Characters%20By%20Frequency.java)|10 ms|
 |473|[ Matchsticks to Square](https://leetcode.com/problems/matchsticks-to-square/)|[Java](./solutions/473.%20Matchsticks%20to%20Square.java)|970 ms|
 |496|[ Next Greater Element I](https://leetcode.com/problems/next-greater-element-i/)|[Java](./solutions/496.%20Next%20Greater%20Element%20I.java)|3 ms|
