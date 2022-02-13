@@ -39,6 +39,7 @@ class Solution {
             you already know by the right neighbours who are the peak values
             so you can increment i pointer directly, 
             not to create dependency upon j for rightward traversal
+            TIME: O(N)
         */
 ​
         return answer;
