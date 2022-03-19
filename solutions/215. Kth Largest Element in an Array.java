@@ -1,27 +1,63 @@
 class Solution {
+    public int findKthLargest(int[] nums, int k) {
+        // PriorityQueue<Integer> minheap = new PriorityQueue<>(); // default: minheap
+        // for (int elem : nums) {
+        //     minheap.offer(elem);
+        //     if (minheap.size() > k) {
+        //         minheap.remove();
+        //     }
+        // }
+        // return minheap.peek();
+        
+        return KthInArray(nums, k);
+    }
     
-    // HEAP - find K largrest
-    // Both are different question
-    public static void findKLargestElement(int[] arr, int k) {
-        PriorityQueue<Integer> maxHeap = new PriorityQueue<>();
-        for (int i = 0; i < k; i++) maxHeap.add(arr[i]);
-        
-        for (int i = k; i < arr.length; i++) {
-            int topel = maxHeap.peek();
-            if (topel < arr[i]) {
-                maxHeap.remove();
-                maxHeap.add(arr[i]);
+    // TC: O(N), SC: O(1)
+    public int KthInArray(int[] arr, int k) {
+        int start = 0;
+        int end = arr.length - 1;
+        int index = arr.length - k;
+​
+        while (start <= end) {
+            int paritionIndex = parition(arr, start, end);
+            if (paritionIndex == index) {
+                return arr[paritionIndex];
+            } else if (paritionIndex > index) {
+                end = paritionIndex - 1;
+            } else {
+                start = paritionIndex + 1;
             }
         }
-        
-        while(maxHeap.isEmpty()==false)
-            System.out.println(maxHeap.poll());
+        return arr[start];
     }
-    
-    public int findKthLargest(int[] nums, int k) {
-        PriorityQueue<Integer> pq = new PriorityQueue<>(Collections.reverseOrder());
-        for (int x : nums) pq.add(x);
-        while(k-1 > 0) {pq.remove(); k--;}
-        return pq.peek();
-    }
+    
+    private void swap(int[] arr, int i, int j) {
+        int t = arr[i];
+        arr[i] = arr[j];
+        arr[j] = t;
+    }
+​
+    private int parition(int[] arr, int start, int end) {
+        // TODO Auto-generated method stub
+        int pivot = end;
+        
+        int i = start;
+        int j = end;
+        
+        while (i < j) {
+            while (i < j && arr[i] <= arr[pivot]) {
+                i++;
+            }
+            
+            while (i < j && arr[j] >= arr[pivot]) {
+                j--;
+            }
+            
+            swap(arr, i, j);
+        }
+        
+        swap(arr, i, pivot);
+        
+        return i;
+    }
 }
