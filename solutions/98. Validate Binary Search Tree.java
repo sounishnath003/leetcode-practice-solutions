@@ -14,49 +14,45 @@
  * }
  */
 class Solution {
-    class Pair3 {
-        int min;
-        int max;
-        boolean state;
+    public boolean isValidBST(TreeNode root) {
+        return simpleCheck(root, Long.MIN_VALUE, Long.MAX_VALUE);
+        // return isBST(root).isbst;
+    }
 ​
-        Pair3() {
-            this.min = Integer.MAX_VALUE;
-            this.max = Integer.MIN_VALUE;
-            this.state = true;
-        }
+    boolean simpleCheck(TreeNode root, long start, long end) {
+        if (root == null) return true ;
 ​
-        Pair3(int min, int max, boolean status) {
-            this.min = min;
-            this.max = max;
-            this.state = status;
-        }
-    }
+        if (start < root.val && root.val < end) {
+            boolean leftTree = simpleCheck(root.left, start, root.val);
+            boolean rightTree = simpleCheck(root.right, root.val, end);
+            return leftTree && rightTree;
+        }
 ​
-    public boolean isValidBST(TreeNode root) {
-        Pair3 ans = _isValidBST(root);
-        return ans.state;
-    }
+        return false;
+    }
+    
+    class State {
+        int minimum;
+        int maximum;
+        boolean isbst;
 ​
-    private Pair3 _isValidBST(TreeNode root) {
+        State() {
+            this.minimum = Integer.MAX_VALUE;
+            this.maximum = Integer.MIN_VALUE;
+            this.isbst = true;
+        }
+        State(int min, int mx, boolean bst) {
+            this.minimum = min;
+            this.maximum = mx;
+            this.isbst = bst;
+        }
+    }
 ​
-        if (root == null) {
-            return new Pair3();
-        }
+    State isBST(TreeNode root) {
+        if (root == null) return new State();
+        
+        // faith
+        State left = isBST(root.left);
+        State right = isBST(root.right);
 ​
-        // faith
-        Pair3 left_result = _isValidBST(root.left);
-        Pair3 right_result = _isValidBST(root.right);
-​
-        // self work
-​
-        Pair3 mystatus = new Pair3();
-​
-        if (root.val <= left_result.max || root.val > right_result.min)
-            mystatus.state = false;
-​
-        mystatus.min = Math.min(root.val, Math.min(left_result.min, right_result.min));
-        mystatus.max = Math.max(root.val, Math.max(left_result.max, right_result.max));
-​
-        return mystatus;
-    }
-}
+        if (left.isbst == false || right.isbst == false) return new State(Integer.MAX_VALUE, Integer.MIN_VALUE, false); 
