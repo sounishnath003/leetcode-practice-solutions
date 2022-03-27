@@ -209,6 +209,7 @@
 |905|[ Sort Array By Parity](https://leetcode.com/problems/sort-array-by-parity/)|[Java](./solutions/905.%20Sort%20Array%20By%20Parity.java)|1 ms|
 |906|[ Super Palindromes](https://leetcode.com/problems/super-palindromes/)|[Java](./solutions/906.%20Super%20Palindromes.java)|809 ms|
 |911|[ Online Election](https://leetcode.com/problems/online-election/)|[C++](./solutions/911.%20Online%20Election.cpp)|344 ms|
+|912|[ Sort an Array](https://leetcode.com/problems/sort-an-array/)|[Java](./solutions/912.%20Sort%20an%20Array.java)|21 ms|
 |915|[ Partition Array into Disjoint Intervals](https://leetcode.com/problems/partition-array-into-disjoint-intervals/)|[Java](./solutions/915.%20Partition%20Array%20into%20Disjoint%20Intervals.java)|1 ms|
 |925|[ Long Pressed Name](https://leetcode.com/problems/long-pressed-name/)|[Java](./solutions/925.%20Long%20Pressed%20Name.java)|1 ms|
 |929|[ Unique Email Addresses](https://leetcode.com/problems/unique-email-addresses/)|[Java](./solutions/929.%20Unique%20Email%20Addresses.java)|13 ms|
