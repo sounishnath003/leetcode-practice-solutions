@@ -26,7 +26,7 @@ class Solution {
                }
                right--;
            }
-        }
+        }
         return water;
     }
 ​
