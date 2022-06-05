@@ -1,53 +1,31 @@
 class Solution {
-    /*
-        * Not too tough; just focus on recursion steps
-        * backtrack when conditions satisfies
-        * algorithm / psuedo code looks somethign like this!! 
-        * very easy and stay focus on recursion steps!
-        * for (i 0 to s.len){
-                if (ispalindrome(s, curIdx, i)) {
-                    if (i==curIdx) curans.add(s[i])
-                    else curans.add(s.substring(idx, i+1))
-                    f(s, i+1);
-                    curans.pop_back();
-                }
-           }
-    */
-    public List<List<String>> partition(String s) {
-        List<List<String>> ans = new ArrayList<>();
-        generatePalindromeStrings(s, 0, ans, new ArrayList<>());
-        return ans;
-    }
+    public List<List<String>> partition(String s) {
+        List<List<String>>result=new ArrayList<>();
+        List<String>set=new ArrayList<>();
+        func(s,0,set,result);
+        return result;
+    }
 ​
-    private void generatePalindromeStrings(String s, int idx, List<List<String>> ans, ArrayList<String> currentAns) {
-        // TODO Auto-generated method stub
-        if (currentAns.size() > 0 && idx >= s.length()) {
-            List<String> aans = (List<String>) currentAns.clone();
-            ans.add(aans);
-        }
-        
-        for (int i = idx; i < s.length(); i++) {
-            if (isPalindrome(s, idx, i)) {
-                if (idx == i) currentAns.add("" + s.charAt(i));
-                else currentAns.add(s.substring(idx, i+1));
-                // faith
-                // ** I will get next indices answers eventually
-                generatePalindromeStrings(s, i+1, ans, currentAns);
-                currentAns.remove(currentAns.size() - 1); // backtracking to prev.state
-            } else continue ;
-        }
-    }
+    private void func(String s, int current_index, List<String> set, List<List<String>> result) {
+        if (current_index>=s.length()){
+            result.add(new ArrayList<>(set));
+            return;
+        }
+        for (int i=current_index;i<s.length();i++){
+            if (is_palindrome(s,current_index,i)){
+                set.add(s.substring(current_index,i+1));
+                func(s,i+1,set,result);
+                set.remove(set.size()-1);
+            }
+        }
+    }
 ​
-    private boolean isPalindrome(String s, int idx, int j) {
-        // TODO Auto-generated method stub
-        if (idx==j) return true;
-        while(idx < j) {
-            if (s.charAt(idx) != s.charAt(j)) return false;
-            else {
-                idx++;
-                j--;
-            }
-        }
-        return true;
-    }
+    private boolean is_palindrome(String s, int start, int end) {
+        while (start<end){
+            if (s.charAt(start)!=s.charAt(end))return false;
+            start++;
+            end--;
+        }
+        return true;
+    }
 }
