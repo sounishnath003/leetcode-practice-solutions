@@ -15,5 +15,5 @@ class Solution {
            func(nums,index+1,set, subsets);
            set.remove(set.size()-1);
         }
-    }
+    }
 }
