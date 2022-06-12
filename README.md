@@ -260,3 +260,4 @@
 |1710|[ Maximum Units on a Truck](https://leetcode.com/problems/maximum-units-on-a-truck/)|[Java](./solutions/1710.%20Maximum%20Units%20on%20a%20Truck.java)|122 ms|
 |1921|[ Eliminate Maximum Number of Monsters](https://leetcode.com/problems/eliminate-maximum-number-of-monsters/)|[Java](./solutions/1921.%20Eliminate%20Maximum%20Number%20of%20Monsters.java)|26 ms|
 |2300|[ Successful Pairs of Spells and Potions](https://leetcode.com/problems/successful-pairs-of-spells-and-potions/)|[Java](./solutions/2300.%20Successful%20Pairs%20of%20Spells%20and%20Potions.java)|87 ms|
+|2301|[ Match Substring After Replacement](https://leetcode.com/problems/match-substring-after-replacement/)|[Java](./solutions/2301.%20Match%20Substring%20After%20Replacement.java)|229 ms|
