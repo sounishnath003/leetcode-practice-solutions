@@ -233,7 +233,7 @@
 |994|[ Rotting Oranges](https://leetcode.com/problems/rotting-oranges/)|[Java](./solutions/994.%20Rotting%20Oranges.java)|19 ms|
 |1008|[ Construct Binary Search Tree from Preorder Traversal](https://leetcode.com/problems/construct-binary-search-tree-from-preorder-traversal/)|[Java](./solutions/1008.%20Construct%20Binary%20Search%20Tree%20from%20Preorder%20Traversal.java)|0 ms|
 |1015|[ Smallest Integer Divisible by K](https://leetcode.com/problems/smallest-integer-divisible-by-k/)|[C++](./solutions/1015.%20Smallest%20Integer%20Divisible%20by%20K.cpp)|0 ms|
-|1048|[ Longest String Chain](https://leetcode.com/problems/longest-string-chain/)|[Java](./solutions/1048.%20Longest%20String%20Chain.java)|34 ms|
+|1048|[ Longest String Chain](https://leetcode.com/problems/longest-string-chain/)|[Java](./solutions/1048.%20Longest%20String%20Chain.java)|116 ms|
 |1051|[ Height Checker](https://leetcode.com/problems/height-checker/)|[Java](./solutions/1051.%20Height%20Checker.java)|1 ms|
 |1094|[ Car Pooling](https://leetcode.com/problems/car-pooling/)|[Java](./solutions/1094.%20Car%20Pooling.java)|16 ms|
 |1123|[ Lowest Common Ancestor of Deepest Leaves](https://leetcode.com/problems/lowest-common-ancestor-of-deepest-leaves/)|[C++](./solutions/1123.%20Lowest%20Common%20Ancestor%20of%20Deepest%20Leaves.cpp)|24 ms|
