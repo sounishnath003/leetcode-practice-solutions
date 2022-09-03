@@ -227,6 +227,7 @@
 |943|[ Find the Shortest Superstring](https://leetcode.com/problems/find-the-shortest-superstring/)|[Java](./solutions/943.%20Find%20the%20Shortest%20Superstring.java)|26 ms|
 |946|[ Validate Stack Sequences](https://leetcode.com/problems/validate-stack-sequences/)|[Java](./solutions/946.%20Validate%20Stack%20Sequences.java)|1 ms|
 |952|[ Largest Component Size by Common Factor](https://leetcode.com/problems/largest-component-size-by-common-factor/)|[Java](./solutions/952.%20Largest%20Component%20Size%20by%20Common%20Factor.java)|405 ms|
+|967|[ Numbers With Same Consecutive Differences](https://leetcode.com/problems/numbers-with-same-consecutive-differences/)|[Java](./solutions/967.%20Numbers%20With%20Same%20Consecutive%20Differences.java)|9 ms|
 |968|[ Binary Tree Cameras](https://leetcode.com/problems/binary-tree-cameras/)|[C++](./solutions/968.%20Binary%20Tree%20Cameras.cpp)|4 ms|
 |977|[ Squares of a Sorted Array](https://leetcode.com/problems/squares-of-a-sorted-array/)|[C++](./solutions/977.%20Squares%20of%20a%20Sorted%20Array.cpp)|52 ms|
 |990|[ Satisfiability of Equality Equations](https://leetcode.com/problems/satisfiability-of-equality-equations/)|[Java](./solutions/990.%20Satisfiability%20of%20Equality%20Equations.java)|14 ms|
