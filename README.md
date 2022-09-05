@@ -152,6 +152,7 @@
 |412|[ Fizz Buzz](https://leetcode.com/problems/fizz-buzz/)|[C++](./solutions/412.%20Fizz%20Buzz.cpp)|4 ms|
 |416|[ Partition Equal Subset Sum](https://leetcode.com/problems/partition-equal-subset-sum/)|[C++](./solutions/416.%20Partition%20Equal%20Subset%20Sum.cpp)|780 ms|
 |419|[ Battleships in a Board](https://leetcode.com/problems/battleships-in-a-board/)|[C++](./solutions/419.%20Battleships%20in%20a%20Board.cpp)|12 ms|
+|429|[ N-ary Tree Level Order Traversal](https://leetcode.com/problems/n-ary-tree-level-order-traversal/)|[Java](./solutions/429.%20N-ary%20Tree%20Level%20Order%20Traversal.java)|4 ms|
 |435|[ Non-overlapping Intervals](https://leetcode.com/problems/non-overlapping-intervals/)|[Java](./solutions/435.%20Non-overlapping%20Intervals.java)|86 ms|
 |438|[ Find All Anagrams in a String](https://leetcode.com/problems/find-all-anagrams-in-a-string/)|[Java](./solutions/438.%20Find%20All%20Anagrams%20in%20a%20String.java)|60 ms|
 |450|[ Delete Node in a BST](https://leetcode.com/problems/delete-node-in-a-bst/)|[Java](./solutions/450.%20Delete%20Node%20in%20a%20BST.java)|0 ms|
