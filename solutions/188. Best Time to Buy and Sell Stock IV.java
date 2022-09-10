@@ -10,7 +10,7 @@ class Solution {
                 maxProfit = maxProfit + Math.max(0,prices[i+1]-prices[i]);
             }
             return maxProfit;
-        }
+        }
         
         int[] buy = new int[k];
         int[] sell = new int[k];
