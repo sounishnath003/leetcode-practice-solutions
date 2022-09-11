@@ -248,6 +248,7 @@
 |1306|[ Jump Game III](https://leetcode.com/problems/jump-game-iii/)|[Java](./solutions/1306.%20Jump%20Game%20III.java)|8 ms|
 |1329|[ Sort the Matrix Diagonally](https://leetcode.com/problems/sort-the-matrix-diagonally/)|[C++](./solutions/1329.%20Sort%20the%20Matrix%20Diagonally.cpp)|8 ms|
 |1354|[ Construct Target Array With Multiple Sums](https://leetcode.com/problems/construct-target-array-with-multiple-sums/)|[Java](./solutions/1354.%20Construct%20Target%20Array%20With%20Multiple%20Sums.java)|N/A|
+|1383|[ Maximum Performance of a Team](https://leetcode.com/problems/maximum-performance-of-a-team/)|[Java](./solutions/1383.%20Maximum%20Performance%20of%20a%20Team.java)|49 ms|
 |1423|[ Maximum Points You Can Obtain from Cards](https://leetcode.com/problems/maximum-points-you-can-obtain-from-cards/)|[Java](./solutions/1423.%20Maximum%20Points%20You%20Can%20Obtain%20from%20Cards.java)|1 ms|
 |1448|[ Count Good Nodes in Binary Tree](https://leetcode.com/problems/count-good-nodes-in-binary-tree/)|[Java](./solutions/1448.%20Count%20Good%20Nodes%20in%20Binary%20Tree.java)|4 ms|
 |1457|[ Pseudo-Palindromic Paths in a Binary Tree](https://leetcode.com/problems/pseudo-palindromic-paths-in-a-binary-tree/)|[C++](./solutions/1457.%20Pseudo-Palindromic%20Paths%20in%20a%20Binary%20Tree.cpp)|204 ms|
