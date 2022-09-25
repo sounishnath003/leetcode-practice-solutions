@@ -18,7 +18,7 @@ class MyCircularQueue {
         rear = (rear+1)%size;
         used++;
         return true;
-    }
+    }
     
     public boolean deQueue()
     {
