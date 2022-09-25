@@ -178,6 +178,7 @@
 |609|[ Find Duplicate File in System](https://leetcode.com/problems/find-duplicate-file-in-system/)|[Java](./solutions/609.%20Find%20Duplicate%20File%20in%20System.java)|13 ms|
 |611|[ Valid Triangle Number](https://leetcode.com/problems/valid-triangle-number/)|[Java](./solutions/611.%20Valid%20Triangle%20Number.java)|32 ms|
 |621|[ Task Scheduler](https://leetcode.com/problems/task-scheduler/)|[C++](./solutions/621.%20Task%20Scheduler.cpp)|344 ms|
+|622|[ Design Circular Queue](https://leetcode.com/problems/design-circular-queue/)|[Java](./solutions/622.%20Design%20Circular%20Queue.java)|10 ms|
 |628|[ Maximum Product of Three Numbers](https://leetcode.com/problems/maximum-product-of-three-numbers/)|[Java](./solutions/628.%20Maximum%20Product%20of%20Three%20Numbers.java)|4 ms|
 |630|[ Course Schedule III](https://leetcode.com/problems/course-schedule-iii/)|[Java](./solutions/630.%20Course%20Schedule%20III.java)|N/A|
 |637|[ Average of Levels in Binary Tree](https://leetcode.com/problems/average-of-levels-in-binary-tree/)|[Java](./solutions/637.%20Average%20of%20Levels%20in%20Binary%20Tree.java)|4 ms|
