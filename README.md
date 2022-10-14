@@ -273,6 +273,7 @@
 |1921|[ Eliminate Maximum Number of Monsters](https://leetcode.com/problems/eliminate-maximum-number-of-monsters/)|[Java](./solutions/1921.%20Eliminate%20Maximum%20Number%20of%20Monsters.java)|26 ms|
 |1996|[ The Number of Weak Characters in the Game](https://leetcode.com/problems/the-number-of-weak-characters-in-the-game/)|[Java](./solutions/1996.%20The%20Number%20of%20Weak%20Characters%20in%20the%20Game.java)|216 ms|
 |2007|[ Find Original Array From Doubled Array](https://leetcode.com/problems/find-original-array-from-doubled-array/)|[Java](./solutions/2007.%20Find%20Original%20Array%20From%20Doubled%20Array.java)|231 ms|
+|2095|[ Delete the Middle Node of a Linked List](https://leetcode.com/problems/delete-the-middle-node-of-a-linked-list/)|[Java](./solutions/2095.%20Delete%20the%20Middle%20Node%20of%20a%20Linked%20List.java)|6 ms|
 |2299|[ Strong Password Checker II](https://leetcode.com/problems/strong-password-checker-ii/)|[Java](./solutions/2299.%20Strong%20Password%20Checker%20II.java)|3 ms|
 |2300|[ Successful Pairs of Spells and Potions](https://leetcode.com/problems/successful-pairs-of-spells-and-potions/)|[Java](./solutions/2300.%20Successful%20Pairs%20of%20Spells%20and%20Potions.java)|87 ms|
 |2301|[ Match Substring After Replacement](https://leetcode.com/problems/match-substring-after-replacement/)|[Java](./solutions/2301.%20Match%20Substring%20After%20Replacement.java)|229 ms|
