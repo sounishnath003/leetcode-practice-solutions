@@ -189,6 +189,7 @@
 |669|[ Trim a Binary Search Tree](https://leetcode.com/problems/trim-a-binary-search-tree/)|[C++](./solutions/669.%20Trim%20a%20Binary%20Search%20Tree.cpp)|12 ms|
 |670|[ Maximum Swap](https://leetcode.com/problems/maximum-swap/)|[Java](./solutions/670.%20Maximum%20Swap.java)|8 ms|
 |684|[ Redundant Connection](https://leetcode.com/problems/redundant-connection/)|[Java](./solutions/684.%20Redundant%20Connection.java)|0 ms|
+|692|[ Top K Frequent Words](https://leetcode.com/problems/top-k-frequent-words/)|[Java](./solutions/692.%20Top%20K%20Frequent%20Words.java)|18 ms|
 |695|[ Max Area of Island](https://leetcode.com/problems/max-area-of-island/)|[Java](./solutions/695.%20Max%20Area%20of%20Island.java)|10 ms|
 |700|[ Search in a Binary Search Tree](https://leetcode.com/problems/search-in-a-binary-search-tree/)|[JavaScript](./solutions/700.%20Search%20in%20a%20Binary%20Search%20Tree.js)|100 ms|
 |704|[ Binary Search](https://leetcode.com/problems/binary-search/)|[Java](./solutions/704.%20Binary%20Search.java)|0 ms|
