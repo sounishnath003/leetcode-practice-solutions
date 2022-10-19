@@ -34,6 +34,6 @@ class Solution {
 ​
                 return a.getValue() - b.getValue();
             });
-        }
+        }
     }
 }
