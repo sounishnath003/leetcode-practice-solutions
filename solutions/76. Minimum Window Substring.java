@@ -59,3 +59,18 @@ class Solution {
     private String minimumWindowSubstring(String s, String p, int start, int end) {
         if (s.length() < p.length())
             return "";
+​
+        if (s.equals(p))
+            return p;
+        if (start > end) {
+            return s;
+        }
+​
+        String substring = s.substring(start, end + 1);
+        if (this.isPatternFound(substring, p)) {
+            int substringLength = substring.length();
+            String rres = this.minimumWindowSubstring(s, p, start + 1, end);
+            if (rres == null)
+                return substring;
+            return substringLength < rres.length() ? substring : rres;
+        }
