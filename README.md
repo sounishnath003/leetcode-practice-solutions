@@ -46,6 +46,7 @@
 |73|[ Set Matrix Zeroes](https://leetcode.com/problems/set-matrix-zeroes/)|[Java](./solutions/73.%20Set%20Matrix%20Zeroes.java)|0 ms|
 |74|[ Search a 2D Matrix](https://leetcode.com/problems/search-a-2d-matrix/)|[Java](./solutions/74.%20Search%20a%202D%20Matrix.java)|0 ms|
 |75|[ Sort Colors](https://leetcode.com/problems/sort-colors/)|[Java](./solutions/75.%20Sort%20Colors.java)|0 ms|
+|76|[ Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/)|[Java](./solutions/76.%20Minimum%20Window%20Substring.java)|12 ms|
 |77|[ Combinations](https://leetcode.com/problems/combinations/)|[C++](./solutions/77.%20Combinations.cpp)|1376 ms|
 |78|[ Subsets](https://leetcode.com/problems/subsets/)|[C++](./solutions/78.%20Subsets.cpp)|4 ms|
 |79|[ Word Search](https://leetcode.com/problems/word-search/)|[Java](./solutions/79.%20Word%20Search.java)|200 ms|
