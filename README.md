@@ -258,6 +258,7 @@
 |1192|[ Critical Connections in a Network](https://leetcode.com/problems/critical-connections-in-a-network/)|[Java](./solutions/1192.%20Critical%20Connections%20in%20a%20Network.java)|134 ms|
 |1239|[ Maximum Length of a Concatenated String with Unique Characters](https://leetcode.com/problems/maximum-length-of-a-concatenated-string-with-unique-characters/)|[Java](./solutions/1239.%20Maximum%20Length%20of%20a%20Concatenated%20String%20with%20Unique%20Characters.java)|55 ms|
 |1268|[ Search Suggestions System](https://leetcode.com/problems/search-suggestions-system/)|[Java](./solutions/1268.%20Search%20Suggestions%20System.java)|8 ms|
+|1293|[ Shortest Path in a Grid with Obstacles Elimination](https://leetcode.com/problems/shortest-path-in-a-grid-with-obstacles-elimination/)|[Java](./solutions/1293.%20Shortest%20Path%20in%20a%20Grid%20with%20Obstacles%20Elimination.java)|37 ms|
 |1302|[ Deepest Leaves Sum](https://leetcode.com/problems/deepest-leaves-sum/)|[Java](./solutions/1302.%20Deepest%20Leaves%20Sum.java)|2 ms|
 |1306|[ Jump Game III](https://leetcode.com/problems/jump-game-iii/)|[Java](./solutions/1306.%20Jump%20Game%20III.java)|8 ms|
 |1329|[ Sort the Matrix Diagonally](https://leetcode.com/problems/sort-the-matrix-diagonally/)|[C++](./solutions/1329.%20Sort%20the%20Matrix%20Diagonally.cpp)|8 ms|
