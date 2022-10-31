@@ -207,6 +207,7 @@
 |746|[ Min Cost Climbing Stairs](https://leetcode.com/problems/min-cost-climbing-stairs/)|[Java](./solutions/746.%20Min%20Cost%20Climbing%20Stairs.java)|3 ms|
 |752|[ Open the Lock](https://leetcode.com/problems/open-the-lock/)|[Java](./solutions/752.%20Open%20the%20Lock.java)|28 ms|
 |754|[ Reach a Number](https://leetcode.com/problems/reach-a-number/)|[C++](./solutions/754.%20Reach%20a%20Number.cpp)|0 ms|
+|766|[ Toeplitz Matrix](https://leetcode.com/problems/toeplitz-matrix/)|[Java](./solutions/766.%20Toeplitz%20Matrix.java)|1 ms|
 |783|[ Minimum Distance Between BST Nodes](https://leetcode.com/problems/minimum-distance-between-bst-nodes/)|[Java](./solutions/783.%20Minimum%20Distance%20Between%20BST%20Nodes.java)|0 ms|
 |787|[ Cheapest Flights Within K Stops](https://leetcode.com/problems/cheapest-flights-within-k-stops/)|[Java](./solutions/787.%20Cheapest%20Flights%20Within%20K%20Stops.java)|N/A|
 |792|[ Number of Matching Subsequences](https://leetcode.com/problems/number-of-matching-subsequences/)|[Java](./solutions/792.%20Number%20of%20Matching%20Subsequences.java)|1867 ms|
