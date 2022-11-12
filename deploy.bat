@@ -1,13 +1,13 @@
 git pull origin master
-xcopy solutions ..\solutions
+cp -r solutions ..\solutions
 git switch master
-del /f/q/s solutions
-copy ..\solutions solutions
-del /f/q/s ..\solutions
-rmdir ..\solutions
-xcopy ..\solutions solutions
+rm -fr solutions
+cp -R ../solutions solutions
+rm -fr ../solutions
+rm -fr ../solutions
+cp -R ../solutions solutions
 go run main.go
-xcopy solutions leetcode-practice-app\src\data
+cp -R solutions leetcode-practice-app/src/data
 git add .
 git commit -am "Updated database on timestamp: " < date /t
 git push
