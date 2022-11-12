@@ -12,4 +12,4 @@ git add .
 git commit -am "Updated database on timestamp: " < date /t
 git push
 cd leetcode-practice-app
-yarn dev
+npm run dev
