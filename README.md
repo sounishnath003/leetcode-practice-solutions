@@ -119,6 +119,7 @@
 |215|[ Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/)|[Java](./solutions/215.%20Kth%20Largest%20Element%20in%20an%20Array.java)|35 ms|
 |217|[ Contains Duplicate](https://leetcode.com/problems/contains-duplicate/)|[C++](./solutions/217.%20Contains%20Duplicate.cpp)|108 ms|
 |219|[ Contains Duplicate II](https://leetcode.com/problems/contains-duplicate-ii/)|[Java](./solutions/219.%20Contains%20Duplicate%20II.java)|18 ms|
+|224|[ Basic Calculator](https://leetcode.com/problems/basic-calculator/)|[Python3](./solutions/224.%20Basic%20Calculator.py)|101 ms|
 |226|[ Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree/)|[Java](./solutions/226.%20Invert%20Binary%20Tree.java)|0 ms|
 |227|[ Basic Calculator II](https://leetcode.com/problems/basic-calculator-ii/)|[C++](./solutions/227.%20Basic%20Calculator%20II.cpp)|20 ms|
 |229|[ Majority Element II](https://leetcode.com/problems/majority-element-ii/)|[Java](./solutions/229.%20Majority%20Element%20II.java)|1 ms|
