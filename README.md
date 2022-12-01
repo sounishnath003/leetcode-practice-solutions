@@ -281,6 +281,7 @@
 |1689|[ Partitioning Into Minimum Number Of Deci-Binary Numbers](https://leetcode.com/problems/partitioning-into-minimum-number-of-deci-binary-numbers/)|[Java](./solutions/1689.%20Partitioning%20Into%20Minimum%20Number%20Of%20Deci-Binary%20Numbers.java)|5 ms|
 |1695|[ Maximum Erasure Value](https://leetcode.com/problems/maximum-erasure-value/)|[Java](./solutions/1695.%20Maximum%20Erasure%20Value.java)|53 ms|
 |1696|[ Jump Game VI](https://leetcode.com/problems/jump-game-vi/)|[Java](./solutions/1696.%20Jump%20Game%20VI.java)|85 ms|
+|1704|[ Determine if String Halves Are Alike](https://leetcode.com/problems/determine-if-string-halves-are-alike/)|[Java](./solutions/1704.%20Determine%20if%20String%20Halves%20Are%20Alike.java)|7 ms|
 |1706|[ Where Will the Ball Fall](https://leetcode.com/problems/where-will-the-ball-fall/)|[Java](./solutions/1706.%20Where%20Will%20the%20Ball%20Fall.java)|1 ms|
 |1710|[ Maximum Units on a Truck](https://leetcode.com/problems/maximum-units-on-a-truck/)|[Java](./solutions/1710.%20Maximum%20Units%20on%20a%20Truck.java)|122 ms|
 |1832|[ Check if the Sentence Is Pangram](https://leetcode.com/problems/check-if-the-sentence-is-pangram/)|[Java](./solutions/1832.%20Check%20if%20the%20Sentence%20Is%20Pangram.java)|10 ms|
