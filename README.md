@@ -231,6 +231,7 @@
 |904|[ Fruit Into Baskets](https://leetcode.com/problems/fruit-into-baskets/)|[C++](./solutions/904.%20Fruit%20Into%20Baskets.cpp)|256 ms|
 |905|[ Sort Array By Parity](https://leetcode.com/problems/sort-array-by-parity/)|[Java](./solutions/905.%20Sort%20Array%20By%20Parity.java)|1 ms|
 |906|[ Super Palindromes](https://leetcode.com/problems/super-palindromes/)|[Java](./solutions/906.%20Super%20Palindromes.java)|809 ms|
+|907|[ Sum of Subarray Minimums](https://leetcode.com/problems/sum-of-subarray-minimums/)|[Java](./solutions/907.%20Sum%20of%20Subarray%20Minimums.java)|78 ms|
 |911|[ Online Election](https://leetcode.com/problems/online-election/)|[C++](./solutions/911.%20Online%20Election.cpp)|344 ms|
 |912|[ Sort an Array](https://leetcode.com/problems/sort-an-array/)|[Java](./solutions/912.%20Sort%20an%20Array.java)|21 ms|
 |915|[ Partition Array into Disjoint Intervals](https://leetcode.com/problems/partition-array-into-disjoint-intervals/)|[Java](./solutions/915.%20Partition%20Array%20into%20Disjoint%20Intervals.java)|1 ms|
