@@ -30,7 +30,7 @@ class Solution {
         for (Map.Entry<Character, Integer> kv : map1.entrySet()) {
             rmap.putIfAbsent(kv.getValue(), new ArrayList<>());
             rmap.get(kv.getValue()).add(kv.getKey());
-        }
+        }
         return rmap;
     }
 ​
