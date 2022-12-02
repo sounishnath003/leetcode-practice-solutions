@@ -6,7 +6,7 @@ class Solution {
         if (map1.equals(map2))
             return true;
         return canBeMapped(map1, map2) ? true : false;
-    }
+    }
 ​
     private boolean canBeMapped(Map<Character, Integer> map1, Map<Character, Integer> map2) {
         if (!map1.keySet().equals(map2.keySet()))
