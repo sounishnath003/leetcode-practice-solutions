@@ -1,5 +1,4 @@
 class Solution {
-​
     public boolean closeStrings(String word1, String word2) {
         Map<Character, Integer> map1 = buildFrequencyMap(word1);
         Map<Character, Integer> map2 = buildFrequencyMap(word2);
