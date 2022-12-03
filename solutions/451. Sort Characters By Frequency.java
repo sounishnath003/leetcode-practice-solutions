@@ -1,19 +1,40 @@
 class Solution {
-    public String frequencySort(String s) {
-        HashMap<Character, Integer> hashMap = new HashMap<>();
-        char[] carr = s.toCharArray();
-        for (Character x : carr) {
-            hashMap.put(x, hashMap.getOrDefault(x, 0)+1);
-        }
-        PriorityQueue<Character> maxheap = new PriorityQueue<>((a, b) -> hashMap.get(b) - hashMap.get(a));
-        maxheap.addAll(hashMap.keySet());
-        StringBuilder answer = new StringBuilder();
-        while(!maxheap.isEmpty()) {
-            char curr = maxheap.remove();
-            for (int i = 1; i < hashMap.get(curr)+1; i++) {
-                answer.append(curr);
-            }
+    private static class CustomSorter {
+        private char[] arr;
+        private StringBuilder sb;
+​
+        public CustomSorter(char[] arr) {
+            super();
+            this.arr = arr;
         }
-        return answer.toString();
+​
+        public void sort() {
+            Map<Character, Integer> map = new HashMap<>();
+            for (char x : this.arr)
+                map.put(x, map.getOrDefault(x, 0) + 1);
+            TreeMap<Integer, List<Character>> rmap = new TreeMap<>(Collections.reverseOrder());
+            for (Map.Entry<Character, Integer> kv : map.entrySet()) {
+                char key = kv.getKey();
+                int value = kv.getValue();
+                rmap.putIfAbsent(value, new ArrayList<>());
+                for (int i = 0; i < value; i++)
+                    rmap.get(value).add(key);
+            }
+            sb = new StringBuilder();
+            for (List<Character> list : rmap.values())
+                for (char c : list)
+                    sb.append(c);
+        }
+​
+        public String toString() {
+            return sb.toString();
+        }
+    }
+​
+    public String frequencySort(String s) {
+        CustomSorter sorter = new CustomSorter(s.toCharArray());
+        sorter.sort();
+        return sorter.toString();
     }
 }
+​
