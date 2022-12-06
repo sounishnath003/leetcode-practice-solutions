@@ -31,7 +31,7 @@
 |38|[ Count and Say](https://leetcode.com/problems/count-and-say/)|[C#](./solutions/38.%20Count%20and%20Say.cs)|88 ms|
 |40|[ Combination Sum II](https://leetcode.com/problems/combination-sum-ii/)|[Java](./solutions/40.%20Combination%20Sum%20II.java)|2 ms|
 |45|[ Jump Game II](https://leetcode.com/problems/jump-game-ii/)|[Java](./solutions/45.%20Jump%20Game%20II.java)|0 ms|
-|46|[ Permutations](https://leetcode.com/problems/permutations/)|[Java](./solutions/46.%20Permutations.java)|5 ms|
+|46|[ Permutations](https://leetcode.com/problems/permutations/)|[Java](./solutions/46.%20Permutations.java)|1 ms|
 |49|[ Group Anagrams](https://leetcode.com/problems/group-anagrams/)|[Java](./solutions/49.%20Group%20Anagrams.java)|17 ms|
 |50|[ Pow(x, n)](https://leetcode.com/problems/powx-n/)|[C++](./solutions/50.%20Pow(x%2C%20n).cpp)|4 ms|
 |51|[ N-Queens](https://leetcode.com/problems/n-queens/)|[Java](./solutions/51.%20N-Queens.java)|3 ms|
