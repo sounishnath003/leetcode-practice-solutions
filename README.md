@@ -145,7 +145,7 @@
 |322|[ Coin Change](https://leetcode.com/problems/coin-change/)|[Java](./solutions/322.%20Coin%20Change.java)|10 ms|
 |324|[ Wiggle Sort II](https://leetcode.com/problems/wiggle-sort-ii/)|[Java](./solutions/324.%20Wiggle%20Sort%20II.java)|2 ms|
 |326|[ Power of Three](https://leetcode.com/problems/power-of-three/)|[C++](./solutions/326.%20Power%20of%20Three.cpp)|92 ms|
-|328|[ Odd Even Linked List](https://leetcode.com/problems/odd-even-linked-list/)|[C++](./solutions/328.%20Odd%20Even%20Linked%20List.cpp)|12 ms|
+|328|[ Odd Even Linked List](https://leetcode.com/problems/odd-even-linked-list/)|[Java](./solutions/328.%20Odd%20Even%20Linked%20List.java)|1 ms|
 |332|[ Reconstruct Itinerary](https://leetcode.com/problems/reconstruct-itinerary/)|[Java](./solutions/332.%20Reconstruct%20Itinerary.java)|N/A|
 |336|[ Palindrome Pairs](https://leetcode.com/problems/palindrome-pairs/)|[Java](./solutions/336.%20Palindrome%20Pairs.java)|64 ms|
 |344|[ Reverse String](https://leetcode.com/problems/reverse-string/)|[C++](./solutions/344.%20Reverse%20String.cpp)|32 ms|
