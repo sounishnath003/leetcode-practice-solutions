@@ -160,6 +160,7 @@
 |392|[ Is Subsequence](https://leetcode.com/problems/is-subsequence/)|[Java](./solutions/392.%20Is%20Subsequence.java)|0 ms|
 |395|[ Longest Substring with At Least K Repeating Characters](https://leetcode.com/problems/longest-substring-with-at-least-k-repeating-characters/)|[C++](./solutions/395.%20Longest%20Substring%20with%20At%20Least%20K%20Repeating%20Characters.cpp)|0 ms|
 |412|[ Fizz Buzz](https://leetcode.com/problems/fizz-buzz/)|[C++](./solutions/412.%20Fizz%20Buzz.cpp)|4 ms|
+|415|[ Add Strings](https://leetcode.com/problems/add-strings/)|[Java](./solutions/415.%20Add%20Strings.java)|4 ms|
 |416|[ Partition Equal Subset Sum](https://leetcode.com/problems/partition-equal-subset-sum/)|[C++](./solutions/416.%20Partition%20Equal%20Subset%20Sum.cpp)|780 ms|
 |419|[ Battleships in a Board](https://leetcode.com/problems/battleships-in-a-board/)|[C++](./solutions/419.%20Battleships%20in%20a%20Board.cpp)|12 ms|
 |429|[ N-ary Tree Level Order Traversal](https://leetcode.com/problems/n-ary-tree-level-order-traversal/)|[Java](./solutions/429.%20N-ary%20Tree%20Level%20Order%20Traversal.java)|4 ms|
