@@ -228,6 +228,7 @@
 |863|[ All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)|[Java](./solutions/863.%20All%20Nodes%20Distance%20K%20in%20Binary%20Tree.java)|17 ms|
 |865|[ Smallest Subtree with all the Deepest Nodes](https://leetcode.com/problems/smallest-subtree-with-all-the-deepest-nodes/)|[C++](./solutions/865.%20Smallest%20Subtree%20with%20all%20the%20Deepest%20Nodes.cpp)|8 ms|
 |871|[ Minimum Number of Refueling Stops](https://leetcode.com/problems/minimum-number-of-refueling-stops/)|[Java](./solutions/871.%20Minimum%20Number%20of%20Refueling%20Stops.java)|N/A|
+|872|[ Leaf-Similar Trees](https://leetcode.com/problems/leaf-similar-trees/)|[Java](./solutions/872.%20Leaf-Similar%20Trees.java)|9 ms|
 |876|[ Middle of the Linked List](https://leetcode.com/problems/middle-of-the-linked-list/)|[Java](./solutions/876.%20Middle%20of%20the%20Linked%20List.java)|0 ms|
 |880|[ Decoded String at Index](https://leetcode.com/problems/decoded-string-at-index/)|[Java](./solutions/880.%20Decoded%20String%20at%20Index.java)|7 ms|
 |889|[ Construct Binary Tree from Preorder and Postorder Traversal](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/)|[Java](./solutions/889.%20Construct%20Binary%20Tree%20from%20Preorder%20and%20Postorder%20Traversal.java)|0 ms|
