@@ -107,7 +107,7 @@
 |189|[ Rotate Array](https://leetcode.com/problems/rotate-array/)|[C++](./solutions/189.%20Rotate%20Array.cpp)|12 ms|
 |190|[ Reverse Bits](https://leetcode.com/problems/reverse-bits/)|[C++](./solutions/190.%20Reverse%20Bits.cpp)|0 ms|
 |191|[ Number of 1 Bits](https://leetcode.com/problems/number-of-1-bits/)|[C++](./solutions/191.%20Number%20of%201%20Bits.cpp)|4 ms|
-|198|[ House Robber](https://leetcode.com/problems/house-robber/)|[C++](./solutions/198.%20House%20Robber.cpp)|4 ms|
+|198|[ House Robber](https://leetcode.com/problems/house-robber/)|[Java](./solutions/198.%20House%20Robber.java)|4 ms|
 |200|[ Number of Islands](https://leetcode.com/problems/number-of-islands/)|[Java](./solutions/200.%20Number%20of%20Islands.java)|3 ms|
 |202|[ Happy Number](https://leetcode.com/problems/happy-number/)|[C++](./solutions/202.%20Happy%20Number.cpp)|4 ms|
 |204|[ Count Primes](https://leetcode.com/problems/count-primes/)|[Java](./solutions/204.%20Count%20Primes.java)|33 ms|
