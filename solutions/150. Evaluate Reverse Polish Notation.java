@@ -34,3 +34,5 @@ class Solution {
         returnValue = Integer.valueOf(stack.pop());
  
         return returnValue;
+    }
+}
