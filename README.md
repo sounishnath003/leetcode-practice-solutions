@@ -305,6 +305,7 @@
 |1832|[ Check if the Sentence Is Pangram](https://leetcode.com/problems/check-if-the-sentence-is-pangram/)|[Java](./solutions/1832.%20Check%20if%20the%20Sentence%20Is%20Pangram.java)|10 ms|
 |1921|[ Eliminate Maximum Number of Monsters](https://leetcode.com/problems/eliminate-maximum-number-of-monsters/)|[Java](./solutions/1921.%20Eliminate%20Maximum%20Number%20of%20Monsters.java)|26 ms|
 |1926|[ Nearest Exit from Entrance in Maze](https://leetcode.com/problems/nearest-exit-from-entrance-in-maze/)|[Java](./solutions/1926.%20Nearest%20Exit%20from%20Entrance%20in%20Maze.java)|8 ms|
+|1971|[ Find if Path Exists in Graph](https://leetcode.com/problems/find-if-path-exists-in-graph/)|[Java](./solutions/1971.%20Find%20if%20Path%20Exists%20in%20Graph.java)|27 ms|
 |1996|[ The Number of Weak Characters in the Game](https://leetcode.com/problems/the-number-of-weak-characters-in-the-game/)|[Java](./solutions/1996.%20The%20Number%20of%20Weak%20Characters%20in%20the%20Game.java)|216 ms|
 |2007|[ Find Original Array From Doubled Array](https://leetcode.com/problems/find-original-array-from-doubled-array/)|[Java](./solutions/2007.%20Find%20Original%20Array%20From%20Doubled%20Array.java)|231 ms|
 |2095|[ Delete the Middle Node of a Linked List](https://leetcode.com/problems/delete-the-middle-node-of-a-linked-list/)|[Java](./solutions/2095.%20Delete%20the%20Middle%20Node%20of%20a%20Linked%20List.java)|6 ms|
