@@ -234,6 +234,7 @@
 |872|[ Leaf-Similar Trees](https://leetcode.com/problems/leaf-similar-trees/)|[Java](./solutions/872.%20Leaf-Similar%20Trees.java)|9 ms|
 |876|[ Middle of the Linked List](https://leetcode.com/problems/middle-of-the-linked-list/)|[Java](./solutions/876.%20Middle%20of%20the%20Linked%20List.java)|0 ms|
 |880|[ Decoded String at Index](https://leetcode.com/problems/decoded-string-at-index/)|[Java](./solutions/880.%20Decoded%20String%20at%20Index.java)|7 ms|
+|886|[ Possible Bipartition](https://leetcode.com/problems/possible-bipartition/)|[Java](./solutions/886.%20Possible%20Bipartition.java)|91 ms|
 |889|[ Construct Binary Tree from Preorder and Postorder Traversal](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/)|[Java](./solutions/889.%20Construct%20Binary%20Tree%20from%20Preorder%20and%20Postorder%20Traversal.java)|0 ms|
 |890|[ Find and Replace Pattern](https://leetcode.com/problems/find-and-replace-pattern/)|[Java](./solutions/890.%20Find%20and%20Replace%20Pattern.java)|3 ms|
 |897|[ Increasing Order Search Tree](https://leetcode.com/problems/increasing-order-search-tree/)|[C++](./solutions/897.%20Increasing%20Order%20Search%20Tree.cpp)|4 ms|
