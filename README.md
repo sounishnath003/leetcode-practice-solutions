@@ -316,3 +316,4 @@
 |2299|[ Strong Password Checker II](https://leetcode.com/problems/strong-password-checker-ii/)|[Java](./solutions/2299.%20Strong%20Password%20Checker%20II.java)|3 ms|
 |2300|[ Successful Pairs of Spells and Potions](https://leetcode.com/problems/successful-pairs-of-spells-and-potions/)|[Java](./solutions/2300.%20Successful%20Pairs%20of%20Spells%20and%20Potions.java)|87 ms|
 |2301|[ Match Substring After Replacement](https://leetcode.com/problems/match-substring-after-replacement/)|[Java](./solutions/2301.%20Match%20Substring%20After%20Replacement.java)|229 ms|
+|2389|[ Longest Subsequence With Limited Sum](https://leetcode.com/problems/longest-subsequence-with-limited-sum/)|[Java](./solutions/2389.%20Longest%20Subsequence%20With%20Limited%20Sum.java)|11 ms|
