@@ -305,6 +305,7 @@
 |1706|[ Where Will the Ball Fall](https://leetcode.com/problems/where-will-the-ball-fall/)|[Java](./solutions/1706.%20Where%20Will%20the%20Ball%20Fall.java)|1 ms|
 |1710|[ Maximum Units on a Truck](https://leetcode.com/problems/maximum-units-on-a-truck/)|[Java](./solutions/1710.%20Maximum%20Units%20on%20a%20Truck.java)|122 ms|
 |1832|[ Check if the Sentence Is Pangram](https://leetcode.com/problems/check-if-the-sentence-is-pangram/)|[Java](./solutions/1832.%20Check%20if%20the%20Sentence%20Is%20Pangram.java)|10 ms|
+|1834|[ Single-Threaded CPU](https://leetcode.com/problems/single-threaded-cpu/)|[Java](./solutions/1834.%20Single-Threaded%20CPU.java)|115 ms|
 |1921|[ Eliminate Maximum Number of Monsters](https://leetcode.com/problems/eliminate-maximum-number-of-monsters/)|[Java](./solutions/1921.%20Eliminate%20Maximum%20Number%20of%20Monsters.java)|26 ms|
 |1926|[ Nearest Exit from Entrance in Maze](https://leetcode.com/problems/nearest-exit-from-entrance-in-maze/)|[Java](./solutions/1926.%20Nearest%20Exit%20from%20Entrance%20in%20Maze.java)|8 ms|
 |1962|[ Remove Stones to Minimize the Total](https://leetcode.com/problems/remove-stones-to-minimize-the-total/)|[Java](./solutions/1962.%20Remove%20Stones%20to%20Minimize%20the%20Total.java)|500 ms|
