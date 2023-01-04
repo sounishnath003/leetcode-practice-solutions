@@ -318,6 +318,7 @@
 |2095|[ Delete the Middle Node of a Linked List](https://leetcode.com/problems/delete-the-middle-node-of-a-linked-list/)|[Java](./solutions/2095.%20Delete%20the%20Middle%20Node%20of%20a%20Linked%20List.java)|6 ms|
 |2136|[ Earliest Possible Day of Full Bloom](https://leetcode.com/problems/earliest-possible-day-of-full-bloom/)|[Java](./solutions/2136.%20Earliest%20Possible%20Day%20of%20Full%20Bloom.java)|187 ms|
 |2225|[ Find Players With Zero or One Losses](https://leetcode.com/problems/find-players-with-zero-or-one-losses/)|[Java](./solutions/2225.%20Find%20Players%20With%20Zero%20or%20One%20Losses.java)|645 ms|
+|2244|[ Minimum Rounds to Complete All Tasks](https://leetcode.com/problems/minimum-rounds-to-complete-all-tasks/)|[Java](./solutions/2244.%20Minimum%20Rounds%20to%20Complete%20All%20Tasks.java)|122 ms|
 |2299|[ Strong Password Checker II](https://leetcode.com/problems/strong-password-checker-ii/)|[Java](./solutions/2299.%20Strong%20Password%20Checker%20II.java)|3 ms|
 |2300|[ Successful Pairs of Spells and Potions](https://leetcode.com/problems/successful-pairs-of-spells-and-potions/)|[Java](./solutions/2300.%20Successful%20Pairs%20of%20Spells%20and%20Potions.java)|87 ms|
 |2301|[ Match Substring After Replacement](https://leetcode.com/problems/match-substring-after-replacement/)|[Java](./solutions/2301.%20Match%20Substring%20After%20Replacement.java)|229 ms|
