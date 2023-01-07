@@ -82,7 +82,7 @@
 |130|[ Surrounded Regions](https://leetcode.com/problems/surrounded-regions/)|[Java](./solutions/130.%20Surrounded%20Regions.java)|5 ms|
 |131|[ Palindrome Partitioning](https://leetcode.com/problems/palindrome-partitioning/)|[Java](./solutions/131.%20Palindrome%20Partitioning.java)|16 ms|
 |133|[ Clone Graph](https://leetcode.com/problems/clone-graph/)|[Java](./solutions/133.%20Clone%20Graph.java)|25 ms|
-|134|[ Gas Station](https://leetcode.com/problems/gas-station/)|[Java](./solutions/134.%20Gas%20Station.java)|13 ms|
+|134|[ Gas Station](https://leetcode.com/problems/gas-station/)|[Java](./solutions/134.%20Gas%20Station.java)|4 ms|
 |136|[ Single Number](https://leetcode.com/problems/single-number/)|[C++](./solutions/136.%20Single%20Number.cpp)|32 ms|
 |137|[ Single Number II](https://leetcode.com/problems/single-number-ii/)|[C++](./solutions/137.%20Single%20Number%20II.cpp)|16 ms|
 |138|[ Copy List with Random Pointer](https://leetcode.com/problems/copy-list-with-random-pointer/)|[Java](./solutions/138.%20Copy%20List%20with%20Random%20Pointer.java)|0 ms|
