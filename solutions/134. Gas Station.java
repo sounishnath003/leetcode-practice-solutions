@@ -4,7 +4,6 @@ class Solution {
     }
 }
 ​
-​
 public class GasStation {
     private static class Station {
         int index;
