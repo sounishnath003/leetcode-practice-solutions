@@ -178,6 +178,7 @@
 |452|[ Minimum Number of Arrows to Burst Balloons](https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons/)|[Java](./solutions/452.%20Minimum%20Number%20of%20Arrows%20to%20Burst%20Balloons.java)|124 ms|
 |473|[ Matchsticks to Square](https://leetcode.com/problems/matchsticks-to-square/)|[Java](./solutions/473.%20Matchsticks%20to%20Square.java)|970 ms|
 |485|[ Max Consecutive Ones](https://leetcode.com/problems/max-consecutive-ones/)|[Java](./solutions/485.%20Max%20Consecutive%20Ones.java)|2 ms|
+|491|[ Non-decreasing Subsequences](https://leetcode.com/problems/non-decreasing-subsequences/)|[Java](./solutions/491.%20Non-decreasing%20Subsequences.java)|13 ms|
 |496|[ Next Greater Element I](https://leetcode.com/problems/next-greater-element-i/)|[Java](./solutions/496.%20Next%20Greater%20Element%20I.java)|3 ms|
 |518|[ Coin Change 2](https://leetcode.com/problems/coin-change-2/)|[Java](./solutions/518.%20Coin%20Change%202.java)|3 ms|
 |520|[ Detect Capital](https://leetcode.com/problems/detect-capital/)|[Java](./solutions/520.%20Detect%20Capital.java)|1 ms|
