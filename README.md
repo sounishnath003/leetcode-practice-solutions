@@ -158,6 +158,7 @@
 |345|[ Reverse Vowels of a String](https://leetcode.com/problems/reverse-vowels-of-a-string/)|[Java](./solutions/345.%20Reverse%20Vowels%20of%20a%20String.java)|18 ms|
 |347|[ Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/)|[Java](./solutions/347.%20Top%20K%20Frequent%20Elements.java)|20 ms|
 |350|[ Intersection of Two Arrays II](https://leetcode.com/problems/intersection-of-two-arrays-ii/)|[C++](./solutions/350.%20Intersection%20of%20Two%20Arrays%20II.cpp)|8 ms|
+|352|[ Data Stream as Disjoint Intervals](https://leetcode.com/problems/data-stream-as-disjoint-intervals/)|[Java](./solutions/352.%20Data%20Stream%20as%20Disjoint%20Intervals.java)|273 ms|
 |354|[ Russian Doll Envelopes](https://leetcode.com/problems/russian-doll-envelopes/)|[Java](./solutions/354.%20Russian%20Doll%20Envelopes.java)|203 ms|
 |380|[ Insert Delete GetRandom O(1)](https://leetcode.com/problems/insert-delete-getrandom-o1/)|[Java](./solutions/380.%20Insert%20Delete%20GetRandom%20O(1).java)|130 ms|
 |382|[ Linked List Random Node](https://leetcode.com/problems/linked-list-random-node/)|[Java](./solutions/382.%20Linked%20List%20Random%20Node.java)|18 ms|
