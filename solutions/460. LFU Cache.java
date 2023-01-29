@@ -17,7 +17,7 @@ class LFUCache {
         frequencies = new HashMap<>();
         minf = 0;
         this.capacity = capacity;
-    }
+    }
     
     public int get(int key) {
         Pair<Integer, Integer> frequencyAndValue = cache.get(key);
