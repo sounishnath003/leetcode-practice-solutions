@@ -178,6 +178,7 @@
 |451|[ Sort Characters By Frequency](https://leetcode.com/problems/sort-characters-by-frequency/)|[Java](./solutions/451.%20Sort%20Characters%20By%20Frequency.java)|61 ms|
 |452|[ Minimum Number of Arrows to Burst Balloons](https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons/)|[Java](./solutions/452.%20Minimum%20Number%20of%20Arrows%20to%20Burst%20Balloons.java)|124 ms|
 |460|[ LFU Cache](https://leetcode.com/problems/lfu-cache/)|[Java](./solutions/460.%20LFU%20Cache.java)|82 ms|
+|472|[ Concatenated Words](https://leetcode.com/problems/concatenated-words/)|[Java](./solutions/472.%20Concatenated%20Words.java)|75 ms|
 |473|[ Matchsticks to Square](https://leetcode.com/problems/matchsticks-to-square/)|[Java](./solutions/473.%20Matchsticks%20to%20Square.java)|970 ms|
 |485|[ Max Consecutive Ones](https://leetcode.com/problems/max-consecutive-ones/)|[Java](./solutions/485.%20Max%20Consecutive%20Ones.java)|2 ms|
 |491|[ Non-decreasing Subsequences](https://leetcode.com/problems/non-decreasing-subsequences/)|[Java](./solutions/491.%20Non-decreasing%20Subsequences.java)|13 ms|
