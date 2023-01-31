@@ -306,6 +306,7 @@
 |1465|[ Maximum Area of a Piece of Cake After Horizontal and Vertical Cuts](https://leetcode.com/problems/maximum-area-of-a-piece-of-cake-after-horizontal-and-vertical-cuts/)|[Java](./solutions/1465.%20Maximum%20Area%20of%20a%20Piece%20of%20Cake%20After%20Horizontal%20and%20Vertical%20Cuts.java)|22 ms|
 |1480|[ Running Sum of 1d Array](https://leetcode.com/problems/running-sum-of-1d-array/)|[Java](./solutions/1480.%20Running%20Sum%20of%201d%20Array.java)|0 ms|
 |1584|[ Min Cost to Connect All Points](https://leetcode.com/problems/min-cost-to-connect-all-points/)|[Java](./solutions/1584.%20Min%20Cost%20to%20Connect%20All%20Points.java)|440 ms|
+|1626|[ Best Team With No Conflicts](https://leetcode.com/problems/best-team-with-no-conflicts/)|[Java](./solutions/1626.%20Best%20Team%20With%20No%20Conflicts.java)|252 ms|
 |1641|[ Count Sorted Vowel Strings](https://leetcode.com/problems/count-sorted-vowel-strings/)|[C++](./solutions/1641.%20Count%20Sorted%20Vowel%20Strings.cpp)|720 ms|
 |1646|[ Get Maximum in Generated Array](https://leetcode.com/problems/get-maximum-in-generated-array/)|[C++](./solutions/1646.%20Get%20Maximum%20in%20Generated%20Array.cpp)|0 ms|
 |1657|[ Determine if Two Strings Are Close](https://leetcode.com/problems/determine-if-two-strings-are-close/)|[Java](./solutions/1657.%20Determine%20if%20Two%20Strings%20Are%20Close.java)|81 ms|
