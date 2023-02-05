@@ -283,6 +283,7 @@
 |1061|[ Lexicographically Smallest Equivalent String](https://leetcode.com/problems/lexicographically-smallest-equivalent-string/)|[Java](./solutions/1061.%20Lexicographically%20Smallest%20Equivalent%20String.java)|25 ms|
 |1094|[ Car Pooling](https://leetcode.com/problems/car-pooling/)|[Java](./solutions/1094.%20Car%20Pooling.java)|16 ms|
 |1110|[ Delete Nodes And Return Forest](https://leetcode.com/problems/delete-nodes-and-return-forest/)|[Java](./solutions/1110.%20Delete%20Nodes%20And%20Return%20Forest.java)|1 ms|
+|1122|[ Relative Sort Array](https://leetcode.com/problems/relative-sort-array/)|[Java](./solutions/1122.%20Relative%20Sort%20Array.java)|3 ms|
 |1123|[ Lowest Common Ancestor of Deepest Leaves](https://leetcode.com/problems/lowest-common-ancestor-of-deepest-leaves/)|[C++](./solutions/1123.%20Lowest%20Common%20Ancestor%20of%20Deepest%20Leaves.cpp)|24 ms|
 |1137|[ N-th Tribonacci Number](https://leetcode.com/problems/n-th-tribonacci-number/)|[Java](./solutions/1137.%20N-th%20Tribonacci%20Number.java)|0 ms|
 |1143|[ Longest Common Subsequence](https://leetcode.com/problems/longest-common-subsequence/)|[Java](./solutions/1143.%20Longest%20Common%20Subsequence.java)|14 ms|
