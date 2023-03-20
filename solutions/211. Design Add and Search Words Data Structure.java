@@ -1,36 +1,91 @@
+import java.util.Arrays;
+
 class WordDictionary {
-    private WordDictionary[] children;
-    boolean isEndOfWord;
-    // Initialize your data structure here. 
-    public WordDictionary() {
-        children = new WordDictionary[26];
-        isEndOfWord = false;
-    }
-    
-    // Adds a word into the data structure. 
-    public void addWord(String word) {
-        WordDictionary curr = this;
-        for(char c: word.toCharArray()){
-            if(curr.children[c - 'a'] == null)
-                curr.children[c - 'a'] = new WordDictionary();
-            curr = curr.children[c - 'a'];
-        }
-        curr.isEndOfWord = true;
-    }
-    
-    // Returns if the word is in the data structure. A word could contain the dot character '.' to represent any one letter. 
-    public boolean search(String word) {
-        WordDictionary curr = this;
-        for(int i = 0; i < word.length(); ++i){
-            char c = word.charAt(i);
-            if(c == '.'){
-                for(WordDictionary ch: curr.children)
-                    if(ch != null && ch.search(word.substring(i+1))) return true;
-                return false;
-            }
-            if(curr.children[c - 'a'] == null) return false;
-            curr = curr.children[c - 'a'];
-        }
-        return curr != null && curr.isEndOfWord;
-    }
+
+    private static class TrieNode {
+        char character;
+        TrieNode[] children;
+        boolean isEndofWord;
+
+        public TrieNode(char c) {
+            this.character = c;
+            this.children = new TrieNode[26];
+            this.isEndofWord = false;
+
+            Arrays.fill(children, null);
+        }
+    }
+
+    private static class Trie {
+        private TrieNode trieRootNode;
+
+        public Trie() {
+            this.trieRootNode = new TrieNode('\0');
+        }
+
+        public void add(String word) {
+            char[] letters = word.toCharArray();
+            TrieNode current = this.trieRootNode;
+            for (char letter : letters) {
+                int index = letter - 'a';
+                if (current.children[index] == null) {
+                    current.children[index] = new TrieNode(letter);
+                }
+                current = current.children[index];
+            }
+            current.isEndofWord = true;
+        }
+
+        public boolean search(TrieNode trieRootNode, String word) {
+            TrieNode current = trieRootNode;
+            if (current == null)
+                return false;
+            char[] letters = word.toCharArray();
+            for (int index = 0; index < letters.length; index++) {
+                char letter = letters[index];
+                if (letter == '.') {
+                    for (int ci = 0; ci < current.children.length; ci++) {
+                        if (current.children[ci] == null)
+                            continue;
+
+                        if (search(current.children[ci], word.substring(index + 1)))
+                            return true;
+                    }
+                } else {
+                    int cindex = letter - 'a';
+                    if (current.children[cindex] == null)
+                        return false;
+                    current = current.children[cindex];
+                }
+            }
+
+            return (current != null) && current.isEndofWord;
+        }
+
+        private boolean searchUtil(WordDictionary.TrieNode current, String word) {
+            return (word != null && word.length() > 0 && current != null) && search(current, word)
+                    && current.isEndofWord;
+        }
+    }
+
+    private Trie trie;
+
+    public WordDictionary() {
+        trie = new Trie();
+    }
+
+    public void addWord(String word) {
+        trie.add(word);
+    }
+
+    public boolean search(String word) {
+        return trie.search(trie.trieRootNode, word);
+    }
 }
+
+/**
+ * Your WordDictionary object will be instantiated and called as such:
+ * WordDictionary obj = new WordDictionary();
+ * obj.addWord(word);
+ * boolean param_2 = obj.search(word);
+ */
