@@ -200,7 +200,7 @@
 |572|[ Subtree of Another Tree](https://leetcode.com/problems/subtree-of-another-tree/)|[Java](./solutions/572.%20Subtree%20of%20Another%20Tree.java)|3 ms|
 |576|[ Out of Boundary Paths](https://leetcode.com/problems/out-of-boundary-paths/)|[Java](./solutions/576.%20Out%20of%20Boundary%20Paths.java)|5 ms|
 |583|[ Delete Operation for Two Strings](https://leetcode.com/problems/delete-operation-for-two-strings/)|[Java](./solutions/583.%20Delete%20Operation%20for%20Two%20Strings.java)|320 ms|
-|605|[ Can Place Flowers](https://leetcode.com/problems/can-place-flowers/)|[C++](./solutions/605.%20Can%20Place%20Flowers.cpp)|48 ms|
+|605|[ Can Place Flowers](https://leetcode.com/problems/can-place-flowers/)|[Java](./solutions/605.%20Can%20Place%20Flowers.java)|2 ms|
 |609|[ Find Duplicate File in System](https://leetcode.com/problems/find-duplicate-file-in-system/)|[Java](./solutions/609.%20Find%20Duplicate%20File%20in%20System.java)|13 ms|
 |611|[ Valid Triangle Number](https://leetcode.com/problems/valid-triangle-number/)|[Java](./solutions/611.%20Valid%20Triangle%20Number.java)|32 ms|
 |621|[ Task Scheduler](https://leetcode.com/problems/task-scheduler/)|[C++](./solutions/621.%20Task%20Scheduler.cpp)|344 ms|
