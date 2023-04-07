@@ -279,6 +279,7 @@
 |994|[ Rotting Oranges](https://leetcode.com/problems/rotting-oranges/)|[Java](./solutions/994.%20Rotting%20Oranges.java)|19 ms|
 |1008|[ Construct Binary Search Tree from Preorder Traversal](https://leetcode.com/problems/construct-binary-search-tree-from-preorder-traversal/)|[Java](./solutions/1008.%20Construct%20Binary%20Search%20Tree%20from%20Preorder%20Traversal.java)|0 ms|
 |1015|[ Smallest Integer Divisible by K](https://leetcode.com/problems/smallest-integer-divisible-by-k/)|[C++](./solutions/1015.%20Smallest%20Integer%20Divisible%20by%20K.cpp)|0 ms|
+|1020|[ Number of Enclaves](https://leetcode.com/problems/number-of-enclaves/)|[Java](./solutions/1020.%20Number%20of%20Enclaves.java)|12 ms|
 |1026|[ Maximum Difference Between Node and Ancestor](https://leetcode.com/problems/maximum-difference-between-node-and-ancestor/)|[Java](./solutions/1026.%20Maximum%20Difference%20Between%20Node%20and%20Ancestor.java)|1 ms|
 |1048|[ Longest String Chain](https://leetcode.com/problems/longest-string-chain/)|[Java](./solutions/1048.%20Longest%20String%20Chain.java)|116 ms|
 |1051|[ Height Checker](https://leetcode.com/problems/height-checker/)|[Java](./solutions/1051.%20Height%20Checker.java)|1 ms|
