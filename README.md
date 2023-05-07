@@ -311,6 +311,7 @@
 |1465|[ Maximum Area of a Piece of Cake After Horizontal and Vertical Cuts](https://leetcode.com/problems/maximum-area-of-a-piece-of-cake-after-horizontal-and-vertical-cuts/)|[Java](./solutions/1465.%20Maximum%20Area%20of%20a%20Piece%20of%20Cake%20After%20Horizontal%20and%20Vertical%20Cuts.java)|22 ms|
 |1472|[ Design Browser History](https://leetcode.com/problems/design-browser-history/)|[Java](./solutions/1472.%20Design%20Browser%20History.java)|58 ms|
 |1480|[ Running Sum of 1d Array](https://leetcode.com/problems/running-sum-of-1d-array/)|[Java](./solutions/1480.%20Running%20Sum%20of%201d%20Array.java)|0 ms|
+|1498|[ Number of Subsequences That Satisfy the Given Sum Condition](https://leetcode.com/problems/number-of-subsequences-that-satisfy-the-given-sum-condition/)|[Java](./solutions/1498.%20Number%20of%20Subsequences%20That%20Satisfy%20the%20Given%20Sum%20Condition.java)|41 ms|
 |1584|[ Min Cost to Connect All Points](https://leetcode.com/problems/min-cost-to-connect-all-points/)|[Java](./solutions/1584.%20Min%20Cost%20to%20Connect%20All%20Points.java)|440 ms|
 |1626|[ Best Team With No Conflicts](https://leetcode.com/problems/best-team-with-no-conflicts/)|[Java](./solutions/1626.%20Best%20Team%20With%20No%20Conflicts.java)|252 ms|
 |1639|[ Number of Ways to Form a Target String Given a Dictionary](https://leetcode.com/problems/number-of-ways-to-form-a-target-string-given-a-dictionary/)|[Java](./solutions/1639.%20Number%20of%20Ways%20to%20Form%20a%20Target%20String%20Given%20a%20Dictionary.java)|107 ms|
