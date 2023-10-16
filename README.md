@@ -347,3 +347,4 @@
 |2301|[ Match Substring After Replacement](https://leetcode.com/problems/match-substring-after-replacement/)|[Java](./solutions/2301.%20Match%20Substring%20After%20Replacement.java)|229 ms|
 |2389|[ Longest Subsequence With Limited Sum](https://leetcode.com/problems/longest-subsequence-with-limited-sum/)|[Java](./solutions/2389.%20Longest%20Subsequence%20With%20Limited%20Sum.java)|11 ms|
 |2466|[ Count Ways To Build Good Strings](https://leetcode.com/problems/count-ways-to-build-good-strings/)|[Java](./solutions/2466.%20Count%20Ways%20To%20Build%20Good%20Strings.java)|50 ms|
+|NaN|[ Number of Ways to Stay in the Same Place After Some Steps](https://leetcode.com/problems/number-of-ways-to-stay-in-the-same-place-after-some-steps/)|[Java](./solutions/No%20companies%20found%20for%20this%20problem1269.%20Number%20of%20Ways%20to%20Stay%20in%20the%20Same%20Place%20After%20Some%20Steps.java)|507 ms|
