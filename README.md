@@ -352,3 +352,4 @@
 |NaN|[ Design Twitter](https://leetcode.com/problems/design-twitter/)|[Java](./solutions/Google3Amazon2Walmart%20Global%20Tech2355.%20Design%20Twitter.java)|10 ms|
 |NaN|[ Number of Great Partitions](https://leetcode.com/problems/number-of-great-partitions/)|[Java](./solutions/No%20companies%20found%20for%20this%20problem2518.%20Number%20of%20Great%20Partitions.java)|717 ms|
 |NaN|[ Delete and Earn](https://leetcode.com/problems/delete-and-earn/)|[Java](./solutions/Goldman%20Sachs11Amazon5Google2740.%20Delete%20and%20Earn.java)|8 ms|
+|NaN|[ Swap Nodes in Pairs](https://leetcode.com/problems/swap-nodes-in-pairs/)|[Java](./solutions/Facebook9Amazon8Microsoft7Bloomberg2Adobe2Apple224.%20Swap%20Nodes%20in%20Pairs.java)|0 ms|
