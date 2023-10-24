@@ -354,3 +354,4 @@
 |NaN|[ Delete and Earn](https://leetcode.com/problems/delete-and-earn/)|[Java](./solutions/Goldman%20Sachs11Amazon5Google2740.%20Delete%20and%20Earn.java)|8 ms|
 |NaN|[ Swap Nodes in Pairs](https://leetcode.com/problems/swap-nodes-in-pairs/)|[Java](./solutions/Facebook9Amazon8Microsoft7Bloomberg2Adobe2Apple224.%20Swap%20Nodes%20in%20Pairs.java)|0 ms|
 |NaN|[ Maximum Frequency Stack](https://leetcode.com/problems/maximum-frequency-stack/)|[Java](./solutions/Amazon5Apple4Microsoft2LinkedIn2Facebook2Adobe2Twitter2MindTickle2895.%20Maximum%20Frequency%20Stack.java)|34 ms|
+|NaN|[ Find Largest Value in Each Tree Row](https://leetcode.com/problems/find-largest-value-in-each-tree-row/)|[Java](./solutions/Facebook18515.%20Find%20Largest%20Value%20in%20Each%20Tree%20Row.java)|9 ms|
