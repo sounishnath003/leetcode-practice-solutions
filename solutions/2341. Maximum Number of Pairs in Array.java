@@ -10,7 +10,7 @@ class Solution {
         // store the elems into map
         for (int elem : nums) {
             map.put(elem, map.getOrDefault(elem, 0) + 1);
-        }
+        }
 ​
         // iterate on map
         for (Map.Entry<Integer, Integer> kv : map.entrySet()) {
