@@ -356,3 +356,4 @@
 |NaN|[ Swap Nodes in Pairs](https://leetcode.com/problems/swap-nodes-in-pairs/)|[Java](./solutions/Facebook9Amazon8Microsoft7Bloomberg2Adobe2Apple224.%20Swap%20Nodes%20in%20Pairs.java)|0 ms|
 |NaN|[ Maximum Frequency Stack](https://leetcode.com/problems/maximum-frequency-stack/)|[Java](./solutions/Amazon5Apple4Microsoft2LinkedIn2Facebook2Adobe2Twitter2MindTickle2895.%20Maximum%20Frequency%20Stack.java)|34 ms|
 |NaN|[ Find Largest Value in Each Tree Row](https://leetcode.com/problems/find-largest-value-in-each-tree-row/)|[Java](./solutions/Facebook18515.%20Find%20Largest%20Value%20in%20Each%20Tree%20Row.java)|9 ms|
+|2616|[ Minimize the Maximum Difference of Pairs](https://leetcode.com/problems/minimize-the-maximum-difference-of-pairs/)|[Java](./solutions/2616.%20Minimize%20the%20Maximum%20Difference%20of%20Pairs.java)|18 ms|
