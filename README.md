@@ -332,6 +332,7 @@
 |1833|[ Maximum Ice Cream Bars](https://leetcode.com/problems/maximum-ice-cream-bars/)|[Java](./solutions/1833.%20Maximum%20Ice%20Cream%20Bars.java)|57 ms|
 |1834|[ Single-Threaded CPU](https://leetcode.com/problems/single-threaded-cpu/)|[Java](./solutions/1834.%20Single-Threaded%20CPU.java)|115 ms|
 |1901|[ Find a Peak Element II](https://leetcode.com/problems/find-a-peak-element-ii/)|[Java](./solutions/1901.%20Find%20a%20Peak%20Element%20II.java)|1 ms|
+|1910|[ Remove All Occurrences of a Substring](https://leetcode.com/problems/remove-all-occurrences-of-a-substring/)|[Python](./solutions/1910.%20Remove%20All%20Occurrences%20of%20a%20Substring.python)|24 ms|
 |1921|[ Eliminate Maximum Number of Monsters](https://leetcode.com/problems/eliminate-maximum-number-of-monsters/)|[Java](./solutions/1921.%20Eliminate%20Maximum%20Number%20of%20Monsters.java)|26 ms|
 |1926|[ Nearest Exit from Entrance in Maze](https://leetcode.com/problems/nearest-exit-from-entrance-in-maze/)|[Java](./solutions/1926.%20Nearest%20Exit%20from%20Entrance%20in%20Maze.java)|8 ms|
 |1962|[ Remove Stones to Minimize the Total](https://leetcode.com/problems/remove-stones-to-minimize-the-total/)|[Java](./solutions/1962.%20Remove%20Stones%20to%20Minimize%20the%20Total.java)|500 ms|
