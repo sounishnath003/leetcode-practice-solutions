@@ -1,0 +1,62 @@
+{{define "index"}}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Leetcode Practice Solution Book | Sounish Nath</title>
+    <script defer src="https://cdn.tailwindcss.com"></script>
+    <script
+      defer
+      src="https://unpkg.com/htmx.org@2.0.2"
+      integrity="sha384-Y7hw+L/jvKeWIRRkqWYfPcvVxHzVzn5REgzbawhxAuQGwX1XWe70vji+VSeHOThJ"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <style>
+      *,
+      html,
+      :root {
+        background: #eaf0fc;
+        color: #303030;
+        -webkit-overflow-scrolling: hidden;
+      }
+    </style>
+    <div class="p-3 flex justify-center items-center flex-col space-y-3">
+      <div class="text-xl md:text-4xl font-bold">
+        Leetcode Practice Solutions Gitbook
+      </div>
+      <div class="text-md">
+        Onestop place to revise own Leetcode Solutions for Interview Prep 🏋️‍♂️
+      </div>
+    </div>
+
+    <div class="m-5">
+      <div class="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-8 my-8">
+        <div>
+          <div class="text-xl font-medium">
+            # List of Leetcode problems solved
+          </div>
+          <div>
+            <button
+              hx-get="/api/solutions/"
+              hx-target="#questionList"
+              hx-swap="beforeend"
+            >
+              Fetch
+            </button>
+          </div>
+          <div
+            id="questionList"
+            class="my-2 max-h-screen overflow-y-scroll"
+          ></div>
+        </div>
+        <div class="h-32 rounded-lg bg-gray-200 lg:col-span-2"></div>
+      </div>
+    </div>
+  </body>
+</html>
+
+{{end}}

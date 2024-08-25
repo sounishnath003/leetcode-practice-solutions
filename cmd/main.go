@@ -12,8 +12,9 @@ func main() {
 	solutionDir := path.Join("solutions")
 
 	core := core.NewCore(solutionDir)
-	JsonfileDb, err := core.PrepareQuestionDatabase()
+	JsonfileDb, err := core.MustPrepareQuestionDatabase()
 	utils.HandleError(err, true)
 
-	server.InitWebServer(JsonfileDb)
+	err = server.MustInitWebServer(JsonfileDb)
+	utils.HandleError(err, true)
 }

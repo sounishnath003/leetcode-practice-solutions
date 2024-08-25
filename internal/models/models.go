@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"os"
 	"path"
+	"sort"
 	"time"
 
 	"github.com/sounishnath003/leetcode-practice-solutions/internal/utils"
@@ -13,7 +14,7 @@ import (
 //
 // Act like a data model for building the app solution
 type QuestionModel struct {
-	ID   string `json:"id"`
+	ID   int    `json:"id"`
 	Name string `json:"name"`
 	Lang string `json:"language"`
 	Code string `json:"code"`
@@ -35,17 +36,24 @@ func (qdb *QuestionDb) Add(data QuestionModel) error {
 	return nil
 }
 
-func (qDb *QuestionDb) SearchByID(id string) (QuestionModel, error) {
+func (qDb *QuestionDb) SearchByID(id int) (QuestionModel, error) {
 	for _, q := range qDb.Questions {
 		if q.ID == id {
 			return q, nil
 		}
 	}
 
-	return QuestionModel{}, fmt.Errorf("invalid id %s not found", id)
+	return QuestionModel{}, fmt.Errorf("invalid id %d not found", id)
+}
+
+func (qdb *QuestionDb) SortByID() {
+	sort.Slice(qdb.Questions, func(i, j int) bool {
+		return qdb.Questions[i].ID < qdb.Questions[j].ID
+	})
 }
 
 func (qdb *QuestionDb) SaveToDisk(filename string) (string, error) {
+	qdb.SortByID()
 	filepath := fmt.Sprintf("%s-%s.json", filename, time.Now().Format(time.DateOnly))
 
 	curDir, err := os.Getwd()
