@@ -14,21 +14,39 @@
  * }
  */
 class Solution {
-    private List<Integer> result;
-    public List<Integer> inorderTraversal(TreeNode root) {
-        result = new ArrayList<>();
-        _inorderTraversal(root);
-        return result;
-    }
-​
-    private void _inorderTraversal(TreeNode root) {
-​
-        if (root == null) {
-            return ;
-        }
-        // faith
-        _inorderTraversal(root.left);
-        this.result.add(root.val);
-        _inorderTraversal(root.right);
-    }
+    public List<Integer> inorderTraversal(TreeNode root) {
+        // implements the morris traversal algorithm
+        List<Integer> nodes=new ArrayList<>();
+
+        TreeNode current=root;
+        while (current != null) {
+            // something to be checked?
+            // check if the node has left child
+            if (current.left != null) {
+                // goto the leftchild and traverse all right nodes till end
+                TreeNode temp=current.left;
+                // traverse until you hit the following cond.
+                while (temp.right != null && temp.right != current) {
+                    temp=temp.right;
+                }
+                // identify why it breaked
+                if (temp.right == null) {
+                    temp.right=current;
+                    current=current.left;
+                } else {
+                    temp.right = null;
+                    nodes.add(current.val);
+                    current=current.right;
+                }
+            } else {
+                // it has no left child
+                // add the current in ndoes list
+                nodes.add(current.val);
+                // move to the right child
+                current=current.right;
+            }
+        }
+
+        return nodes;
+    }
 }
