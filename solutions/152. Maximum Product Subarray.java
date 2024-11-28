@@ -1,50 +1,25 @@
 class Solution {
-public int maxProduct(int[] nums) {
-    return brainiestapproach(nums);
-}
-​
-private int brainiestapproach(int[] nums) {
-    // TODO Auto-generated method stub
-            int leftprod = 1;
-            int rightprod = 1;
-            
-            int result=nums[0];
-            
-            for(int i = 0; i < nums.length; i++) {
-                int elem1 = nums[i];
-                int elem2 = nums[nums.length-1-i];
-                
-                leftprod = leftprod == 0 ? 1 : leftprod;
-                rightprod = rightprod == 0 ? 1 : rightprod;
-                
-                leftprod = leftprod * elem1;
-                rightprod = rightprod * elem2;
-                
-                result=Math.max(result, Math.max(leftprod, rightprod));
-            }
-            
-            return result;
-}
-​
-private int goodapproch(int[] nums) {
-    int n = nums.length;
-    int maxprod = nums[0];
-    int minprod = nums[0];
-    int result = nums[0];
-​
-    for (int i = 1; i < n; i++) {
-        int e = nums[i];
-        if (e <= 0) {
-            // swap
-            int t = maxprod;
-            maxprod = minprod;
-            minprod = t;
+    public int maxProduct(int[] nums) {
+        // declare vars.
+        int gmax=Integer.MIN_VALUE;
+        int prefixprod=1;
+        int suffixprod=1;
+        
+        // iterate on the nums
+        for (int i=0; i <nums.length; i++) {
+            int elem=nums[i];
+            if (prefixprod==0)prefixprod=1;
+            if (suffixprod==0)suffixprod=1;
+            
+            // update the prefix and suffix
+            prefixprod = prefixprod * elem;
+            suffixprod = suffixprod * nums[nums.length - i - 1];
+            
+            // update gmax
+            gmax=Math.max(gmax, Math.max(prefixprod, suffixprod));
         }
-        maxprod = Math.max(nums[i], maxprod * e);
-        minprod = Math.min(nums[i], minprod * e);
-        result = Math.max(result, maxprod);
+        
+        // return gmax
+        return gmax;
     }
-​
-    return result;
-}
 }
