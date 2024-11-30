@@ -1,57 +1,51 @@
-class LFUCache {
-    // key: original key, value: frequency and original value.
-    private Map<Integer, Pair<Integer, Integer>> cache;
-    // key: frequency, value: All keys that have the same frequency.
-    private Map<Integer, LinkedHashSet<Integer>> frequencies;
-    private int minf;
-    private int capacity;
-    
-    private void insert(int key, int frequency, int value) {
-        cache.put(key, new Pair<>(frequency, value));
-        frequencies.putIfAbsent(frequency, new LinkedHashSet<>());
-        frequencies.get(frequency).add(key);
+import java.util.*;
+​
+public class LFUCache {
+    private class Node {
+        int key, value, freq;
+        Node prev, next;
+​
+        Node(int key, int value) {
+            this.key = key;
+            this.value = value;
+            this.freq = 1;
+        }
     }
 ​
-    public LFUCache(int capacity) {
-        cache = new HashMap<>();
-        frequencies = new HashMap<>();
-        minf = 0;
-        this.capacity = capacity;
-    }
-    
-    public int get(int key) {
-        Pair<Integer, Integer> frequencyAndValue = cache.get(key);
-        if (frequencyAndValue == null) {
-            return -1;
+    private class DoublyLinkedList {
+        Node head, tail;
+        int size;
+​
+        DoublyLinkedList() {
+            head = new Node(0, 0);
+            tail = new Node(0, 0);
+            head.next = tail;
+            tail.prev = head;
+            size = 0;
         }
-        final int frequency = frequencyAndValue.getKey();
-        final Set<Integer> keys = frequencies.get(frequency);
-        keys.remove(key);
-        if (minf == frequency && keys.isEmpty()) {
-            ++minf;
+​
+        void addFirst(Node node) {
+            Node next = head.next;
+            head.next = node;
+            node.prev = head;
+            node.next = next;
+            next.prev = node;
+            size++;
         }
-        final int value = frequencyAndValue.getValue();
-        insert(key, frequency + 1, value);   
-        return value;
-    }
-    
-    public void put(int key, int value) {
-        if (capacity <= 0) {
-            return;
+​
+        void remove(Node node) {
+            Node prev = node.prev;
+            Node next = node.next;
+            prev.next = next;
+            next.prev = prev;
+            size--;
         }
-        Pair<Integer, Integer> frequencyAndValue = cache.get(key);
-        if (frequencyAndValue != null) {
-            cache.put(key, new Pair<>(frequencyAndValue.getKey(), value));
-            get(key);
-            return;
+​
+        Node removeLast() {
+            if (size > 0) {
+                Node last = tail.prev;
+                remove(last);
+                return last;
+            }
+            return null;
         }
-        if (capacity == cache.size()) {
-            final Set<Integer> keys = frequencies.get(minf);
-            final int keyToDelete = keys.iterator().next();
-            cache.remove(keyToDelete);
-            keys.remove(keyToDelete);
-        }
-        minf = 1;
-        insert(key, 1, value);
-    }
-}
