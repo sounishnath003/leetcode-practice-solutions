@@ -248,6 +248,7 @@
 |865|[ Smallest Subtree with all the Deepest Nodes](https://leetcode.com/problems/smallest-subtree-with-all-the-deepest-nodes/)|[Java](./solutions/865.%20Smallest%20Subtree%20with%20all%20the%20Deepest%20Nodes.java)|0 ms|
 |871|[ Minimum Number of Refueling Stops](https://leetcode.com/problems/minimum-number-of-refueling-stops/)|[Java](./solutions/871.%20Minimum%20Number%20of%20Refueling%20Stops.java)|N/A|
 |872|[ Leaf-Similar Trees](https://leetcode.com/problems/leaf-similar-trees/)|[Java](./solutions/872.%20Leaf-Similar%20Trees.java)|9 ms|
+|875|[ Koko Eating Bananas](https://leetcode.com/problems/koko-eating-bananas/)|[Java](./solutions/875.%20Koko%20Eating%20Bananas.java)|29 ms|
 |876|[ Middle of the Linked List](https://leetcode.com/problems/middle-of-the-linked-list/)|[Java](./solutions/876.%20Middle%20of%20the%20Linked%20List.java)|0 ms|
 |880|[ Decoded String at Index](https://leetcode.com/problems/decoded-string-at-index/)|[Java](./solutions/880.%20Decoded%20String%20at%20Index.java)|7 ms|
 |886|[ Possible Bipartition](https://leetcode.com/problems/possible-bipartition/)|[Java](./solutions/886.%20Possible%20Bipartition.java)|91 ms|
