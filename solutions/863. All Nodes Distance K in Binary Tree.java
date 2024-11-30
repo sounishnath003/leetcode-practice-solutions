@@ -1,75 +1,49 @@
-/**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode(int x) { val = x; }
- * }
- */
-​
 class Solution {
 ​
-    private List<Integer> nodesAtKDistance;
-​
     public List<Integer> distanceK(TreeNode root, TreeNode target, int k) {
-        this.nodesAtKDistance = new ArrayList<>();
+        // Prepare the parent map
+        Map<TreeNode, TreeNode> parentMap = new HashMap<>();
+        findAllParent(root, parentMap, null);
 ​
-        ArrayList<TreeNode> rootpath = this.getTheNodeRootPath(root, target);
+        List<Integer> result = new ArrayList<>();
+        Set<TreeNode> visited = new HashSet<>();
+        findKDistanceNodes(target, parentMap, visited, result, k, 0);
 ​
-        for (int i = 0; i < rootpath.size(); i++) {
-            TreeNode node = rootpath.get(i);
-            if (i == 0) {
-                this.printNodesWhichAreKLevelsDown(node, k-i, null);
-            } else {
-                this.printNodesWhichAreKLevelsDown(node, k-i, rootpath.get(i-1));
-            }
-        }
-​
-        return this.nodesAtKDistance;
+        return result;
     }
 ​
-    private void printNodesWhichAreKLevelsDown(TreeNode node, int k, TreeNode blocker) {
+    private void findAllParent(TreeNode root, Map<TreeNode, TreeNode> parentMap, TreeNode parent) {
+        if (root == null) return;
 ​
-        if (node == null || node == blocker || k < 0)
+        parentMap.put(root, parent);
+        findAllParent(root.left, parentMap, root);
+        findAllParent(root.right, parentMap, root);
+    }
+​
+    private void findKDistanceNodes(TreeNode node, Map<TreeNode, TreeNode> parentMap,
+                                    Set<TreeNode> visited, List<Integer> result, int k, int depth) {
+        if (node == null || visited.contains(node)) {
             return;
+        }
 ​
-        if (k == 0) {
-            nodesAtKDistance.add(node.val);
+        // Mark the current node as visited
+        visited.add(node);
+​
+        // If we reach the target depth, add the node's value to the result
+        if (depth == k) {
+            result.add(node.val);
             return;
         }
 ​
-        // faith
-        this.printNodesWhichAreKLevelsDown(node.left, k - 1, blocker); // left call
-        this.printNodesWhichAreKLevelsDown(node.right, k - 1, blocker); // right call
+        // Explore left child
+        findKDistanceNodes(node.left, parentMap, visited, result, k, depth + 1);
+​
+        // Explore right child
+        findKDistanceNodes(node.right, parentMap, visited, result, k, depth + 1);
+​
+        // Explore parent
+        TreeNode parent = parentMap.get(node);
+        findKDistanceNodes(parent, parentMap, visited, result, k, depth + 1);
     }
-​
-    private ArrayList<TreeNode> getTheNodeRootPath(TreeNode root, TreeNode target) {
-​
-        if (root == null)
-            return new ArrayList<>();
-​
-        if (root == target) {
-            ArrayList<TreeNode> bres = new ArrayList<>();
-            bres.add(root);
-            return bres;
-        }
-​
-        // faith
-        ArrayList<TreeNode> path1 = this.getTheNodeRootPath(root.left, target);
-        ArrayList<TreeNode> path2 = this.getTheNodeRootPath(root.right, target);
-​
-        ArrayList<TreeNode> mypath = new ArrayList<>();
-​
-        if (path1.size() > 0) {
-            mypath = (ArrayList) path1.clone();
-            mypath.add(root);
-        } else if (path2.size() > 0) {
-            mypath = (ArrayList) path2.clone();
-            mypath.add(root);
-        }
-​
-        return mypath;
-    }
-​
 }
+​
