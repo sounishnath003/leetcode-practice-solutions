@@ -1,62 +1,54 @@
 class Solution {
-​
-    private class Pair {
-        int row;
-        int col;
-​
-        Pair(int r, int c) {
-            this.row = r;
-            this.col = c;
-        }
-    }
-​
-    private int[] dx = new int[] { 1, -1, 0, 0 };
-    private int[] dy = new int[] { 0, 0, -1, 1 };
-​
-    public boolean exist(char[][] board, String word) {
-        final int R = board.length;
-        final int C = board[0].length;
-​
-        for (int row = 0; row < R; row++) {
-            for (int col = 0; col < C; col++) {
-                if (search(board, word, 0, new Pair(row, col)) == true) {
-                    return true;
-                }
-            }
-        }
-​
-        return false;
-    }
-​
-    private boolean search(char[][] board, String word, int wordCount, Pair node) {
-​
-        if (wordCount == word.length()) {
-            return true;
-        }
-​
-        if (isNotUnderSafeArea(board, node.row, node.col, word, wordCount) == true)
-            return false;
-​
-        // faith
-        if (word.charAt(wordCount) == board[node.row][node.col]) {
-            char orignalCharacter = board[node.row][node.col];
-            board[node.row][node.col] = '#';
-            for (int k = 0; k < 4; k++) {
-                boolean rres = search(board, word, wordCount + 1, new Pair(node.row + dx[k], node.col + dy[k]));
-                if (rres == true) {
-                    return true;
-                }
-            }
-            board[node.row][node.col] = orignalCharacter;
-        }
-​
-        return false;
-    }
-​
-    private boolean isNotUnderSafeArea(char[][] board, int row, int col, String word, int wordCount) {
-​
-        return row < 0 || row >= board.length || col < 0 || col >= board[0].length
-                || word.charAt(wordCount) != board[row][col] || board[row][col] == '#';
-​
-    }
+    public boolean exist(char[][] board, String word) {
+        int rows = board.length;
+        int cols = board[0].length;
+
+        // Iterate through each cell in the board
+        for (int row = 0; row < rows; row++) {
+            for (int col = 0; col < cols; col++) {
+                // Start the DFS search if the first character matches
+                if (board[row][col] == word.charAt(0)) {
+                    if (dfs(board, word, 0, row, col)) {
+                        return true;
+                    }
+                }
+            }
+        }
+        return false;
+    }
+
+    // Directions: up, left, down, right
+    private final int[][] directions = {
+        {-1, 0}, {0, -1}, {1, 0}, {0, 1}
+    };
+
+    private boolean dfs(char[][] board, String word, int index, int row, int col) {
+        // Base case: all characters matched
+        if (index == word.length()) {
+            return true;
+        }
+
+        // Check boundaries and current character match
+        if (row < 0 || row >= board.length || col < 0 || col >= board[0].length || board[row][col] != word.charAt(index)) {
+            return false;
+        }
+
+        // Temporarily mark the cell as visited
+        char temp = board[row][col];
+        board[row][col] = '#';
+
+        // Explore all possible directions
+        for (int[] dir : directions) {
+            int newRow = row + dir[0];
+            int newCol = col + dir[1];
+            if (dfs(board, word, index + 1, newRow, newCol)) {
+                return true;
+            }
+        }
+
+        // Restore the cell after backtracking
+        board[row][col] = temp;
+
+        return false;
+    }
 }
