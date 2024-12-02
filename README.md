@@ -170,6 +170,7 @@
 |387|[ First Unique Character in a String](https://leetcode.com/problems/first-unique-character-in-a-string/)|[C++](./solutions/387.%20First%20Unique%20Character%20in%20a%20String.cpp)|148 ms|
 |392|[ Is Subsequence](https://leetcode.com/problems/is-subsequence/)|[Java](./solutions/392.%20Is%20Subsequence.java)|0 ms|
 |395|[ Longest Substring with At Least K Repeating Characters](https://leetcode.com/problems/longest-substring-with-at-least-k-repeating-characters/)|[C++](./solutions/395.%20Longest%20Substring%20with%20At%20Least%20K%20Repeating%20Characters.cpp)|0 ms|
+|402|[ Remove K Digits](https://leetcode.com/problems/remove-k-digits/)|[Java](./solutions/402.%20Remove%20K%20Digits.java)|18 ms|
 |412|[ Fizz Buzz](https://leetcode.com/problems/fizz-buzz/)|[C++](./solutions/412.%20Fizz%20Buzz.cpp)|4 ms|
 |415|[ Add Strings](https://leetcode.com/problems/add-strings/)|[Java](./solutions/415.%20Add%20Strings.java)|4 ms|
 |416|[ Partition Equal Subset Sum](https://leetcode.com/problems/partition-equal-subset-sum/)|[C++](./solutions/416.%20Partition%20Equal%20Subset%20Sum.cpp)|780 ms|
