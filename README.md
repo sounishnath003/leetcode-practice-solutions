@@ -226,6 +226,7 @@
 |704|[ Binary Search](https://leetcode.com/problems/binary-search/)|[Java](./solutions/704.%20Binary%20Search.java)|0 ms|
 |709|[ To Lower Case](https://leetcode.com/problems/to-lower-case/)|[Java](./solutions/709.%20To%20Lower%20Case.java)|0 ms|
 |718|[ Maximum Length of Repeated Subarray](https://leetcode.com/problems/maximum-length-of-repeated-subarray/)|[Java](./solutions/718.%20Maximum%20Length%20of%20Repeated%20Subarray.java)|51 ms|
+|721|[ Accounts Merge](https://leetcode.com/problems/accounts-merge/)|[Java](./solutions/721.%20Accounts%20Merge.java)|29 ms|
 |724|[ Find Pivot Index](https://leetcode.com/problems/find-pivot-index/)|[Java](./solutions/724.%20Find%20Pivot%20Index.java)|1 ms|
 |729|[ My Calendar I](https://leetcode.com/problems/my-calendar-i/)|[Java](./solutions/729.%20My%20Calendar%20I.java)|20 ms|
 |739|[ Daily Temperatures](https://leetcode.com/problems/daily-temperatures/)|[Java](./solutions/739.%20Daily%20Temperatures.java)|241 ms|
