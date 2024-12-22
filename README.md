@@ -77,7 +77,7 @@
 |114|[ Flatten Binary Tree to Linked List](https://leetcode.com/problems/flatten-binary-tree-to-linked-list/)|[Python3](./solutions/114.%20Flatten%20Binary%20Tree%20to%20Linked%20List.py)|0 ms|
 |118|[ Pascal's Triangle](https://leetcode.com/problems/pascals-triangle/)|[C++](./solutions/118.%20Pascal's%20Triangle.cpp)|0 ms|
 |121|[ Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)|[C++](./solutions/121.%20Best%20Time%20to%20Buy%20and%20Sell%20Stock.cpp)|12 ms|
-|122|[ Best Time to Buy and Sell Stock II](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/)|[Java](./solutions/122.%20Best%20Time%20to%20Buy%20and%20Sell%20Stock%20II.java)|2 ms|
+|122|[ Best Time to Buy and Sell Stock II](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/)|[Java](./solutions/122.%20Best%20Time%20to%20Buy%20and%20Sell%20Stock%20II.java)|1 ms|
 |123|[ Best Time to Buy and Sell Stock III](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iii/)|[Java](./solutions/123.%20Best%20Time%20to%20Buy%20and%20Sell%20Stock%20III.java)|3 ms|
 |124|[ Binary Tree Maximum Path Sum](https://leetcode.com/problems/binary-tree-maximum-path-sum/)|[Java](./solutions/124.%20Binary%20Tree%20Maximum%20Path%20Sum.java)|1 ms|
 |125|[ Valid Palindrome](https://leetcode.com/problems/valid-palindrome/)|[Python3](./solutions/125.%20Valid%20Palindrome.py)|1228 ms|
