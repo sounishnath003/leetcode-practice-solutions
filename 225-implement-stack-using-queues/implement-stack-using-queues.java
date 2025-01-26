@@ -11,6 +11,17 @@ class MyStack {
         queue1.add(x);
     }
 
+    // single queue approach ......
+    // poll() from the queue, add into the queue
+    public void push(int x) {
+        queue.add(x);
+        int size = queue.size();
+        while (size > 1) {
+            queue.add(queue.remove());
+            size--;
+        }
+    }
+
     public int pop() {
 
         while (queue1.size() > 1) {
