@@ -7,7 +7,8 @@ class Solution {
 
         if (nums[0] != nums[1]) return nums[0];
         if (nums[n-1] != nums[n-2]) return nums[n-1];
-
+        // even tho we have checked, still have to run from 1 extremes
+        // other wise even check will failed with index not in bound.
         int low = 0;
         int high = n-1;
 
