@@ -4,6 +4,7 @@ class Solution {
         if (nums == null || nums.length == 0) {
             return 0;
         }
+        // return f(nums,0,nums.length-1)-1;
         return mergeSort(nums, 0, nums.length - 1);
     }
 
@@ -45,4 +46,35 @@ class Solution {
         System.arraycopy(temp, 0, nums, left, temp.length);
         return count;
     }
+
+    // ====
+
+
+        // recursion
+        // explore all possibilities
+        // TC: O (2 ^ N)
+        public int f(int[] nums, int i, int j) {
+
+            if (i > j) {
+                return 1;
+            }
+
+            int pairs = 0;
+            pairs += f(nums, i + 1, j);
+            
+            for (int k = i + 1; k <= j; k++) {
+                int e1 = nums[i];
+                int e2 = nums[k];
+
+                boolean satisfiesCondition = e1/e2 > 2L;
+
+                if (satisfiesCondition) {
+                    pairs++;
+                }
+            }
+
+
+            return pairs;
+
+        }
 }
