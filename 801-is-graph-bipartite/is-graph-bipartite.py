@@ -17,7 +17,8 @@ class Solution:
         colors[node] = color
 
         for neighbor in graph[node]:
-            if not self.dfs(graph, neighbor, colors, 1 - color):
+            ctou = 1 if color == 0 else 0
+            if not self.dfs(graph, neighbor, colors, ctou):
                 return False
 
         return True
