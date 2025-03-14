@@ -1,10 +1,30 @@
 class Solution:
     def minDistance(self, word1: str, word2: str) -> int:
+        # return self.func(word1, word2, sn-1, tn-1, dp)
         sn=len(word1)
         tn=len(word2)
 
-        dp = [[-1 for _ in range(tn)] for _ in range(sn)]
-        return self.func(word1, word2, sn-1, tn-1, dp)
+        dp = [[0 for _ in range(tn+1)] for _ in range(sn+1)]
+
+        for i in range(sn+1):
+            dp[i][0]=i
+        
+        for j in range(tn+1):
+            dp[0][j]=j
+
+        for i in range(1, sn+1):
+            for j in range(1, tn+1):
+                # if same
+                if word1[i-1] == word2[j-1]:
+                    dp[i][j] = dp[i-1][j-1]
+                else:
+                    op_add = dp[i-1][j]
+                    op_del = dp[i][j-1]
+                    op_repl = dp[i-1][j-1]
+
+                    dp[i][j] = 1 + min([op_add, op_del, op_repl])
+
+        return dp[sn][tn]
     
     def func(self, s, t, i, j, dp):
         if i < 0:
