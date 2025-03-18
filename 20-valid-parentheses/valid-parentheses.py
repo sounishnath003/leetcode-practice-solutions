@@ -10,8 +10,8 @@ class Solution:
             elif bracket in [ '(', '{', '[' ]:
                 stack.append(bracket)
             else:
-                if len(stack) == 0:
-                    return False
+                # if len(stack) == 0:
+                #     return False
                 if (
                     bracket == ')' and stack[-1] != '('
                     or bracket == '}' and stack[-1] != '{'
