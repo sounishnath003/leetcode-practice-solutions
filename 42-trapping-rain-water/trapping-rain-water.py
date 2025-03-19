@@ -1,31 +1,28 @@
 class Solution:
-    def rain_water_tapping(self, buildings: list[int]) -> int:
-        if not buildings:  # Edge case: Empty list
-            return 0
+    def tapping_rain_water2(self, arr):
+        n=len(arr)
+        left_walls=[0 for _ in range(n)]
+        left_walls[0] = arr[0]
+        # traverse from left to right and store the immdediate bigger buildings
+        for i in range(1,n):
+            left_walls[i] = max(arr[i], left_walls[i-1])
+        
+        right_walls=[0 for _ in range(n)]
+        right_walls[n-1] = arr[n-1]
+        # traverse from right to left and store the immdediate bigger builders
+        for i in range(n-2, -1, -1):
+            right_walls[i] = max(arr[i], right_walls[i+1])
 
-        n = len(buildings)
-
-        # Arrays to store the highest left and right walls at each index
-        left_walls = [0] * n
-        right_walls = [0] * n
-
-        # Fill left_walls
-        left_walls[0] = buildings[0]
-        for i in range(1, n):
-            left_walls[i] = max(left_walls[i - 1], buildings[i])
-
-        # Fill right_walls
-        right_walls[n - 1] = buildings[n - 1]
-        for i in range(n - 2, -1, -1):
-            right_walls[i] = max(right_walls[i + 1], buildings[i])
-
-        # Calculate trapped water
-        water_count = 0
+        # result
+        water=0
+        # traverse and keep building and calc the water
         for i in range(n):
-            water_count += min(left_walls[i], right_walls[i]) - buildings[i]
+            lefth=left_walls[i]
+            righth=right_walls[i]
+            
+            water += min(lefth, righth) - arr[i]
 
-        return water_count
-
+        return water
 
     def trap(self, height: List[int]) -> int:
-        return self.rain_water_tapping(height)
+        return self.tapping_rain_water2(height)
