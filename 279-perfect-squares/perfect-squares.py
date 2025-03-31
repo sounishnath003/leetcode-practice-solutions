@@ -1,12 +1,8 @@
 MAX=float("inf")
 class Solution:
     def numSquares(self, n: int) -> int:
-        perfect_squares = []
-        i = 1
-        while i * i <= n:
-            perfect_squares.append(i * i)
-            i += 1
-
+        perfect_squares = list(map(lambda x: x**2, list(range(1,n+1))))
+        
         dp = [float('inf')] * (n + 1)
         dp[0] = 0
 
@@ -15,7 +11,7 @@ class Solution:
                 dp[j] = min(dp[j], dp[j - square] + 1)
 
         return dp[n]
-        
+
     def numSquares2(self, n: int) -> int:
         def f(ps,i,n,dp=None):
             if dp is None:
