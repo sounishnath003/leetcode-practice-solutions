@@ -4,17 +4,18 @@ class Solution:
         # store indices of invalid parentheses in stack
         stack = [] # stores indices of opening brackets
         s_list = list(s)
-        
         # First pass - mark invalid closing brackets
         for i in range(len(s)):
             if s[i] == '(':
+                # Store index of opening bracket
                 stack.append(i)
             elif s[i] == ')':
-                if stack: # if there's a matching opening bracket
+                # For closing bracket, check if we have matching opening bracket
+                if stack and s[stack[-1]] == '(':
                     stack.pop()
-                else: # no matching opening bracket - invalid closing bracket
+                else:
+                    # No matching opening bracket, mark as invalid
                     s_list[i] = ''
-        
         # Second pass - remove unmatched opening brackets
         while stack:
             s_list[stack.pop()] = ''
