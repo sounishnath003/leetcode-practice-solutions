@@ -18,8 +18,7 @@ class Solution:
             for v in range(C):
                 if isConnected[u][v] == 1:
                     graph[u].append(v)
-                    # graph[v].append(u)
-
+                    
         """find the DFS function"""
         def dfs1(graph,node,visited,topolist):
             # mark as visited the node
