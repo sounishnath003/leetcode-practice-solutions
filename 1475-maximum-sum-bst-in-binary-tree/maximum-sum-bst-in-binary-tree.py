@@ -1,10 +1,50 @@
-from typing import Optional
 
 MAX = float('inf')
 MIN = -MAX
 
+class Result:
+    def __init__(self, minv, maxv, isBST, total):
+        self.minv=minv
+        self.maxv=maxv
+        self.isBST=isBST
+        self.total=total
+
+
 class Solution:
     def maxSumBST(self, root: Optional[TreeNode]) -> int:
+        max_sum=0
+
+        """write a recursion to person the check of isbst and keep updating the sum"""    
+        def f(root) -> Result:
+            global MIN, MAX
+            nonlocal max_sum
+
+            # if root is null is BST but return a unknown value
+            if not root:
+                return Result(MAX, MIN, True, 0)
+            
+            # keep faith and perform the left and right tree checks
+            left=f(root.left)
+            right=f(root.right)
+
+            # check if this tree is BST and everything is proper
+            if left.isBST and right.isBST and left.maxv < root.val < right.minv:
+                # calculate the my sum
+                mysum = left.total + root.val + right.total
+                # update the my sum if bigger
+                max_sum=max(max_sum, mysum)
+                # return the updated value
+                return Result(min(left.minv, root.val), max(root.val, right.maxv), True, mysum)
+            
+            # if not a right tree return bad val
+            return Result(0,0,False,0)
+    
+        # call the func 
+        f(root)
+        
+        return max_sum
+    
+    def maxSumBST2(self, root: Optional[TreeNode]) -> int:
         self.ans = 0
 
         def f(root): # returns [min_val, max_val, is_bst, sum_of_bst]
