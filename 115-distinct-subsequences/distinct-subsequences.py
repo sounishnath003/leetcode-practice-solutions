@@ -2,6 +2,28 @@
 
 class Solution:
     def numDistinct(self, s: str, t: str) -> int:
+        n=len(s)
+        m=len(t)
+
+        dp=[[0 for _ in range(m+1)] for _ in range(n+1)]
+
+        # base condn: if j == 0 all are 1s
+        for i in range(n+1):
+            dp[i][0] = 1
+
+        # iterate over and biuld
+        for i in range(1,n+1):
+            for j in range(1,m+1):
+                # check if characters are same?
+                if s[i-1] == t[j-1]:
+                    dp[i][j] = dp[i-1][j] + dp[i-1][j-1]
+                else:
+                    dp[i][j] = dp[i-1][j]
+
+        return dp[n][m]
+
+
+    def numDistinct2(self, s: str, t: str) -> int:
         """
         find the unique ways to generate the target (t) from the string (s)
         subsequence: pick or not pick
