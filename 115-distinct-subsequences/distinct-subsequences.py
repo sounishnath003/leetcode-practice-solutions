@@ -6,21 +6,29 @@ class Solution:
         m=len(t)
 
         dp=[[0 for _ in range(m+1)] for _ in range(n+1)]
+        prev=[0 for _ in range(m+1)]
+        prev[0]=1
 
         # base condn: if j == 0 all are 1s
-        for i in range(n+1):
+        for i in range(n):
             dp[i][0] = 1
 
-        # iterate over and biuld
+        # iterate over and build
         for i in range(1,n+1):
+            current=[0 for _ in range(m+1)]
+            current[0]=1
             for j in range(1,m+1):
                 # check if characters are same?
                 if s[i-1] == t[j-1]:
                     dp[i][j] = dp[i-1][j] + dp[i-1][j-1]
+                    current[j] = prev[j] + prev[j-1]
                 else:
                     dp[i][j] = dp[i-1][j]
+                    current[j]=prev[j]
 
-        return dp[n][m]
+            prev=current.copy()
+
+        return prev[m]
 
 
     def numDistinct2(self, s: str, t: str) -> int:
