@@ -4,25 +4,27 @@ from typing import List
 
 class Solution:
     def combinationSum2(self, candidates: List[int], target: int) -> List[List[int]]:
-        result = []
+        results=[]
 
         def solve(arr, i, current, ssf, target):
+            nonlocal results
             if ssf == target:
-                result.append(current[:])
-                return
-            if ssf > target or i == len(arr):
-                return
+                results.append(current[:])
+                return 
+            if i == len(arr) or ssf > target:
+                return 0
             
-            for j in range(i, len(arr)):
-                if j > i and arr[j] == arr[j - 1]:
+            n=len(arr)
+            for j in range(i, n):
+                if j>i and arr[j] == arr[j-1]:
                     continue
                 current.append(arr[j])
-                solve(arr, j + 1, current, ssf + arr[j], target)
+                f=solve(arr,j+1,current,ssf + arr[j], target)
                 current.pop()
 
         # we need to sort the candidates as it is asked to 
         # use the numbers only once.
         candidates.sort()
 
-        solve(candidates, 0, [], 0, target)
-        return result
+        solve(candidates,0,[],0,target)
+        return results
