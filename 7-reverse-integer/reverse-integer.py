@@ -17,6 +17,8 @@ class Solution:
         
         while x > 0:
             num = num * 10 + (x % 10)
+            if check_overflow(num):
+                return 0
             x=x//10
             
         num=-1 * num if is_negetive else num
