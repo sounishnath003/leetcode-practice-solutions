@@ -1,6 +1,6 @@
 class Solution:
     def mincostTickets(self, days: List[int], costs: List[int]) -> int:
-        """ find the minimum spend dollars to travel everyday"""
+        """find the minimum spend dollars to travel everyday"""
         # define a dp for memoization
         dp = {}
         def minCost(days,i,dp):
@@ -28,4 +28,22 @@ class Solution:
             # return the minimum cost i have incurred from this day
             return min_cost
 
-        return minCost(days,0,dp)
+        # return minCost(days,0,dp)
+
+        # iterative DP solution
+        n=len(days)
+        dp=[0] * (n+1)
+
+        # iterate on all the days
+        for i in range(n-1, -1, -1):
+            dp[i]=float("inf")
+            # cover all the possible costs and current_days w/ day_index
+            for d,c in zip([1,7,30],costs):
+                curr_day=i
+                day_index=i
+                while day_index < n and days[day_index] < days[curr_day] + d:
+                    day_index +=1
+                dp[i]=min(dp[i], c+dp[day_index])
+        
+        return dp[0]
+
