@@ -1,30 +1,29 @@
 class Solution:
-    def is_peak(self, arr, mid):
-        return (mid-1) >= 0 and (mid+1 < len(arr)) and arr[mid-1] < arr[mid] and arr[mid] > arr[mid+1]
-
     def findPeakElement(self, arr: List[int]) -> int:
-        # get the length
+        # get the length of the arr
         n=len(arr)
-        if n==1:
+        if n == 1:
             return 0
-        # check if 0th elem is peak
+        # base condition checks 
+        # if the 0th or n-1th element is the peak
         if arr[0] > arr[1]:
             return 0
-        # check if n-1th elem is peak
-        if n-2>=0 and arr[n-1] > arr[n-2]:
+        if n-2 >= 0 and arr[n-1] > arr[n-2]:
             return n-1
-        # do the check for 
-        # all the idnexes
+        # now we can apply binary search?
+        # through the array check if an element is greater than its neighbors
         low=1
         high=n-2
-
+        peak = -1
         while low <= high:
-            mid=(low + (high-low)//2)
-            if self.is_peak(arr, mid):
-                return mid
-            elif arr[mid-1] > arr[mid]:
-                high=mid-1
-            elif arr[mid+1] > arr[mid]:
+            mid = (low + (high-low)//2)
+            # check if the mid element is the peak?
+            if arr[mid-1] < arr[mid] and arr[mid] > arr[mid+1]:
+                peak=mid
+                return peak
+            elif arr[mid] > arr[mid-1]:
                 low=mid+1
+            else:
+                high=mid-1
 
-        return -1
+        return peak
