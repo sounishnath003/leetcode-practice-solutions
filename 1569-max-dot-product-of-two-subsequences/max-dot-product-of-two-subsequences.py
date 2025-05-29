@@ -4,7 +4,7 @@ class Solution:
         m = len(nums2)
         
         # Initialize dp array with negative infinity
-        dp = [[float("-inf") for _ in range(m)] for _ in range(n)]
+        dp = [[0 for _ in range(m)] for _ in range(n)]
         
         # Base case - first element
         dp[0][0] = nums1[0] * nums2[0]
