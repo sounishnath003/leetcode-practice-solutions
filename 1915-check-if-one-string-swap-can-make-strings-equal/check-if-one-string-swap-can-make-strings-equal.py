@@ -1,20 +1,21 @@
 class Solution:
     def areAlmostEqual(self, s1: str, s2: str) -> bool:
-        # Find the indices where s1 and s2 differ
-        diff = []
+        if s1 == s2:
+            return True
         
-        for i in range(len(s1)):
+        # store the indexes where the mismatching has happened
+        diff=list()
+        # iterate and store all the results (differences)
+        for i, c in enumerate(s1):
+            # so characters are different
             if s1[i] != s2[i]:
                 diff.append(i)
         
-        # Case 1: strings already equal
-        if len(diff) == 0:
-            return True
+        # so extactly there has to the 2 values right?
+        if len(diff) == 1 or len(diff) > 2:
+            return False
         
-        # Case 2: exactly two characters differ
-        if len(diff) == 2:
-            i, j = diff
-            return s1[i] == s2[j] and s1[j] == s2[i]
-        
-        # Any other number of mismatches — not possible
-        return False
+        # pull out the indexes
+        i, j = diff
+        # just simply return
+        return s1[i] == s2[j] and s2[i] == s1[j]
