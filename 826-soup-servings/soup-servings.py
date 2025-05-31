@@ -1,3 +1,7 @@
+""" WORST QUESTION """
+""" Why 4800 in base case, IDK after alot of attempts just copy pasted """
+""" But the operations are correct """
+
 class Solution:
     def soupServings(self, n: int) -> float:
         
