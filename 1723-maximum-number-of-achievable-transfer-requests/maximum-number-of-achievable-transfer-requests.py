@@ -12,6 +12,10 @@ class Solution:
                     max_requests=max(max_requests, count)
                 return
             
+            # not pick
+            backtrack(index+1, count)
+
+            # pick
             fromm, to=requests[index]
             movements[fromm] -=1
             movements[to] +=1
@@ -21,7 +25,6 @@ class Solution:
             movements[fromm] +=1
             movements[to] -=1
 
-            backtrack(index+1, count)
 
         backtrack(0,0)
         return max_requests
