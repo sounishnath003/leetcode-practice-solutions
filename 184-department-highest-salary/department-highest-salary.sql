@@ -1,16 +1,11 @@
 # Write your MySQL query statement below
-with fil as (
-    with deptWiseMaxSal as (
-        select e.departmentId, max(e.salary) as maxSal
-        from employee e
-        group by e.departmentId
-    )
-    select e.*
-    from employee e
-    join deptWiseMaxSal ds
-    where e.departmentId=ds.departmentId and e.salary=ds.maxSal
+WITH deptWiseMaxSal AS (
+    SELECT departmentId, MAX(salary) AS maxSal
+    FROM employee
+    GROUP BY departmentId
 )
-select d.name as Department, ds.name as Employee, ds.salary as Salary
-    from fil as ds
-    join department d
-on ds.departmentId=d.id;
+SELECT d.name AS Department, e.name AS Employee, e.salary AS Salary
+FROM employee e
+JOIN deptWiseMaxSal ds ON e.departmentId = ds.departmentId
+JOIN department d ON e.departmentId = d.id
+WHERE e.salary = ds.maxSal;
