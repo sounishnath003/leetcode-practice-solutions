@@ -1,26 +1,19 @@
-# https://leetcode.com/explore/featured/card/top-interview-questions-easy/92/array/770/
-
-from typing import List
+import typing
 
 class Solution:
-    def rotate(self, grid: List[List[int]]) -> None:
-        """
-        Rotates the given 2D grid (matrix) 90 degrees clockwise in-place.
-        Do not return anything, modify the matrix in-place instead.
-        """
-        R = len(grid)  # Number of rows in the grid
-        C = len(grid[0])  # Number of columns in the grid
-
-        # Step 1: Transpose the matrix (swap rows with columns)
+    def rotate(self, grid: typing.List[typing.List[int]]) -> typing.List[typing.List[int]]:
+        def swap(grid: typing.List[typing.List[int]], row:int, col:int) -> None:
+            """swaps out the elements at position (row, col)"""
+            grid[row][col],grid[col][row] = grid[col][row], grid[row][col]
+        
+        R = len(grid)
+        C = len(grid[0])
+        # swap the elements (row,col) -> (col, row)
         for row in range(R):
             for col in range(row, C):
-                # Swap elements at (row, col) and (col, row)
-                grid[row][col], grid[col][row] = grid[col][row], grid[row][col]
+                swap(grid, row, col)
 
-        # Step 2: Reverse each row to complete the 90-degree rotation
-        for row, row_v in enumerate(grid):
-            # Reverse the current row
-            grid[row][:] = row_v[::-1]
-
-        # The grid is now rotated 90 degrees clockwise
-        return grid
+        # reverse every row [1,6,7] -> [7,6,1]
+        for row in range(R):
+            grid[row][:] = grid[row][::-1]
+        # return grid
