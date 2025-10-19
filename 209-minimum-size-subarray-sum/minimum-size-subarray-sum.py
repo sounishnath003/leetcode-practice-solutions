@@ -1,22 +1,22 @@
 class Solution:
     def minSubArrayLen(self, target: int, nums: List[int]) -> int:
-        """find the shorter window length elem, which matches or more than target"""
-        # get length
-        n=len(nums)
-        # result, keeping the window length to be the array length only
-        # we need to minmize it only
-        result=float('inf')
-        # we need to apply the sliding window technique only
-        # slide the window and get the answer
-        start=0
-        # prefix sum
-        prefix_sum=0
-        # iterate over the elem in arr
-        for end in range(n):
-            prefix_sum += nums[end]
+        start = 0
+        gmin = float("inf")
+        prefix_sum = 0
+
+        # Iterate over the nums array and check it
+        for end, num in enumerate(nums):
+            prefix_sum += num
+            # if prefix sum is bigger than the target when start looking at this
             while prefix_sum >= target:
-                window_length=end-start+1
-                result=min(result, window_length)
-                prefix_sum=prefix_sum - nums[start]
-                start +=1
-        return 0 if result == float('inf') else result
+                # Window length calculation
+                window_length = end - start + 1
+                # calculate the gmin length update
+                gmin = min(gmin, window_length)
+                # update the prefix sum substract from nums[start]
+                prefix_sum = prefix_sum - nums[start]
+                # increment the start pointer ...
+                start += 1
+
+
+        return 0 if gmin == float("inf") else gmin
