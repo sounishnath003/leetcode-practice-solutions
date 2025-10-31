@@ -2,6 +2,7 @@ class Solution:
     def generateParenthesis(self, n: int) -> List[str]:
         res = []
 
+        @lru_cache(None)
         def fn(open_bracket:int, close_bracket: int, sequence:str) -> None:
             nonlocal n, res
             if open_bracket > n or len(sequence) > 2*n: return
