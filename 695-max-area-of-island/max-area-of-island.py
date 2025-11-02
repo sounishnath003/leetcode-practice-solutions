@@ -10,8 +10,7 @@ class Solution:
             
             grid[row][col] = 0
             area = 1
-            for dr, dc in [(0,-1), (-1,0), (0,1), (1,0)]:
-                area += dfs(row+dr, col+dc)
+            for dr, dc in [(0,-1), (-1,0), (0,1), (1,0)]: area += dfs(row+dr, col+dc)
 
             return area
 
