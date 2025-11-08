@@ -1,0 +1,24 @@
+# LC: 322 Coin Change
+class Solution:
+    def coinChange(self, coins: List[int], amount: int) -> int:
+        """returns the minimum number of coins required to match the amount"""
+        dp = {}
+        def f(i:int, amount:int) -> int:
+            nonlocal dp
+
+            if amount < 0: return float("inf")
+            if amount == 0: return 0
+            if i == 0:
+                if amount % coins[0] == 0: return amount//coins[0]
+            if i < 0: return float("inf")
+            if (i, amount) in dp: return dp[(i, amount)]
+            # few options
+            op1 = 1 + f(i, amount-coins[i])
+            op2 = f(i-1, amount)
+
+            dp[(i,amount)] =  min(op1, op2)
+            return dp[(i,amount)]
+
+
+        x = f(len(coins)-1, amount)
+        return x if x != float("inf") else -1
