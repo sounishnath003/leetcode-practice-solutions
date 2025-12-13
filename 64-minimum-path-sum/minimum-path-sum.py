@@ -1,33 +1,18 @@
-MAX=float('inf')
 class Solution:
     def minPathSum(self, grid: List[List[int]]) -> int:
-        def f(grid,row,col,dp=None):
-            if dp is None:
-                dp={}
-            
-            # if you have crossed anywhere outside
-            if row < 0 or col < 0:
-                return MAX
-            # if you are at the point (start)
-            if row == 0 and col == 0:
-                return grid[row][col]
+        R = len(grid)
+        C = len(grid[0])
 
-            # if row,col already computed
-            if (row,col) in dp:
-                return dp[(row,col)]
+        # stand at 0th row
+        for col in range(1, C):
+            grid[0][col] += grid[0][col-1]
 
-            cost=grid[row][col]
-            # you have two opts
-            top=f(grid,row-1,col,dp)
-            left=f(grid,row,col-1,dp)
-            # pick the minimum
-            dp[(row,col)]=cost+min(top,left)
-            # return current ans
-            return dp[(row,col)]
-        
-        # get the row
-        R=len(grid)
-        # get the col
-        C=len(grid[0])
-        return f(grid,R-1,C-1)
-        
+        # stand at 0th col
+        for row in range(1, R):
+            grid[row][0] += grid[row-1][0]
+
+        for row in range(1, R):
+            for col in range(1, C):
+                grid[row][col] += min(grid[row-1][col], grid[row][col-1])
+
+        return grid[R-1][C-1] 
