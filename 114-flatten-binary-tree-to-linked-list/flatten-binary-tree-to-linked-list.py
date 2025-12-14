@@ -1,55 +1,34 @@
 class Solution:
-    def flatten(self, root):
-        if not root:
-            return None
-        # inorder morris traversal
-        curr=root
-        while curr:
-            # curr has left child
-            if curr.left is not None:
-                temp=curr.left
-                # goto its right most children and do something
-                while temp.right is not None:
-                    temp=temp.right
-                # connect the right most node to root's right
-                temp.right=curr.right
-                # change the curr left subtree to its right
-                curr.right=curr.left
-                # make the left children as None
-                curr.left=None
-                # move the curr to its next ndoe i.e right
-                curr=curr.right
-                
-            else:
-                curr=curr.right
-                
-        return root
+    def flatten(self, root: Optional[TreeNode]) -> None:
+        if not root: return None
+        while root:
+            if root.left:
+                oleft = root.left
+                curr = root.left
+                while curr.right: curr = curr.right
+                curr.right = root.right # morris traversal main logic
+                root.right = oleft
+                root.left = None
 
+            root = root.right
 
     def flatten2(self, root: Optional[TreeNode]) -> None:
         """
         Do not return anything, modify root in-place instead.
         """
-        
-        if not root:
-            return
+        prev = None
+        def dfs(root):
+            nonlocal prev
+            if not root: return
+            # faith
+            dfs(root.right)
+            dfs(root.left)
 
-        # Flatten left and right subtrees
-        self.flatten(root.left)
-        self.flatten(root.right)
+            # my work
+            root.right = prev
+            root.left = None
+            prev = root
 
-        # Store the right subtree
-        right_subtree = root.right
+        dfs(root)
 
-        # Move the left subtree to the right
-        root.right = root.left
-        root.left = None
-
-        # Find the tail of the new right subtree
-        current = root
-        while current.right:
-            current = current.right
-
-        # Attach the original right subtree
-        current.right = right_subtree
         
