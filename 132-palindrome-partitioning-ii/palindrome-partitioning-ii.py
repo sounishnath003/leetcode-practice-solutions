@@ -25,10 +25,25 @@ class Solution:
             dp = [float("inf")] * (n + 1)
             dp[n] = -1
 
+            # finding is_palindrome is slower:: make it faster
+            pal_dp = [[False] * n for _ in range(n)]
+
+            for gap in range(1, n+1):
+                for i in range(n - gap + 1):
+                    j = i + gap - 1
+                    if s[i] == s[j]:
+                        if gap == 1:
+                            pal_dp[i][j] = True
+                        elif gap == 2:
+                            pal_dp[i][j] = True
+                        elif gap > 2:
+                            pal_dp[i][j] = True and pal_dp[i+1][j-1]
+
             # other case:
             for i in range(n-1, -1, -1):
                 for j in range(i, n):
-                    if is_palindrome(s[i:j+1]):
+                    # if is_palindrome(s[i:j+1]):
+                    if pal_dp[i][j]:
                         cuts = 1 + dp[j+1]
                         dp[i] = min(dp[i], cuts)
 
