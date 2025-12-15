@@ -22,5 +22,24 @@ class Solution:
             width = index - first_seen_index_at_level[level] + 1
             max_width = max(width, max_width)
 
-        dfs(root,0,1)
+        # dfs(root,0,1)
+        # return max_width
+
+        q = deque([(root, 0, 1)])
+        while q:
+            qs = len(q)
+            _, level, first_index = q[0]
+            _, level, last_index = q[-1]
+            width = last_index - first_index + 1
+            max_width = max(max_width, width)
+            # traverse on the q level
+            for _ in range(qs):
+                node, level, index = q.popleft()
+                # index = index - first_index : skipping overflow issue
+                if node.left:
+                    q.append((node.left, level+1, 2*index))
+                if node.right:
+                    q.append((node.right, level+1, 2*index+1))
+
+
         return max_width
