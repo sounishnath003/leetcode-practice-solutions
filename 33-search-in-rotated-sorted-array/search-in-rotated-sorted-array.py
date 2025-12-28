@@ -1,23 +1,23 @@
 class Solution:
-    def search(self, arr: List[int], target: int) -> int:
-        low=0
-        high=len(arr) - 1 # 0 based indexing
-        # apply binary search concept
+    def search(self, nums: List[int], target: int) -> int:
+        low = 0
+        high = len(nums) - 1
+        
         while low <= high:
-            mid=(low + (high-low)//2)
-            # check the condition
-            # low .... mid is sorted and target belongs to that range
-            if target == arr[mid]:
-                return mid
-            elif arr[low] <= arr[mid]:
-                if arr[low] <= target <= arr[mid]:
-                    high=mid-1
+            mid = (low + high) // 2
+            if nums[mid] == target:
+                return mid #{"found": True, "index": mid, "actual": nums[mid]}
+            
+            if nums[low] <= nums[mid]:
+                if nums[low] <= target < nums[mid]:
+                    high = mid - 1
                 else:
-                    low=mid+1
-            else:
-                if arr[mid] <= target <= arr[high]:
-                    low=mid+1
+                    low = mid + 1
+            elif nums[mid] <= nums[high]:
+                if nums[mid] < target <= nums[high]:
+                    low = mid + 1
                 else:
-                    high=mid-1
-
-        return -1
+                    high = mid - 1
+                    
+                    
+        return -1 #{"found": False, "index": low, "actual": nums[mid]}
