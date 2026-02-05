@@ -19,7 +19,7 @@ class Solution:
         
         while low <= high:
             mid = (low + high) // 2
-            if nums[mid] > nums[mid-1] and nums[mid] > nums[mid+1]:
+            if is_peak(mid):
                 return mid
             if nums[mid] > nums[mid-1]:
                 low = mid + 1
