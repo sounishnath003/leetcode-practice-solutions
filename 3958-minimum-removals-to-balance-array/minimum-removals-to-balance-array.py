@@ -4,12 +4,12 @@ class Solution:
         nums.sort()
 
         gmax = 0
-        right = 0
+        start = 0
         # minimum removals means: maximum keeping
-        for left in range(n):
-            while right < n and nums[right] <= nums[left] * k:
-                right += 1
-            gmax = max(gmax, right - left)
+        for end in range(n):
+            while nums[end] > nums[start] * k:
+                start += 1
+            gmax = max(gmax, end - start + 1)
 
         # gmax says: how many elements i can keep (instead of removing on basis of condn)
         return n - gmax # says: minimum removal required
