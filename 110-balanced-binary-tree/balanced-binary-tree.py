@@ -1,15 +1,7 @@
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, val=0, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
 class Solution:
     def isBalanced(self, root: Optional[TreeNode]) -> bool:
-        balanced=True
-
         def height_fn(root:TreeNode):
-            nonlocal balanced
+            # nonlocal balanced
             if not root: return 0
             # faith
             left = height_fn(root.left)
@@ -17,9 +9,9 @@ class Solution:
 
             # my work
             diff = abs(left - right)
-            if diff > 1: balanced=False
+            if left == -1 or right == -1 or diff > 1: return -1
 
             return 1 + max(left, right)
 
-        height_fn(root)
-        return balanced
+        return False if height_fn(root) == -1 else True
+        # return balanced
