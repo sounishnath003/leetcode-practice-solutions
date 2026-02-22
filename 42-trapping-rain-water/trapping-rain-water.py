@@ -24,5 +24,23 @@ class Solution:
 
         return water
 
-    def trap(self, height: List[int]) -> int:
-        return self.tapping_rain_water2(height)
+    def trap(self, heights: List[int]) -> int:
+        n = len(heights)
+        low, high = 0, n - 1
+        left_max, right_max = heights[0], heights[-1]
+        # store the units of water stored
+        water = 0
+        # iterate over the two pointers
+        while low < high:
+            # update the max boundary
+            left_max = max(left_max, heights[low])
+            right_max = max(right_max, heights[high])
+            
+            if left_max < right_max:
+                water += left_max - heights[low]
+                low += 1
+            else:
+                water += right_max - heights[high]
+                high -= 1
+                
+        return water
