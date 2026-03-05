@@ -1,5 +1,8 @@
 # LC: 930
 # https://leetcode.com/problems/binary-subarrays-with-sum/
+from collections import Counter
+
+
 class Solution:
     def numSubarraysWithSum(self, nums: list[int], goal: int) -> int:
         """
@@ -11,6 +14,22 @@ class Solution:
             2. When the sum of window > K; shrink the window
             3. Return the global maximum sum
         """
+
+        def solution1(goal: int):
+            """counts the subarray which sums equals to the target"""
+            n = len(nums)
+            prefix_sum = 0
+            mapp = Counter()
+            mapp[0] = 1
+            subarr = 0
+            for i in range(n):
+                prefix_sum += nums[i]
+                diff = prefix_sum - goal
+                if diff in mapp:
+                    subarr += mapp[diff]
+                mapp[prefix_sum] += 1
+
+            return subarr
 
         def fn1(goal):
             if goal < 0: return 0
@@ -28,4 +47,5 @@ class Solution:
 
             return gcount
 
-        return fn1(goal) - fn1(goal-1)
+        # return fn1(goal) - fn1(goal-1)
+        return solution1(goal)
