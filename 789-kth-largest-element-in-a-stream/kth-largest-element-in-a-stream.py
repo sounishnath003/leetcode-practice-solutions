@@ -1,19 +1,18 @@
-class KthLargest:
+# LC: 703
+# https://leetcode.com/problems/kth-largest-element-in-a-stream/
+import heapq
 
-    def __init__(self, k: int, nums: List[int]):
-       self.k = k
-       self.minheap = nums
-       heapq.heapify(self.minheap)
+
+class KthLargest:
+    def __init__(self, K:int, nums: list[int]) -> None:
+        self.nums = nums
+        self.K = K
+
+        # min heapify them
+        heapq.heapify(self.nums)
 
     def add(self, val: int) -> int:
-        # add new score
-        heapq.heappush(self.minheap, val)
-        # pop out unnecessary scores
-        while len(self.minheap) > self.k:
-            heapq.heappop(self.minheap)
-        return self.minheap[-self.k]
+        heapq.heappush(self.nums, val)
+        while len(self.nums) > self.K: heapq.heappop(self.nums)
 
-
-# Your KthLargest object will be instantiated and called as such:
-# obj = KthLargest(k, nums)
-# param_1 = obj.add(val)
+        return self.nums[0] #heapq.nsmallest(self.K, self.nums)[0]
