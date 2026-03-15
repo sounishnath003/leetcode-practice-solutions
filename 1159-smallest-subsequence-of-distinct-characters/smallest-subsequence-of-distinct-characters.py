@@ -1,23 +1,21 @@
+# LC: 316, 1081
+# https://leetcode.com/problems/smallest-subsequence-of-distinct-characters/description/
 class Solution:
     def smallestSubsequence(self, s: str) -> str:
-        stack = []
-        freqmap = Counter(s)
-        seen = set()
-        
+        last_position_map = {char: i for i, char in enumerate(s)}
+        used = set()
+        res = []
+
         for i, char in enumerate(s):
-            # i will always reduce the count of characters from frequency map
-            freqmap[char] -= 1
-            # nothing to do here! :-0
-            if char in seen:
-                continue
-                
-            # i iwll make sure, it is lexiographically smaller than the cahracters on stack
-            # i can only pop them, if the freqmap of the top element is bigger than 0 (its count)
-            while stack and freqmap[stack[-1]] > 0 and stack[-1] > char:
-                seen.remove(stack.pop())
+            if char not in used:
+                # check conditions:
+                # char < res[-1] -> then pop res[-1]
+                # current.index < last_pos_map[char] (means, i can still include later) -> then pop res[-1]
+                while res and char < res[-1] and i < last_position_map[res[-1]]:
+                    poped_char = res.pop()
+                    used.discard(poped_char)
 
-			# add all the new characters
-            stack.append(char)
-            seen.add(char)
+                res.append(char)
+                used.add(char)
 
-        return ''.join(stack) 
+        return "".join(res)
