@@ -1,30 +1,25 @@
-from collections import deque, defaultdict
-from typing import List, Optional
-
 class Solution:
     def verticalTraversal(self, root: Optional[TreeNode]) -> List[List[int]]:
         if not root:
             return []
 
-        # Dictionary to store the nodes at each horizontal distance
-        column_table = defaultdict(list)
-        # Queue to perform BFS
-        queue = deque([(root, 0, 0)])  # (node, column, row)
+        # hd -> list of (row, val)
+        node_map = defaultdict(list)
+        q = deque([(root, 0, 0)])  # node, hd, level
 
-        while queue:
-            node, column, row = queue.popleft()
-            if node is not None:
-                column_table[column].append((row, node.val))
-                queue.append((node.left, column - 1, row + 1))
-                queue.append((node.right, column + 1, row + 1))
+        while q:
+            node, hd, level = q.popleft()
+            node_map[hd].append((level, node.val))
 
-        # Sort the dictionary by column
-        sorted_columns = sorted(column_table.items())
+            if node.left:
+                q.append((node.left, hd-1, level+1))
+            if node.right:
+                q.append((node.right, hd+1, level+1))
+
+        # Build the final result
         result = []
-        for column, value in sorted_columns:
-            # Sort by row and value
-            value.sort(key=lambda x: (x[0], x[1]))
-            column_values = [val for row, val in value]
-            result.append(column_values)
+        for hd in sorted(node_map):  # iterate columns in sorted order
+            col_nodes = sorted(node_map[hd], key=lambda x: (x[0], x[1]))  # sort by row, then value
+            result.append([val for row, val in col_nodes])  # extract values only
 
         return result
