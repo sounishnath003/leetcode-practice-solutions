@@ -1,5 +1,17 @@
 class Solution:
     def numEnclaves(self, grid: List[List[int]]) -> int:
+        """
+        1. Bruteforce: O((RxC)^2 + O(V+E))
+            1. Q is asking to tell if from the 1s, can you go out of the window?
+            2. So, If I o DFS from all the cells with 1, can check if I can go out of the boundary?
+            3. At last I may return # of total 1s - # of 1s from there I was able to go out?
+
+        2. Optimized: TC: O(R x C)
+            1. Apply the same rule surrounded regions, Start from the Boundary 1s.
+            2. Mark all the 1s reachable from boundary 1s. as 1 --> 2
+            3. Ones all operations is done; Then simply COUNT the # of 1s (left out)
+        """
+
         R, C = len(grid), len(grid[0])
 
         def is_boundary(r:int, c:int) -> int:
