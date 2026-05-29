@@ -1,5 +1,6 @@
 class Solution:
     def maxKelements(self, nums: List[int], K: int) -> int:
+        # TC: O(nLogN + KLogK) ; SC: O(N)
         # put all elements into a max heap
         # pop () from heap and add it in score, num / 3 and agin push into heap
         # return result after K ops.
