@@ -23,4 +23,13 @@ class Solution:
                 pick = dp[i][amt - coins[i]] if amt >= coins[i] else 0
                 dp[i][amt] = not_pick + pick
 
-        return dp[n - 1][amount]
+        # return dp[n - 1][amount]
+        dp = [0] * (amount + 1)
+        dp[0] = 1
+
+        for coin in coins:
+            for t in range(amount+1):
+                if t >= coin:
+                    dp[t] += dp[t-coin]
+
+        return dp[amount]
